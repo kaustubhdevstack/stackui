@@ -1,0 +1,1470 @@
+<section class="page-area">
+        <div class="flex-container">
+                <div class="item">
+                        <div class="introduction">
+                                <h1>Freeform <span class="text-primary">Helpers</span></h1>
+                                <p>Different types of Helper & Extra Components for different needs</p>
+                        </div>
+                </div>
+        </div>
+</section>
+<section class="content-area">
+        <div class="ui-area">
+                <div class="content-zone">
+                        <div class="tab-area">
+                                <div class="code-tab">
+                                        <button class="code-tab-btn btn-1" data-tab="component-1">Badges</button>
+                                        <button class="code-tab-btn btn-1" data-tab="view-1">Code</button>
+                                        <div class="code-slide-bar"></div>
+                                </div>
+                                <div class="code-tab-content ctent-1" id="component-1">
+                                        <div class="ui-zone">
+                                                <div class="btn-zone">
+                                                        <span class="st-badge red">Hello world!</span>
+                                                        <span class="st-badge blue">Hello world!</span>
+                                                        <span class="st-badge green">Hello world!</span>
+                                                        <span class="st-badge yellow">Hello world!</span>
+                                                        <br>
+                                                        <br>
+                                                        <span class="st-badge red">1</span>
+                                                        <span class="st-badge blue">2</span>
+                                                        <span class="st-badge green">3</span>
+                                                        <span class="st-badge yellow">4</span>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="code-tab-content ctent-1" id="view-1">
+                                        <pre>
+                                        &lt;span class="st-badge red"&gt;Hello world!&lt;/span&gt;
+                                        &lt;span class="st-badge blue"&gt;Hello world!&lt;/span&gt;
+                                        &lt;span class="st-badge green"&gt;Hello world!&lt;/span&gt;
+                                        &lt;span class="st-badge yellow"&gt;Hello world!&lt;/span&gt;
+
+                                        &lt;span class="st-badge red"&gt;1&lt;/span&gt;
+                                        &lt;span class="st-badge blue"&gt;2&lt;/span&gt;
+                                        &lt;span class="st-badge green"&gt;3&lt;/span&gt;
+                                        &lt;span class="st-badge yellow"&gt;4&lt;/span&gt;
+
+                                        .st-badge {
+                                                display: inline-block;
+                                                height: 32px;
+                                                font-size: 13px;
+                                                font-weight: 500;
+                                                line-height: 32px;
+                                                padding: 0 12px;
+                                                border-radius: 4px;
+                                                margin-bottom: 5px;
+                                                margin-right: 5px;
+                                                -webkit-font-smoothing: antialiased;
+                                                -moz-osx-font-smoothing: grayscale;
+                                        }
+                                        .st-badge.red {
+                                                background-color: #dc3545;
+                                                color: #fff;
+                                        }
+                                        .st-badge.blue {
+                                                background-color: #0d6efd;
+                                                color: #fff;
+                                        }
+                                        .st-badge.green {
+                                                background-color: #198754;
+                                                color: #fff;
+                                        }
+                                        .st-badge.yellow {
+                                                background-color: #ffc107;
+                                                color: #000;
+                                        }
+                                        </pre>
+                                </div>
+                        </div>
+
+                        <div class="tab-area mt-4">
+                                <div class="code-tab">
+                                        <button class="code-tab-btn btn-2" data-tab="component-2">Tags</button>
+                                        <button class="code-tab-btn btn-2" data-tab="view-2">Code</button>
+                                        <div class="code-slide-bar"></div>
+                                </div>
+                                <div class="code-tab-content ctent-2" id="component-2">
+                                        <div class="ui-zone">
+                                                <div class="btn-zone">
+                                                        <div class="tag">
+                                                                <img src="<?= base_url('/public/assets/img/profile-card.jpg'); ?>" alt="">
+                                                                John Doe
+                                                        </div>
+                                                        <div class="tag red">
+                                                                <img src="<?= base_url('/public/assets/img/profile-card.jpg'); ?>" alt="">
+                                                                John Doe
+                                                        </div>
+                                                        <div class="tag blue">
+                                                                <img src="<?= base_url('/public/assets/img/profile-card.jpg'); ?>" alt="">
+                                                                John Doe
+                                                        </div>
+                                                        <div class="tag green">
+                                                                <img src="<?= base_url('/public/assets/img/profile-card.jpg'); ?>" alt="">
+                                                                John Doe
+                                                        </div>
+                                                        <div class="tag yellow">
+                                                                <img src="<?= base_url('/public/assets/img/profile-card.jpg'); ?>" alt="">
+                                                                John Doe
+                                                        </div>
+
+                                                        <br>
+                                                        <br>
+
+                                                        <div class="tag">
+                                                                Filter Name
+                                                                <i class="fa-solid fa-xmark close-ico"></i>
+                                                        </div>
+                                                        <div class="tag red">
+                                                                Filter Name
+                                                                <i class="fa-solid fa-xmark close-ico"></i>
+                                                        </div>
+                                                        <div class="tag blue">
+                                                                Filter Name
+                                                                <i class="fa-solid fa-xmark close-ico"></i>
+                                                        </div>
+                                                        <div class="tag green">
+                                                                Filter Name
+                                                                <i class="fa-solid fa-xmark close-ico"></i>
+                                                        </div>
+                                                        <div class="tag yellow">
+                                                                Filter Name
+                                                                <i class="fa-solid fa-xmark close-ico"></i>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="code-tab-content ctent-2" id="view-2">
+                                        <pre>
+                                        &lt;div class="tag"&gt;
+                                                &lt;img src="Your image link goes here" alt=""&gt;
+                                                John Doe
+                                        &lt;/div&gt;
+                                        &lt;div class="tag red"&gt;
+                                                &lt;img src="Your image link goes here" alt=""&gt;
+                                                John Doe
+                                        &lt;/div&gt;
+                                        &lt;div class="tag blue"&gt;
+                                                &lt;img src="Your image link goes here" alt=""&gt;
+                                                John Doe
+                                        &lt;/div&gt;
+                                        &lt;div class="tag green"&gt;
+                                                &lt;img src="Your image link goes here" alt=""&gt;
+                                                John Doe
+                                        &lt;/div&gt;
+                                        &lt;div class="tag yellow"&gt;
+                                                &lt;img src="Your image link goes here" alt=""&gt;
+                                                John Doe
+                                        &lt;/div&gt;
+
+                                        &lt;div class="tag"&gt;
+                                                Filter Name
+                                                &lt;i class="fa-solid fa-xmark close-ico"&gt;&lt;/i&gt;
+                                        &lt;/div&gt;
+                                        &lt;div class="tag red"&gt;
+                                                Filter Name
+                                                &lt;i class="fa-solid fa-xmark close-ico"&gt;&lt;/i&gt;
+                                        &lt;/div&gt;
+                                        &lt;div class="tag blue"&gt;
+                                                Filter Name
+                                                &lt;i class="fa-solid fa-xmark close-ico"&gt;&lt;/i&gt;
+                                        &lt;/div&gt;
+                                        &lt;div class="tag green"&gt;
+                                                Filter Name
+                                                &lt;i class="fa-solid fa-xmark close-ico"&gt;&lt;/i&gt;
+                                        &lt;/div&gt;
+                                        &lt;div class="tag yellow"&gt;
+                                                Filter Name
+                                                &lt;i class="fa-solid fa-xmark close-ico"&gt;&lt;/i&gt;
+                                        &lt;/div&gt;
+                                        
+                                        .tag {
+                                                display: inline-block;
+                                                height: 32px;
+                                                font-size: 13px;
+                                                font-weight: 500;
+                                                color: rgba(0,0,0,0.6);
+                                                line-height: 32px;
+                                                padding: 0 12px;
+                                                border-radius: 16px;
+                                                background-color: #e4e4e4;
+                                                margin-bottom: 5px;
+                                                margin-right: 5px;
+                                                -webkit-font-smoothing: antialiased;
+                                                -moz-osx-font-smoothing: grayscale;
+                                        }
+                                        .tag img {
+                                                float: left;
+                                                margin: 0 8px 0 -12px;
+                                                height: 32px;
+                                                width: 32px;
+                                                border-radius: 50%;
+                                        }
+                                        .tag .close-ico {
+                                                cursor: pointer;
+                                                float: right;
+                                                font-size: 16px;
+                                                line-height: 32px;
+                                                padding-left: 8px;
+                                        }
+                                        .tag.red {
+                                                background-color: #dc3545;
+                                                color: #fff;
+                                        }
+                                        .tag.blue {
+                                                background-color: #0d6efd;
+                                                color: #fff;
+                                        }
+                                        .tag.green {
+                                                background-color: #198754;
+                                                color: #fff;
+                                        }
+                                        .tag.yellow {
+                                                background-color: #ffc107;
+                                                color: #000;
+                                        }
+                                        </pre>
+                                </div>
+                        </div>
+
+                        <div class="tab-area mt-4">
+                                <div class="code-tab">
+                                        <button class="code-tab-btn btn-3" data-tab="component-3">Pulse</button>
+                                        <button class="code-tab-btn btn-3" data-tab="view-3">Code</button>
+                                        <div class="code-slide-bar"></div>
+                                </div>
+                                <div class="code-tab-content ctent-3" id="component-3">
+                                        <div class="ui-zone">
+                                                <div class="btn-zone">
+                                                        <button class="stack-btn-1 pulse">Pulse Effect</button>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="code-tab-content ctent-3" id="view-3">
+                                        <pre>
+                                        /* Just add this css to any button or icon and the pulse animation will work */
+                      
+                                        .pulse {
+                                                animation: pulse 1.5s infinite;
+                                        }
+                                        @keyframes pulse {
+                                                0% {
+                                                        transform: scale(1);
+                                                        box-shadow: 0 0 0 rgba(0, 0, 0, 0.4);
+                                                }
+                                                70% {
+                                                        transform: scale(1.2);
+                                                        box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+                                                }
+                                                100% {
+                                                        transform: scale(1);
+                                                        box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+                                                }
+                                        }
+                                        </pre>
+                                </div>
+                        </div>
+
+                        <div class="tab-area mt-4">
+                                <div class="code-tab">
+                                        <button class="code-tab-btn btn-4" data-tab="component-4">Spinner 1</button>
+                                        <button class="code-tab-btn btn-4" data-tab="view-4">Code</button>
+                                        <div class="code-slide-bar"></div>
+                                </div>
+                                <div class="code-tab-content ctent-4" id="component-4">
+                                        <div class="ui-zone">
+                                                <div class="tab-center">
+                                                        <div class="stack-spinner-1 m-3"></div>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="code-tab-content ctent-4" id="view-4">
+                                        <pre>
+                                        &lt;div class="stack-spinner-1"&gt;&lt;/div&gt;
+
+                                        .stack-spinner-1 {
+                                                width: 70px;
+                                                height: 70px;
+                                                border: 4px solid rgba(0, 0, 0, 0.1);
+                                                border-top: 4px solid #5783db;
+                                                border-radius: 50%;
+                                                animation: spin 1s linear infinite;
+                                        }
+                                        @keyframes spin {
+                                                0% { transform: rotate(0deg); }
+                                                100% { transform: rotate(360deg); }
+                                        }
+                                        @media (max-width: 790px) {
+                                                .stack-spinner-1 {
+                                                        width: 40px;
+                                                        height: 40px;
+                                                        border: 2px solid rgba(0, 0, 0, 0.1);
+                                                        border-top: 2px solid #5783db;
+                                                }
+                                        }
+                                        @media (max-width: 480px) {
+                                                .stack-spinner-1 {
+                                                        width: 30px;
+                                                        height: 30px;
+                                                        border: 1px solid rgba(0, 0, 0, 0.1);
+                                                        border-top: 1px solid #5783db;
+                                                }
+                                        }
+                                        </pre>
+                                </div>
+                        </div>
+
+                        <div class="tab-area mt-4">
+                                <div class="code-tab">
+                                        <button class="code-tab-btn btn-5" data-tab="component-5">Spinner 2</button>
+                                        <button class="code-tab-btn btn-5" data-tab="view-5">Code</button>
+                                        <div class="code-slide-bar"></div>
+                                </div>
+                                <div class="code-tab-content ctent-5" id="component-5">
+                                        <div class="ui-zone">
+                                                <div class="tab-center">
+                                                        <div class="stack-spinner-2 m-3">
+                                                                <div class="square"></div>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="code-tab-content ctent-5" id="view-5">
+                                        <pre>
+                                        &lt;div class="stack-spinner-2"&gt;
+                                                &lt;div class="square"&gt;&lt;/div&gt;
+                                        &lt;/div&gt;
+
+                                        .stack-spinner-2 {
+                                                display: inline-block;
+                                                width: 70px;
+                                                height: 70px;
+                                                position: relative;
+                                                border: 4px solid #dd7973;
+                                                top: 50%;
+                                                animation: loader 2s infinite ease;
+                                        }
+                                        .stack-spinner-2 .square {
+                                                vertical-align: top;
+                                                display: inline-block;
+                                                width: 100%;
+                                                background-color: #dd7973;
+                                                animation: loader-inner 2s infinite ease-in;
+                                        }
+                                        @keyframes loader {
+                                                0% {
+                                                        transform: rotate(0deg);
+                                                }
+                                                
+                                                25% {
+                                                        transform: rotate(180deg);
+                                                }
+                                                
+                                                50% {
+                                                        transform: rotate(180deg);
+                                                }
+                                                
+                                                75% {
+                                                        transform: rotate(360deg);
+                                                }
+                                                
+                                                100% {
+                                                        transform: rotate(360deg);
+                                                }
+                                        }
+                                        @keyframes loader-inner {
+                                                0% {
+                                                        height: 0%;
+                                                }
+                                                
+                                                25% {
+                                                        height: 0%;
+                                                }
+                                                
+                                                50% {
+                                                        height: 100%;
+                                                }
+                                                
+                                                75% {
+                                                        height: 100%;
+                                                }
+                                                
+                                                100% {
+                                                        height: 0%;
+                                                }
+                                        }
+                                        @media (max-width: 790px) {
+                                                .stack-spinner-2 {
+                                                        width: 40px;
+                                                        height: 40px;
+                                                        border: 2px solid #dd7973;
+                                                }
+                                        }
+                                        @media (max-width: 480px) {
+                                                .stack-spinner-2 {
+                                                        width: 30px;
+                                                        height: 30px;
+                                                        border: 1px solid #dd7973;
+                                                }
+                                        }
+                                        </pre>
+                                </div>
+                        </div>
+
+                        <div class="tab-area mt-4">
+                                <div class="code-tab">
+                                        <button class="code-tab-btn btn-6" data-tab="component-6">Spinner 3</button>
+                                        <button class="code-tab-btn btn-6" data-tab="view-6">Code</button>
+                                        <div class="code-slide-bar"></div>
+                                </div>
+                                <div class="code-tab-content ctent-6" id="component-6">
+                                        <div class="ui-zone">
+                                                <div class="tab-center">
+                                                        <div class="stack-spinner-3 m-3"></div>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="code-tab-content ctent-6" id="view-6">
+                                        <pre>
+                                        &lt;div class="stack-spinner-3"&gt;&lt;/div&gt;
+
+                                        .stack-spinner-3 {
+                                                width: 70px;
+                                                height: 70px;
+                                                border: 4px solid #00695c;
+                                                border-radius: 50%;
+                                                display: inline-block;
+                                                position: relative;
+                                                animation: rotation 1s linear infinite;
+                                        }
+                                        .stack-spinner-3:after {
+                                                content: "";
+                                                position: absolute;
+                                                left: 50%;
+                                                top: 50%;
+                                                transform: translate(-50%, -50%);
+                                                width: 56px;
+                                                height: 56px;
+                                                border-radius: 50%;
+                                                border: 4px solid transparent;
+                                                border-bottom-color: #00695c;
+                                        }
+                                        @keyframes rotation {
+                                                0% {
+                                                        transform: rotate(0deg);
+                                                }
+                                                100% {
+                                                        transform: rotate(360deg);
+                                                }
+                                        }
+                                        @media (max-width: 480px) {
+                                                .stack-spinner-3 {
+                                                        width: 30px;
+                                                        height: 30px;
+                                                        border: 1px solid #00695c;
+                                                }
+                                                .stack-spinner-3:after {
+                                                        content: "";
+                                                        position: absolute;
+                                                        left: 50%;
+                                                        top: 50%;
+                                                        transform: translate(-50%, -50%);
+                                                        width: 16px;
+                                                        height: 16px;
+                                                        border-radius: 50%;
+                                                        border: 1px solid transparent;
+                                                        border-bottom-color: #00695c;
+                                                }
+                                        }
+                                        </pre>
+                                </div>
+                        </div>
+
+                        <div class="tab-area mt-4">
+                                <div class="code-tab">
+                                        <button class="code-tab-btn btn-7" data-tab="component-7">Spinner 4</button>
+                                        <button class="code-tab-btn btn-7" data-tab="view-7">Code</button>
+                                        <div class="code-slide-bar"></div>
+                                </div>
+                                <div class="code-tab-content ctent-7" id="component-7">
+                                        <div class="ui-zone">
+                                                <div class="tab-center">
+                                                        <div class="stack-spinner-4 m-3"></div>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="code-tab-content ctent-7" id="view-7">
+                                        <pre>
+                                        &lt;div class="stack-spinner-4"&gt;&lt;/div&gt;
+
+                                        .stack-spinner-4 {
+                                                width: 70px;
+                                                height: 70px;
+                                                position: relative;
+                                                border: 8px solid transparent;
+                                                border-radius: 50%;
+                                                animation: border-opacity 0.7s linear infinite;
+                                                animation-delay: 0.24s;
+                                        }
+                                        .stack-spinner-4:before,
+                                        .stack-spinner-4:after {
+                                                content: '';
+                                                display: block;
+                                                position: absolute;
+                                                border: 8px solid transparent;
+                                                border-radius: 50%;
+                                                box-sizing: border-box;
+                                                animation: border-opacity 0.7s linear infinite;
+                                        }
+                                        .stack-spinner-4:before {
+                                                top: 12px;
+                                                left: 12px;
+                                                right: 12px;
+                                                bottom: 12px;
+                                        }
+                                        .stack-spinner-4:after {
+                                                top: 2px;
+                                                left: 2px;
+                                                right: 2px;
+                                                bottom: 2px;
+                                                animation-delay: 0.12s;
+                                        }
+                                        @keyframes border-opacity {
+                                                from {
+                                                        border-color: #ea580c;
+                                                }
+                                                to {
+                                                        border-color: rgba(0, 150, 136, 0);
+                                                }
+                                        }
+
+                                        @media (max-width: 790px) {
+                                                .stack-spinner-4 {
+                                                        width: 40px;
+                                                        height: 40px;
+                                                        border: 4px solid transparent;
+                                                }
+                                                .stack-spinner-4:before,
+                                                .stack-spinner-4:after {
+                                                        border: 4px solid transparent;
+                                                }
+                                                .stack-spinner-4:before {
+                                                        top: 6px;
+                                                        left: 6px;
+                                                        right: 6px;
+                                                        bottom: 6px;
+                                                }
+                                                .stack-spinner-4:after {
+                                                        top: 1px;
+                                                        left: 1px;
+                                                        right: 1px;
+                                                        bottom: 1px;
+                                                }
+                                        }
+
+                                        @media (max-width: 480px) {
+                                                .stack-spinner-4 {
+                                                        width: 30px;
+                                                        height: 30px;
+                                                        border: 2px solid transparent;
+                                                }
+                                                .stack-spinner-4:before,
+                                                .stack-spinner-4:after {
+                                                        border: 2px solid transparent;
+                                                }
+                                                .stack-spinner-4:before {
+                                                        top: 4px;
+                                                        left: 4px;
+                                                        right: 4px;
+                                                        bottom: 4px;
+                                                }
+                                                .stack-spinner-4:after {
+                                                        top: 1px;
+                                                        left: 1px;
+                                                        right: 1px;
+                                                        bottom: 1px;
+                                                }
+                                        }
+                                        </pre>
+                                </div>
+                        </div>
+
+                        <div class="tab-area mt-4">
+                                <div class="code-tab">
+                                        <button class="code-tab-btn btn-8" data-tab="component-8">Spinner 5</button>
+                                        <button class="code-tab-btn btn-8" data-tab="view-8">Code</button>
+                                        <div class="code-slide-bar"></div>
+                                </div>
+                                <div class="code-tab-content ctent-8" id="component-8">
+                                        <div class="ui-zone">
+                                                <div class="tab-center">
+                                                        <div class="stack-spinner-5 m-3">
+                                                                <div class="inner-square"></div>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="code-tab-content ctent-8" id="view-8">
+                                        <pre>
+                                        &lt;div class="stack-spinner-5"&gt;
+                                                &lt;div class="inner-square"&gt;&lt;/div&gt;
+                                        &lt;/div&gt;
+
+                                        .stack-spinner-5 {
+                                                display: inline-block;
+                                                position: relative;
+                                                width: 70px;
+                                                height: 70px;
+                                                margin: 1rem;
+                                        }
+                                        .stack-spinner-5 .inner-square {
+                                                position: absolute;
+                                                width: 70px;
+                                                height: 70px;
+                                                background-color: #030712;
+                                                animation: scale 1.2s infinite ease-in-out;
+                                        }
+                                        @keyframes scale {
+                                                0%, 100% { transform: scale(1); }
+                                                50% { transform: scale(1.5); }
+                                        }
+                                        @media (max-width: 790px) {
+                                                .stack-spinner-5 {
+                                                        width: 40px;
+                                                        height: 40px;
+                                                        margin: 1rem;
+                                                }
+                                                .stack-spinner-5 .inner-square {
+                                                        width: 40px;
+                                                        height: 40px;
+                                                        margin: 1rem;
+                                                }
+                                        }
+                                        @media (max-width: 480px) {
+                                                .stack-spinner-5 {
+                                                        width: 30px;
+                                                        height: 30px;
+                                                        margin: 1rem;
+                                                }
+                                                .stack-spinner-5 .inner-square {
+                                                        width: 30px;
+                                                        height: 30px;
+                                                        margin: 1rem;
+                                                }
+                                        }
+                                        </pre>
+                                </div>
+                        </div>
+
+                        <div class="tab-area mt-4">
+                                <div class="code-tab">
+                                        <button class="code-tab-btn btn-9" data-tab="component-9">Slide Tab Bar</button>
+                                        <button class="code-tab-btn btn-9" data-tab="view-9">Code</button>
+                                        <div class="code-slide-bar"></div>
+                                </div>
+                                <div class="code-tab-content ctent-9" id="component-9">
+                                        <div class="ui-zone">
+                                                <div class="stack-tab-container">
+                                                        <div class="tab-bar">
+                                                                <div class="left-arrow">
+                                                                        <i class="fa-solid fa-chevron-left"></i>
+                                                                </div>
+                                                                <ul class="tabs">
+                                                                        <li><a class="tab active" href="#">Home</a></li>
+                                                                        <li><a class="tab" href="#">Trending</a></li>
+                                                                        <li><a class="tab" href="#">Subscriptions</a></li>
+                                                                        <li><a class="tab" href="#">Library</a></li>
+                                                                        <li><a class="tab" href="#">Videos</a></li>
+                                                                        <li><a class="tab" href="#">Playlist</a></li>
+                                                                        <li><a class="tab" href="#">Shorts</a></li>
+                                                                        <li><a class="tab" href="#">Stories</a></li>
+                                                                        <li><a class="tab" href="#">Latest</a></li>
+                                                                        <li><a class="tab" href="#">Uploads</a></li>
+                                                                        <li><a class="tab" href="#">History</a></li>
+                                                                </ul>
+                                                                <div class="right-arrow active">
+                                                                        <i class="fa-solid fa-chevron-right"></i>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="code-tab-content ctent-9" id="view-9">
+                                        <pre>
+                                        &lt;div class="stack-tab-container"&gt;
+                                        &lt;div class="tab-bar"&gt;
+                                                &lt;div class="left-arrow"&gt;
+                                                &lt;i class="fa-solid fa-chevron-left"&gt;&lt;/i&gt;
+                                                &lt;/div&gt;
+                                                &lt;ul class="tabs"&gt;
+                                                &lt;li&gt;&lt;a class="tab active" href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+                                                &lt;li&gt;&lt;a class="tab" href="#"&gt;Trending&lt;/a&gt;&lt;/li&gt;
+                                                &lt;li&gt;&lt;a class="tab" href="#"&gt;Subscriptions&lt;/a&gt;&lt;/li&gt;
+                                                &lt;li&gt;&lt;a class="tab" href="#"&gt;Library&lt;/a&gt;&lt;/li&gt;
+                                                &lt;li&gt;&lt;a class="tab" href="#"&gt;Videos&lt;/a&gt;&lt;/li&gt;
+                                                &lt;li&gt;&lt;a class="tab" href="#"&gt;Playlist&lt;/a&gt;&lt;/li&gt;
+                                                &lt;li&gt;&lt;a class="tab" href="#"&gt;Shorts&lt;/a&gt;&lt;/li&gt;
+                                                &lt;li&gt;&lt;a class="tab" href="#"&gt;Stories&lt;/a&gt;&lt;/li&gt;
+                                                &lt;li&gt;&lt;a class="tab" href="#"&gt;Latest&lt;/a&gt;&lt;/li&gt;
+                                                &lt;li&gt;&lt;a class="tab" href="#"&gt;Uploads&lt;/a&gt;&lt;/li&gt;
+                                                &lt;li&gt;&lt;a class="tab" href="#"&gt;History&lt;/a&gt;&lt;/li&gt;
+                                                &lt;/ul&gt;
+                                                &lt;div class="right-arrow active"&gt;
+                                                &lt;i class="fa-solid fa-chevron-right"&gt;&lt;/i&gt;
+                                                &lt;/div&gt;
+                                        &lt;/div&gt;
+                                        &lt;/div&gt;
+
+                                        .stack-tab-container {
+                                                position: relative;
+                                                max-width: 800px;
+                                                margin: 0 auto;
+                                                text-align: center;
+                                        }
+                                        .stack-tab-container .tab-bar {
+                                                background: #fff;
+                                                overflow: hidden;
+                                                padding-right: 25px;
+                                        }
+                                        .stack-tab-container .left-arrow,
+                                        .stack-tab-container .right-arrow {
+                                                position: absolute;
+                                                width: 100px;
+                                                height: 100%;
+                                                top: 0;
+                                                display: none;
+                                                align-items: center;
+                                                padding: 0 10px;
+                                                pointer-events: none;
+                                        }
+                                        .stack-tab-container .right-arrow {
+                                                right: 0;
+                                                justify-content: flex-end;
+                                                background: linear-gradient(to left, #fff 20%, transparent);
+                                        }
+                                        .stack-tab-container .left-arrow {
+                                                background: linear-gradient(to right, #fff 20%, transparent);
+                                        }
+                                        .stack-tab-container .right-arrow.active,
+                                        .stack-tab-container .left-arrow.active {
+                                                display: flex;
+                                        }
+                                        .stack-tab-container i {
+                                                width: 24px;
+                                                height: 24px;
+                                                padding: 8px;
+                                                cursor: pointer;
+                                                pointer-events: auto;
+                                        }
+                                        .stack-tab-container ul.tabs {
+                                                display: flex;
+                                                gap: 16px;
+                                                margin: 0;
+                                                padding-top: 16px;
+                                                padding-bottom: 12px;
+                                                list-style: none;
+                                                overflow-x: scroll;
+                                                -ms-overflow-style: none;
+                                                scrollbar-width: none;
+                                                scroll-behavior: smooth;
+                                        }
+                                        .stack-tab-container ul.dragging {
+                                                scroll-behavior: auto;
+                                                cursor: pointer;
+                                        }
+                                        .stack-tab-container ul::-webkit-scrollbar {
+                                                display: none;
+                                        }
+                                        .stack-tab-container a.tab {
+                                                display: inline-block;
+                                                height: 32px;
+                                                font-size: 13px;
+                                                font-weight: 500;
+                                                color: rgba(0,0,0,0.6);
+                                                line-height: 32px;
+                                                padding: 0 12px;
+                                                border-radius: 16px;
+                                                background-color: #e4e4e4;
+                                                margin-bottom: 5px;
+                                                margin-right: 5px;
+                                                user-select: none;
+                                                white-space: nowrap;
+                                        }
+                                        .stack-tab-container a.tab.active {
+                                                border: 1px solid #007bff;
+                                                color: #007bff;
+                                                background: #fff;
+                                        }
+                                        @media (max-width: 790px) {
+                                                .stack-tab-container {
+                                                        position: relative;
+                                                        margin: 0 auto;
+                                                        text-align: center;
+                                                }
+                                        }
+
+                                        document.addEventListener('DOMContentLoaded', function () {
+                                                //Dragging tabs slider
+                                                const tabs = document.querySelectorAll(".stack-tab-container a.tab");
+                                                const scrollRightArrow = document.querySelector(".stack-tab-container .right-arrow");
+                                                const scrollLeftArrow = document.querySelector(".stack-tab-container .left-arrow");
+                                                const tabList = document.querySelector(".stack-tab-container ul.tabs");
+                                                const leftArrowContainer = document.querySelector(".stack-tab-container .left-arrow");
+                                                const rightArrowContainer = document.querySelector(".stack-tab-container .right-arrow");
+                                                
+                                                // Function to remove "active" class from all tabs
+                                                        const removeActiveClasses = () => {
+                                                        tabs.forEach(tab => {
+                                                                tab.classList.remove("active");
+                                                        });
+                                                };
+                                                
+                                                //Function to activate the left scroll button
+                                                const manageLeftbtn = () => {
+                                                if(tabList.scrollLeft >= 20) {
+                                                        leftArrowContainer.classList.add("active");
+                                                } else {
+                                                        leftArrowContainer.classList.remove("active");
+                                                }
+                                                
+                                                let maxScroll = tabList.scrollWidth - tabList.clientWidth - 20
+                                                if(tabList.scrollLeft >= maxScroll) {
+                                                        rightArrowContainer.classList.remove("active");
+                                                } else {
+                                                        rightArrowContainer.classList.add("active");
+                                                }
+                                                };
+                                                
+                                                // Add "active" class to clicked tab and remove from others
+                                                tabs.forEach(tab => {
+                                                tab.addEventListener("click", () => {
+                                                        event.preventDefault(); 
+                                                        removeActiveClasses();
+                                                        tab.classList.add("active");
+                                                });
+
+                                                });
+                                                
+                                                // Scroll the tab list to the right
+                                                scrollRightArrow.addEventListener("click", () => {
+                                                        tabList.scrollLeft += 300;
+                                                        manageLeftbtn();
+                                                });
+                                                
+                                                // Scroll the tab list to the left
+                                                scrollLeftArrow.addEventListener("click", () => {
+                                                        tabList.scrollLeft -= 300;
+                                                        manageLeftbtn();
+                                                });
+                                                
+                                                // Listen to scroll event to activate the buttons 
+                                                tabList.addEventListener("scroll", manageLeftbtn);
+                                                
+                                                
+                                                // Adding the dragging functionality
+                                                let drag = false;
+                                                const dragging = (e) => { // Add the event parameter
+                                                        if (!drag) return;
+                                                        tabList.classList.add("dragging");
+                                                        tabList.scrollLeft -= e.movementX;
+                                                };
+                                                
+                                                tabList.addEventListener("mousedown", () => {
+                                                        drag = true;
+                                                        tabList.addEventListener("mousemove", dragging); // Add mousemove listener here
+                                                });
+                                                
+                                                document.addEventListener("mouseup", () => {
+                                                        drag = false;
+                                                        tabList.removeEventListener("mousemove", dragging); // Remove mousemove listener here
+                                                        tabList.classList.remove("dragging");
+                                                });
+
+                                        });
+                                        </pre>
+                                </div>
+                        </div>
+
+                        <div class="tab-area mt-4">
+                                <div class="code-tab">
+                                        <button class="code-tab-btn btn-10" data-tab="component-10">Flyout Options</button>
+                                        <button class="code-tab-btn btn-10" data-tab="view-10">Code</button>
+                                        <div class="code-slide-bar"></div>
+                                </div>
+                                <div class="code-tab-content ctent-10" id="component-10">
+                                        <div class="ui-zone">
+                                        <div class="stack-flyout-opt-menu">
+                                                <div class="stack-flyout-option">
+                                                <div class="flyout-point active">
+                                                <i class="fa-solid fa-plus"></i>
+                                                </div>
+
+                                                        <div class="sub-options">
+                                                        <div class="sub-opt show">
+                                                        <i class="fa-solid fa-gears"></i>
+                                                        </div>
+                                                        <div class="sub-opt show">
+                                                        <i class="fa-solid fa-cloud-arrow-up"></i>
+                                                        </div>
+                                                        <div class="sub-opt show">
+                                                        <i class="fa-solid fa-rotate"></i>
+                                                        </div>
+                                                        <div class="sub-opt show">
+                                                        <i class="fa-solid fa-envelope-open-text"></i>
+                                                        </div>
+                                                        </div>
+                                                </div>
+                                        </div> 
+                                        </div>
+                                </div>
+                                <div class="code-tab-content ctent-10" id="view-10">
+                                        <pre>
+                                        &lt;div class="stack-flyout-opt-menu"&gt;
+                                                &lt;div class="stack-flyout-option"&gt;
+                                                        &lt;div class="flyout-point active"&gt;
+                                                        &lt;i class="fa-solid fa-plus"&gt;&lt;/i&gt;
+                                                        &lt;/div&gt;
+
+                                                        &lt;div class="sub-options"&gt;
+                                                        &lt;div class="sub-opt show"&gt;
+                                                        &lt;i class="fa-solid fa-gears"&gt;&lt;/i&gt;
+                                                        &lt;/div&gt;
+                                                        &lt;div class="sub-opt show"&gt;
+                                                        &lt;i class="fa-solid fa-cloud-arrow-up"&gt;&lt;/i&gt;
+                                                        &lt;/div&gt;
+                                                        &lt;div class="sub-opt show"&gt;
+                                                        &lt;i class="fa-solid fa-rotate"&gt;&lt;/i&gt;
+                                                        &lt;/div&gt;
+                                                        &lt;div class="sub-opt show"&gt;
+                                                        &lt;i class="fa-solid fa-envelope-open-text"&gt;&lt;/i&gt;
+                                                        &lt;/div&gt;
+                                                        &lt;/div&gt;
+                                                &lt;/div&gt;
+                                        &lt;/div&gt;
+
+                                        .stack-flyout-opt-menu {
+                                                padding: 70px;
+                                        }
+                                        .stack-flyout-option {
+                                                width: 70px;
+                                                height: 70px;
+                                                border-radius: 50%;
+                                                text-align: center;
+                                                position: relative;
+                                                margin: 0 auto;
+                                        }
+                                        .stack-flyout-option .flyout-point {
+                                                font-size: 28px;
+                                                color: #fff;
+                                                width: 100%;
+                                                height: 100%;
+                                                border-radius: 50%;
+                                                cursor: pointer;
+                                                transition: 0.5s;
+                                                z-index: 1000;
+                                                position: absolute;
+                                                background-color: #2196f3;
+                                                display: flex;
+                                                align-items: center;
+                                                justify-content: center;
+                                        }
+                                        .stack-flyout-option .flyout-point:hover {
+                                                background-color: #2196f3;
+                                        }
+                                        .stack-flyout-option .flyout-point:active {
+                                                background-color: #2196f3;
+                                        }
+                                        .stack-flyout-option .flyout-point.active {
+                                                transform: rotateZ(180deg);
+                                        }
+                                        .sub-options {
+                                                display: inline-flex;
+                                        }
+                                        .sub-options .sub-opt {
+                                                width: 70px;
+                                                height: 70px;
+                                                border-radius: 50%;
+                                                color: #fff;
+                                                line-height: 70px;
+                                                font-size: 24px;
+                                                position: absolute;
+                                                top: 6px;
+                                                left: 6px;
+                                                z-index: 999;
+                                                transition: 0.5s;
+                                                transform: scale(0.3);
+                                                cursor: pointer;
+                                        }
+                                        .sub-options .sub-opt:hover{
+                                                opacity: 0.9;
+                                        }
+                                        .sub-options .sub-opt:active{
+                                                opacity: 1;
+                                                transform: scale(0.9);
+                                        }
+                                        .sub-opt.show {
+                                                transform: scale(1);
+                                        }
+                                        .sub-opt.show:first-child {
+                                                left: -80px;
+                                                top: 0px;
+                                                color: #000;
+                                                background-color: #e5e7eb;
+                                        }
+                                        .sub-opt.show:first-child:hover {
+                                                color: #2196f3;
+                                        }
+                                        .sub-opt.show:nth-child(2) {
+                                                left: 80px;
+                                                top: 0px;
+                                                color: #000;
+                                                background-color: #e5e7eb;
+                                        }
+                                        .sub-opt.show:nth-child(2):hover {
+                                                color: #2196f3;
+                                        }
+                                        .sub-opt.show:nth-child(3) {
+                                                top: -80px;
+                                                left: 0px;
+                                                color: #000;
+                                                background-color: #e5e7eb;
+                                        }
+                                        .sub-opt.show:nth-child(3):hover {
+                                                color: #2196f3;
+                                        }
+                                        .sub-opt.show:last-child {
+                                                top: 80px;
+                                                left: 0px;
+                                                color: #000;
+                                                background-color: #e5e7eb;
+                                        }
+                                        .sub-opt.show:last-child:hover {
+                                                color: #2196f3;
+                                        }
+
+                                        let flyoutPoint = document.querySelector(".flyout-point"),
+                                        subOpions = document.querySelectorAll(".sub-options > div");
+
+                                        flyoutPoint.addEventListener("click", showOptions);
+
+                                        function showOptions() {
+
+                                                flyoutPoint.classList.toggle("active");
+
+                                                subOpions.forEach(circle => {
+                                                        circle.classList.toggle("show");
+                                                })
+                                        };
+                                        </pre>
+                                </div>
+                        </div>
+
+                        <div class="tab-area mt-4">
+                                <div class="code-tab">
+                                        <button class="code-tab-btn btn-11" data-tab="component-11">Trend Ticker</button>
+                                        <button class="code-tab-btn btn-11" data-tab="view-11">Code</button>
+                                        <div class="code-slide-bar"></div>
+                                </div>
+                                <div class="code-tab-content ctent-11" id="component-11">
+                                        <div class="ui-zone">
+                                        <div class="stack-trend-container">
+                                                <div class="trend-heading">Trending</div>
+                                                        <div class="trending-wrapper">
+                                                        <div class="trending-area">
+                                                                <a href="#" class="trending active">
+                                                                Study Finds Eating Pizza Daily Increases IQ by 20 Points
+                                                                </a>
+                                                                <a href="#" class="trending">
+                                                                Aliens Demand to Speak to Elon Musk, Cite His Tweets as Earth's Official Communication
+                                                                </a>
+                                                                <a href="#" class="trending">
+                                                                World Governments Unite to Build a Secret Moon Base for Billionaires
+                                                                </a>
+                                                                <a href="#" class="trending">
+                                                                Scientists Discover New Species of Talking Watermelons in Remote Rainforest
+                                                                </a>
+                                                                <a href="#" class="trending">
+                                                                Earth's Gravity Weakening – People Worldwide Start Floating Away
+                                                                </a>
+                                                        </div>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="code-tab-content ctent-11" id="view-11">
+                                        <pre>
+                                        &lt;div class="stack-trend-container"&gt;
+                                        &lt;div class="trend-heading"&gt;Trending&lt;/div&gt;
+
+                                        &lt;div class="trending-wrapper"&gt;
+                                                &lt;div class="trending-area"&gt;
+                                                &lt;a href="#" class="trending active"&gt;
+                                                Study Finds Eating Pizza Daily Increases IQ by 20 Points
+                                                &lt;/a&gt;
+                                                &lt;a href="#" class="trending"&gt;
+                                                Aliens Demand to Speak to Elon Musk, Cite His Tweets as Earth's Official Communication
+                                                &lt;/a&gt;
+                                                &lt;a href="#" class="trending"&gt;
+                                                World Governments Unite to Build a Secret Moon Base for Billionaires
+                                                &lt;/a&gt;
+                                                &lt;a href="#" class="trending"&gt;
+                                                Scientists Discover New Species of Talking Watermelons in Remote Rainforest
+                                                &lt;/a&gt;
+                                                &lt;a href="#" class="trending"&gt;
+                                                Earth's Gravity Weakening – People Worldwide Start Floating Away
+                                                &lt;/a&gt;
+                                                &lt;/div&gt;
+                                        &lt;/div&gt;
+                                        &lt;/div&gt;
+
+                                        .stack-trend-container {
+                                                display: flex;
+                                                font-size: 16px;
+                                                background: #030712;
+                                                color: #e5e7eb;
+                                                border-radius: 4px;
+                                                padding: 10px 32px;
+                                                overflow: hidden;
+                                                box-shadow: 0 4px 6px -1px rgba(0, 0, 0, .1), 0 2px 4px -1px rgba(0, 0, 0, .06);
+                                        }
+                                        .stack-trend-container .trend-heading {
+                                                font-weight: bold;
+                                                padding-right: 20px;
+                                                margin-right: 20px;
+                                                border-right: 1px solid #fff;
+                                        }
+                                        .stack-trend-container .trending-area {
+                                                max-width: 100%;
+                                                white-space: nowrap;
+                                                position: relative;
+                                        }
+                                        .stack-trend-container .trending {
+                                                color: #fff;
+                                                text-decoration: none;
+                                                font-weight: normal;
+                                                opacity: 0;
+                                                position: absolute;
+                                        }
+                                        .stack-trend-container .trending.active {
+                                                opacity: 1;
+                                        }
+                                        @media (max-width: 790px) {
+                                                .stack-trend-container {
+                                                        padding: 5px;
+                                                }
+                                                .trend-heading {
+                                                        font-size: 14px;
+                                                }
+                                                .trending {
+                                                        font-size: 14px;
+                                                }
+                                        }
+
+                                        document.addEventListener('DOMContentLoaded', function () {
+                                        //Trending ticker
+                                        const trendingAll = document.querySelectorAll(".stack-trend-container .trending");
+                                        let currentActive = 0;
+                                        let duration = 3000; // Adjust the duration as needed
+                                        let totalTrends = trendingAll.length;
+
+                                        const removeAllActive = () => {
+                                                trendingAll.forEach(n => {
+                                                        n.classList.remove("active");
+                                                });
+                                        };
+
+                                        const changeTrend = () => {
+                                                if (currentActive >= totalTrends - 1) {
+                                                        currentActive = 0;
+                                                } else {
+                                                        currentActive += 1;
+                                                }
+
+                                        removeAllActive();
+                                                trendingAll[currentActive].classList.add("active");
+                                        };
+
+                                                setInterval(changeTrend, duration);
+                                        });
+                                        </pre>
+                                </div>
+                        </div>
+
+                        <div class="tab-area mt-4">
+                                <div class="code-tab">
+                                        <button class="code-tab-btn btn-12" data-tab="component-12">Calendar</button>
+                                        <button class="code-tab-btn btn-12" data-tab="view-12">Code</button>
+                                        <div class="code-slide-bar"></div>
+                                </div>
+                                <div class="code-tab-content ctent-12" id="component-12">
+                                        <div class="ui-zone">
+                                                <div class="stack-cal-wrapper">
+                                                        <header>
+                                                                <p class="current-date"></p>
+                                                                <div class="icons">
+                                                                        <i id="prev" class="fa-solid fa-chevron-left"></i>
+                                                                        <i id="next" class="fa-solid fa-chevron-right"></i>
+                                                                </div>
+                                                        </header>
+                                                        <div class="calendar">
+                                                                <ul class="weeks">
+                                                                <li>Sun</li>
+                                                                <li>Mon</li>
+                                                                <li>Tue</li>
+                                                                <li>Wed</li>
+                                                                <li>Thu</li>
+                                                                <li>Fri</li>
+                                                                <li>Sat</li>
+                                                                </ul>
+                                                                <ul class="days"></ul>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="code-tab-content ctent-12" id="view-12">
+                                        <pre>
+                                        &lt;div class="stack-cal-wrapper"&gt;
+                                        &lt;header&gt;
+                                                &lt;p class="current-date"&gt;&lt;/p&gt;
+                                                &lt;div class="icons"&gt;
+                                                &lt;i id="prev" class="fa-solid fa-chevron-left"&gt;&lt;/i&gt;
+                                                &lt;i id="next" class="fa-solid fa-chevron-right"&gt;&lt;/i&gt;
+                                                &lt;/div&gt;
+                                        &lt;/header&gt;
+                                        &lt;div class="calendar"&gt;
+                                                &lt;ul class="weeks"&gt;
+                                                &lt;li&gt;Sun&lt;/li&gt;
+                                                &lt;li&gt;Mon&lt;/li&gt;
+                                                &lt;li&gt;Tue&lt;/li&gt;
+                                                &lt;li&gt;Wed&lt;/li&gt;
+                                                &lt;li&gt;Thu&lt;/li&gt;
+                                                &lt;li&gt;Fri&lt;/li&gt;
+                                                &lt;li&gt;Sat&lt;/li&gt;
+                                                &lt;/ul&gt;
+                                                &lt;ul class="days"&gt;&lt;/ul&gt;
+                                        &lt;/div&gt;
+                                        &lt;/div&gt;
+
+                                        .stack-cal-wrapper {
+                                                margin: 0 auto;
+                                                text-align: center;
+                                                width: 450px;
+                                                background: #fff;
+                                                box-shadow: 0 4px 6px -1px rgba(0, 0, 0, .1), 0 2px 4px -1px rgba(0, 0, 0, .06);
+                                        }
+                                        .stack-cal-wrapper header {
+                                                display: flex;
+                                                align-items: center;
+                                                padding: 25px 30px 10px;
+                                                justify-content: space-between;
+                                        }
+                                        .stack-cal-wrapper header .icons {
+                                                display: flex;
+                                        }
+                                        .stack-cal-wrapper .icons i {
+                                                display: flex;
+                                        }
+                                        .stack-cal-wrapper .icons i {
+                                                height: 38px;
+                                                width: 38px;
+                                                cursor: pointer;
+                                                color: #878787;
+                                                text-align: center;
+                                                line-height: 38px;
+                                                font-size: 1.5rem;
+                                                user-select: none;
+                                                border-radius: 50%;
+                                        }
+                                        .stack-cal-wrapper .icons i:last-child {
+                                                margin-right: -20px;
+                                        }
+                                        .stack-cal-wrapper .icons i:hover {
+                                                color: #007bff;
+                                        }
+                                        .stack-cal-wrapper header .current-date {
+                                                font-size: 1.2rem;
+                                                font-weight: 500;
+                                                color: #007bff;
+                                        }
+                                        .stack-cal-wrapper .calendar {
+                                                padding: 20px;
+                                                margin-left: -35px;
+                                        }
+                                        .stack-cal-wrapper .calendar ul {
+                                                display: flex;
+                                                flex-wrap: wrap;
+                                                list-style: none;
+                                                text-align: center;
+                                        }
+                                        .stack-cal-wrapper .calendar .days {
+                                                margin-bottom: 20px;
+                                        }
+                                        .stack-cal-wrapper .calendar li {
+                                                color: #333;
+                                                width: calc(100% / 7);
+                                                font-size: 1.07rem;
+                                        }
+                                        .stack-cal-wrapper .calendar .weeks li {
+                                                font-weight: 500;
+                                                cursor: default;
+                                        }
+                                        .stack-cal-wrapper .calendar .days li {
+                                                z-index: 1;
+                                                cursor: pointer;
+                                                position: relative;
+                                                margin-top: 30px;
+                                        }
+                                        .stack-cal-wrapper .days li.inactive {
+                                                color: #aaa;
+                                        }
+                                        .stack-cal-wrapper .days li.active {
+                                                color: #fff;
+                                        }
+                                        .stack-cal-wrapper .days li::before {
+                                                position: absolute;
+                                                content: "";
+                                                left: 50%;
+                                                top: 50%;
+                                                height: 40px;
+                                                width: 40px;
+                                                z-index: -1;
+                                                border-radius: 50%;
+                                                transform: translate(-50%, -50%);
+                                        }
+                                        .stack-cal-wrapper .days li.active::before {
+                                                background: #007bff;
+                                        }
+                                        .stack-cal-wrapper .days li:not(.active):hover::before {
+                                                background: #f2f2f2;
+                                        }
+
+                                        document.addEventListener('DOMContentLoaded', function () {
+                                        // Calendar
+                                        const daysTag = document.querySelector(".days");
+                                        const currentDate = document.querySelector(".current-date");
+                                        const prevIcon = document.getElementById("prev");
+                                        const nextIcon = document.getElementById("next");
+
+                                        // Storing full names of months in an array
+                                        const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+                                        // Initialize the date
+                                        let date = new Date();
+
+                                        function renderCalendar() {
+                                        const firstDayOfMonth = new Date(date.getFullYear(), date.getMonth(), 1).getDay();
+                                        const lastDateOfMonth = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
+                                        const lastDayOfMonth = new Date(date.getFullYear(), date.getMonth(), lastDateOfMonth).getDay();
+                                        const lastDateOfLastMonth = new Date(date.getFullYear(), date.getMonth(), 0).getDate();
+
+                                        let liTag = "";
+
+                                        // Create li elements for the previous month's days
+                                        for (let i = firstDayOfMonth; i > 0; i--) {
+                                        liTag += `&lt;li class="inactive"&gt;${lastDateOfLastMonth - i + 1}&lt;/li&gt;`;
+                                        }
+
+                                        // Create li elements for the current month's days
+                                        for (let i = 1; i <= lastDateOfMonth; i++) {
+                                        const isToday = i === date.getDate() && date.getMonth() === new Date().getMonth() && date.getFullYear() === new Date().getFullYear();
+                                        liTag += `&lt;li class="${isToday ? "active" : ""}">${i}&lt;/li&gt;`;
+                                        }
+
+                                        // Create li elements for the next month's days
+                                        for (let i = lastDayOfMonth; i < 6; i++) {
+                                        liTag += `&lt;li class="inactive">${i - lastDayOfMonth + 1}&lt;/li&gt;`;
+                                        }
+
+                                        currentDate.innerText = `${months[date.getMonth()]} ${date.getFullYear()}`;
+                                        daysTag.innerHTML = liTag;
+                                        }
+
+                                        renderCalendar();
+
+                                        // Add click event listeners to previous and next icons
+                                        prevIcon.addEventListener("click", function () {
+                                        date.setMonth(date.getMonth() - 1);
+                                        renderCalendar();
+                                        });
+
+                                        nextIcon.addEventListener("click", function () {
+                                        date.setMonth(date.getMonth() + 1);
+                                        renderCalendar();
+                                        });
+                                        });
+                                        </pre>
+                                </div>
+                        </div>
+
+                        <div class="tab-area mt-4">
+                                <div class="code-tab">
+                                        <button class="code-tab-btn btn-13" data-tab="component-13">Simple Flex System</button>
+                                        <button class="code-tab-btn btn-13" data-tab="view-13">Code</button>
+                                        <div class="code-slide-bar"></div>
+                                </div>
+                                <div class="code-tab-content ctent-13" id="component-13">
+                                        <div class="ui-zone">
+                                                <div class="flex-container">
+                                                        <div class="item">Item</div>
+                                                </div>
+                                                <div class="flex-container">
+                                                        <div class="item">Item 1</div>
+                                                        <div class="item">Item 2</div>
+                                                </div>
+                                                <div class="flex-container">
+                                                        <div class="item">Item 1</div>
+                                                        <div class="item">Item 2</div>
+                                                        <div class="item">Item 3</div>
+                                                </div>
+                                                <div class="flex-container">
+                                                        <div class="item">Item 1</div>
+                                                        <div class="item">Item 2</div>
+                                                        <div class="item">Item 3</div>
+                                                        <div class="item">Item 4</div>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="code-tab-content ctent-13" id="view-13">
+                                        <pre>
+                                        &lt;div class="flex-container"&gt;
+                                                &lt;div class="item"&gt;&lt;/div&gt;
+                                        &lt;/div&gt;
+                                        &lt;div class="flex-container"&gt;
+                                                &lt;div class="item"&gt;&lt;/div&gt;
+                                                &lt;div class="item"&gt;&lt;/div&gt;
+                                        &lt;/div&gt;
+                                        &lt;div class="flex-container"&gt;
+                                                &lt;div class="item"&gt;&lt;/div&gt;
+                                                &lt;div class="item"&gt;&lt;/div&gt;
+                                                &lt;div class="item"&gt;&lt;/div&gt;
+                                        &lt;/div&gt;
+                                        &lt;div class="flex-container"&gt;
+                                                &lt;div class="item"&gt;&lt;/div&gt;
+                                                &lt;div class="item"&gt;&lt;/div&gt;
+                                                &lt;div class="item"&gt;&lt;/div&gt;
+                                                &lt;div class="item"&gt;&lt;/div&gt;
+                                        &lt;/div&gt;
+
+                                        .flex-container {
+                                                display: flex;
+                                                flex-wrap: wrap;
+                                                justify-content: space-between;
+                                        }
+                                        .flex-container .item {
+                                                flex: 1;
+                                                min-width: 200px;
+                                                height: 60px;
+                                                margin: 10px;
+                                                padding: 20px;
+                                                text-align: center;
+                                                color: #fff;
+                                                border-radius: 2px;
+                                                background-color: #140330;
+                                                box-sizing: border-box;
+                                        }
+                                        </pre>
+                                </div>
+                        </div>
+                </div>
+        </div>
+</section>

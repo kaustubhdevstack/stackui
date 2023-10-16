@@ -1,0 +1,897 @@
+<section class="page-area">
+        <div class="flex-container">
+                <div class="item">
+                        <div class="introduction">
+                                <h1>Freeform <span class="text-primary">Modals</span></h1>
+                                <p>Different types of Modals for different needs</p>
+                        </div>
+                </div>
+        </div>
+</section>
+<section class="content-area">
+        <div class="ui-area">
+                <div class="content-zone">
+                        <div class="tab-area">
+                                <div class="code-tab">
+                                        <button class="code-tab-btn btn-1" data-tab="component-1">Dialog Modal</button>
+                                        <button class="code-tab-btn btn-1" data-tab="view-1">Code</button>
+                                        <div class="code-slide-bar"></div>
+                                </div>
+                                <div class="code-tab-content ctent-1" id="component-1">
+                                        <div class="ui-zone">
+                                                <div class="container">
+                                                        <div class="tab-center">
+                                                                <button  id="openModal" class="stack-btn-1" onclick="openModal()">Edit Details</button>
+                                                        </div>
+
+                                                        <div id="cmdmodal" class="command-modal">
+                                                                <div class="cmd-modal-content">
+                                                                        <div class="cmd-modal-header">
+                                                                                <h4>Edit Details</h4>
+                                                                                <span class="close-button" onclick="closeModal()"><i class="fa-solid fa-xmark"></i></span>
+                                                                        </div>
+                                                                        <div class="cmd-modal-body">
+                                                                                <form action="">
+                                                                                        <div class="text-box-1">
+                                                                                                <input type="text" class="text-input" placeholder="First Name">
+                                                                                        </div>
+                                                                                        <div class="text-box-1 mt-2">
+                                                                                                <input type="text" class="text-input" placeholder="Last Name">
+                                                                                        </div>
+                                                                                        <button class="stack-btn-1 mt-2">Update Name</button>
+                                                                                </form>
+                                                                        </div>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="code-tab-content ctent-1" id="view-1">
+                                        <pre>
+                                        &lt;button id="openModal" class="stack-btn-1" onclick="openModal()"&gt;Edit Details&lt;/button&gt;
+
+                                        &lt;div id="cmdmodal" class="command-modal"&gt;
+                                        &lt;div class="cmd-modal-content"&gt;
+                                                &lt;div class="cmd-modal-header"&gt;
+                                                &lt;h4&gt;Edit Details&lt;/h4&gt;
+                                                &lt;span class="close-button" onclick="closeModal()"&gt;&lt;i class="fa-solid fa-xmark"&gt;&lt;/i&gt;&lt;/span&gt;
+                                                &lt;/div&gt;
+                                                &lt;div class="cmd-modal-body"&gt;
+                                                &lt;form action=""&gt;
+                                                        &lt;div class="text-box-1"&gt;
+                                                        &lt;input type="text" class="text-input" placeholder="First Name"&gt;
+                                                        &lt;/div&gt;
+                                                        &lt;div class="text-box-1 mt-2"&gt;
+                                                        &lt;input type="text" class="text-input" placeholder="Last Name"&gt;
+                                                        &lt;/div&gt;
+                                                        &lt;button class="stack-btn-1 mt-2"&gt;Update Name&lt;/button&gt;
+                                                &lt;/form&gt;
+                                                &lt;/div&gt;
+                                        &lt;/div&gt;
+                                        &lt;/div&gt;
+
+
+                                        .command-modal {
+                                                display: none; 
+                                                position: fixed; 
+                                                z-index: 1;
+                                                padding-top: 100px; 
+                                                left: 0;
+                                                top: 0;
+                                                width: 100%; 
+                                                height: 100%; 
+                                                overflow: auto; 
+                                                background-color: rgb(0,0,0); 
+                                                background-color: rgba(0,0,0,0.4); 
+                                        }
+                                        .cmd-modal-content {
+                                                position: relative;
+                                                background-color: #fefefe;
+                                                margin: auto;
+                                                padding: 20px;
+                                                width: 80%;
+                                                max-width: 500px;
+                                                -webkit-animation-name: animatetop;
+                                                -webkit-animation-duration: 0.4s;
+                                                animation-name: animatetop;
+                                                animation-duration: 0.4s
+                                        }
+                                        .cmd-modal-content .cmd-modal-header {
+                                                display: flex;
+                                                justify-content: space-between;
+                                                align-items: center;
+                                                padding: 2px 16px;
+                                        }
+                                        .cmd-modal-content .cmd-modal-header h4 {
+                                                margin: 0;
+                                                font-size: 16px;
+                                                font-family: 'Roboto', sans-serif;
+                                        }
+                                        .cmd-modal-content i {
+                                                color: #ddd;
+                                        }
+                                        .cmd-modal-content .cmd-modal-body {
+                                                padding: 16px;
+                                                margin-bottom: 35px;
+                                        }
+                                        .cmd-modal-content .cmd-modal-body button {
+                                                float: right;
+                                        }
+                                        .close-button {
+                                                font-size: 24px;
+                                                cursor: pointer;
+                                        }
+                                        @-webkit-keyframes animatetop {
+                                                from {top:-300px; opacity:0} 
+                                                to {top:0; opacity:1}
+                                        }  
+                                        @keyframes animatetop {
+                                                from {top:-300px; opacity:0}
+                                                to {top:0; opacity:1}
+                                        }
+
+                                        //Command Modal
+                                        function openModal() {
+                                        var modal = document.getElementById("cmdmodal");
+                                        modal.style.display = "block";
+
+                                        // Calculate the top margin to center the modal vertically
+                                        var windowHeight = window.innerHeight;
+                                        var modalHeight = modal.clientHeight;
+                                        var marginTop = (windowHeight - modalHeight) / 2;
+                                        
+                                        // Apply the calculated margin
+                                        modal.style.marginTop = marginTop + "px";
+
+                                        // Attach click event listener to close modal on outside click
+                                        window.addEventListener("click", closeModalOutside);
+                                        }
+
+                                        function closeModal() {
+                                        var modal = document.getElementById("cmdmodal");
+                                        modal.style.display = "none";
+
+                                        // Remove click event listener for closing modal on outside click
+                                        window.removeEventListener("click", closeModalOutside);
+                                        }
+
+                                        function closeModalOutside(event) {
+                                        var modal = document.getElementById("cmdmodal");
+                                        if (event.target === modal) {
+                                        closeModal();
+                                        }
+                                        }
+                                        </pre>
+                                </div>
+                        </div>
+
+                        <div class="tab-area mt-4">
+                                <div class="code-tab">
+                                        <button class="code-tab-btn btn-2" data-tab="component-2">Slide Modal</button>
+                                        <button class="code-tab-btn btn-2" data-tab="view-2">Code</button>
+                                        <div class="code-slide-bar"></div>
+                                </div>
+                                <div class="code-tab-content ctent-2" id="component-2">
+                                        <div class="ui-zone">
+                                                <div class="container">
+                                                        <div class="tab-center">   
+                                                                <button id="show-modal" class="stack-btn-1">Open Slide</button>
+                                                        </div>
+                                                        <div id="slide" class="slide-modal">
+                                                                <div id="sheet-cover" class="sheet-overaly"></div>
+                                                                        <div id="content" class="slide-modal-content">
+                                                                                <div class="slide-modal-header">
+                                                                                        <div id="drag-btn" class="drag-icon"><span></span></div>
+                                                                                </div>
+                                                                                <div class="slide-modal-content">
+                                                                                <h4>Bottom Slide Modal</h4>
+                                                                                <br>
+                                                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id odio magna. Nam vel augue rutrum, imperdiet sem a, mollis arcu. Phasellus et turpis porttitor enim facilisis dignissim eu eget ligula. Quisque malesuada justo mi, non auctor est mattis ut. Maecenas in nulla ligula. Cras tristique orci et enim elementum, sit amet malesuada sapien pharetra. Praesent egestas, massa vitae interdum facilisis, elit sem iaculis quam, at tempus tortor enim at mauris. Integer in consectetur orci. Sed sagittis ligula sit amet tincidunt egestas.</p>
+
+                                                                                <p>In quis massa orci. Morbi sagittis feugiat urna, sit amet luctus mauris maximus ac. Aenean augue augue, dignissim quis commodo ac, molestie eu nunc. Nunc in nunc eu mauris congue accumsan et sed purus. Cras luctus mollis mi id egestas. Nunc vel pulvinar nisi, a accumsan tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam id arcu sodales, imperdiet metus et, venenatis quam. Donec ipsum urna, bibendum ut auctor eu, placerat ac augue. Nullam tincidunt commodo dolor scelerisque eleifend. Vivamus finibus sed nulla a iaculis.</p>
+
+                                                                                <p>Curabitur nisi velit, laoreet ut eleifend eget, ultrices sed quam. Vivamus vel purus vitae lorem molestie venenatis vitae eget leo. Pellentesque in mollis elit. Donec faucibus dignissim justo, ac malesuada nunc dignissim vitae. Etiam leo nulla, posuere sed ultricies ac, ultrices sit amet dui. Duis eget quam ligula. Donec vitae pretium ligula. Ut orci mi, consectetur sed ullamcorper at, rutrum at tellus. Praesent imperdiet dignissim erat, id feugiat urna vehicula molestie.</p>
+
+                                                                                <p>Praesent volutpat ultrices urna, a consequat elit accumsan sed. Cras bibendum, massa sit amet porta condimentum, sapien leo rutrum ex, pretium scelerisque mi elit eget arcu. In hac habitasse platea dictumst. Nulla eu lacus tellus. Vivamus ac ante justo. Praesent pulvinar, velit et fringilla vestibulum, sapien sapien ullamcorper ligula, nec pulvinar nunc eros nec sapien. Phasellus lobortis blandit molestie. Mauris sit amet nisi lorem. Curabitur ultricies risus magna, et gravida urna tincidunt et. Phasellus aliquet ultricies turpis, vel feugiat nulla sollicitudin id.</p>
+
+                                                                                <p>Nullam bibendum blandit justo, hendrerit blandit erat tincidunt in. Morbi tempus rutrum enim eget finibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in dolor volutpat, laoreet diam at, suscipit ligula. Donec dictum et mi vitae sollicitudin. Aenean consequat dui sed nisi tincidunt, eu dapibus metus suscipit. Etiam congue sem eget dolor placerat posuere. Sed mauris magna, vehicula nec lectus quis, suscipit tincidunt arcu.</p>
+                                                                                </div>
+                                                                        </div>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="code-tab-content ctent-2" id="view-2">
+                                        <pre>
+                                        &lt;button id="show-modal" class="stack-btn-1"&gt;Open Slide&lt;/button&gt;
+
+                                        &lt;div id="slide" class="slide-modal"&gt;
+                                        &lt;div id="sheet-cover" class="sheet-overaly"&gt;&lt;/div&gt;
+                                                &lt;div id="content" class="slide-modal-content"&gt;
+                                                        &lt;div class="slide-modal-header"&gt;
+                                                        &lt;div id="drag-btn" class="drag-icon"&gt;&lt;span&gt;&lt;/span&gt;&lt;/div&gt;
+                                                        &lt;/div&gt;
+                                                        &lt;div class="slide-modal-content"&gt;
+                                                        &lt;h4&gt;Bottom Slide Modal&lt;/h4&gt;
+                                                        &lt;br&gt;
+                                                        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id odio magna. Nam vel augue rutrum, imperdiet sem a, mollis arcu. Phasellus et turpis porttitor enim facilisis dignissim eu eget ligula. Quisque malesuada justo mi, non auctor est mattis ut. Maecenas in nulla ligula. Cras tristique orci et enim elementum, sit amet malesuada sapien pharetra. Praesent egestas, massa vitae interdum facilisis, elit sem iaculis quam, at tempus tortor enim at mauris. Integer in consectetur orci. Sed sagittis ligula sit amet tincidunt egestas.&lt;/p&gt;
+                                                        &lt;/div&gt;
+                                                &lt;/div&gt;
+                                        &lt;/div&gt;
+
+                                        .slide-modal {
+                                                position: fixed;
+                                                bottom: 0;
+                                                left: 0;
+                                                width: 100%;
+                                                height: 100%;
+                                                display: flex;
+                                                flex-direction: column;
+                                                justify-content: flex-end;
+                                                align-items: center;
+                                                z-index: 9999;
+                                                opacity: 0;
+                                                pointer-events: none;
+                                                transition: opacity 0.1s linear;
+                                                background-color: rgba(0, 0, 0, 0.4);
+                                        }
+                                        .slide-modal .sheet-overlay {
+                                                position: absolute;
+                                                top: 0;
+                                                left: 0;
+                                                width: 100%;
+                                                height: 100%;
+                                                opacity: 0.2;
+                                                background: #000;
+                                        }
+                                        .slide-modal .slide-modal-content {
+                                                background: #fff;
+                                                height: 50vh;
+                                                max-height: 100vh;
+                                                padding: 25px;
+                                                max-width: 1080px;
+                                                overflow-y: auto;
+                                                scrollbar-width: none;
+                                                position: relative;
+                                                transform: translateY(100%);
+                                                transition: transform 0.3s ease;
+                                        }
+                                        .slide-modal .slide-modal-content p {
+                                                font-size: 1rem;
+                                                line-height: 1.8rem;
+                                        }
+                                        .slide-modal.show .slide-modal-content {
+                                                transform: translateY(0%);
+                                        }
+                                        .slide-modal .slide-modal-content::-webkit-scrollbar {
+                                                display: none;
+                                        }
+                                        .slide-modal .slide-modal-header {
+                                                display: flex;
+                                                justify-content: center;
+                                        }
+                                        .slide-modal .drag-icon span {
+                                                height: 4px;
+                                                width: 40px;
+                                                display: block;
+                                                background: #c7d0e1;
+                                                border-radius: 50px;
+                                                cursor: grab;
+                                        }
+                                        .slide-modal.show {
+                                                opacity: 1;
+                                                pointer-events: auto;
+                                        }
+
+                                        //Slide modal
+                                        const showModalBtn = document.getElementById("show-modal");
+                                        const showModal = document.getElementById("slide");
+                                        const sheetOverlay = document.getElementById("slide");
+                                        const dragBtn = document.getElementById("drag-btn");
+
+                                        const showSlideModal = () => {
+                                                showModal.classList.add("show");
+                                        }
+
+                                        const hideSlideModal = () => {
+                                                showModal.classList.remove("show");
+                                        }
+
+                                        const hideModalOnBtnClick = () => {
+                                                hideSlideModal();
+                                        }
+
+                                        showModalBtn.addEventListener("click", showSlideModal);
+                                        sheetOverlay.addEventListener("click", hideSlideModal);
+                                        dragBtn.addEventListener("click", hideModalOnBtnClick);
+                                        </pre>
+                                </div>
+                        </div>
+
+                        <div class="tab-area mt-4">
+                                <div class="code-tab">
+                                        <button class="code-tab-btn btn-3" data-tab="component-3">Read modal</button>
+                                        <button class="code-tab-btn btn-3" data-tab="view-3">Code</button>
+                                        <div class="code-slide-bar"></div>
+                                </div>
+                                <div class="code-tab-content ctent-3" id="component-3">
+                                        <div class="ui-zone">
+                                                <div class="container">
+                                                        <div class="tab-center">
+                                                                <button  id="openModal" class="stack-btn-1" onclick="readOpen()">Read Details</button>
+                                                        </div>
+                    
+                                                        <div id="readModal" class="read-modal">
+                                                                <div id="content" class="read-modal-body">
+                                                                <div class="read-modal-header">
+                                                                        <h4>Apple iMac 25</h4>
+                                                                        <span class="close-button" onclick="readClose()"><i class="fa-solid fa-xmark"></i></span>
+                                                                </div>
+                                                                <br>
+                                                                <div class="read-modal-content">
+                                                                        <h5>$2999</h5>
+                                                                        <p><b>Details</b></p>
+
+                                                                        <p>Standard glass ,3.8GHz 8-core 10th-generation Intel Core i7 processor, Turbo Boost up to 5.0GHz, 16GB 2666MHz DDR4 memory, Radeon Pro 5500 XT with 8GB of GDDR6 memory, 256GB SSD storage, Gigabit Ethernet, Magic Mouse 2, Magic Keyboard - US.</p>
+                                                                        <br>
+                                                                <h5>Category</h5>
+                                                                <span>PC/Computers</span>
+                                                                <br>
+                                                                <br>
+                                                                        <button class="stack-btn-1">Edit</button>
+                                                                        <button class="stack-btn-10">Delete</button>
+                                                                </div>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="code-tab-content ctent-3" id="view-3">
+                                        <pre>
+                                        &lt;button id="openModal" class="stack-btn-1" onclick="readOpen()"&gt;Read Details&lt;/button&gt;
+
+                                        &lt;div id="readModal" class="read-modal"&gt;
+                                                &lt;div id="content" class="read-modal-body"&gt;
+                                                        &lt;div class="read-modal-header"&gt;
+                                                        &lt;h4&gt;Apple iMac 25&lt;/h4&gt;
+                                                        &lt;span class="close-button" onclick="readClose()"&gt;&lt;i class="fa-solid fa-xmark"&gt;&lt;/i&gt;&lt;/span&gt;
+                                                        &lt;/div&gt;
+                                                        &lt;br&gt;
+                                                        &lt;div class="read-modal-content"&gt;
+                                                        &lt;h5&gt;$2999&lt;/h5&gt;
+                                                        &lt;p&gt;&lt;b&gt;Details&lt;/b&gt;&lt;/p&gt;
+                                                        &lt;p&gt;Standard glass ,3.8GHz 8-core 10th-generation Intel Core i7 processor, Turbo Boost up to 5.0GHz, 16GB 2666MHz DDR4 memory, Radeon Pro 5500 XT with 8GB of GDDR6 memory, 256GB SSD storage, Gigabit Ethernet, Magic Mouse 2, Magic Keyboard - US.&lt;/p&gt;
+                                                        &lt;h5&gt;Category&lt;/h5&gt;
+                                                        &lt;span&gt;PC/Computers&lt;/span&gt;
+                                                        &lt;br&gt;
+                                                        &lt;br&gt;
+                                                        &lt;button class="stack-btn-1"&gt;Edit&lt;/button&gt;
+                                                        &lt;button class="stack-btn-10"&gt;Delete&lt;/button&gt;
+                                                        &lt;/div&gt;
+                                                &lt;/div&gt;
+                                        &lt;/div&gt;
+
+                                        .read-modal {
+                                                display: none; 
+                                                position: fixed; 
+                                                z-index: 1;
+                                                padding-top: 100px; 
+                                                left: 0;
+                                                top: 0;
+                                                width: 100%; 
+                                                height: 100%; 
+                                                overflow: auto; 
+                                                background-color: rgb(0,0,0); 
+                                                background-color: rgba(0,0,0,0.4); 
+                                        }
+                                        .read-modal-body {
+                                                position: relative;
+                                                background-color: #fefefe;
+                                                margin: auto;
+                                                padding: 20px;
+                                                width: 80%;
+                                                max-width: 600px;
+                                                -webkit-animation-name: animatetop;
+                                                -webkit-animation-duration: 0.4s;
+                                                animation-name: animatetop;
+                                                animation-duration: 0.4s
+                                        }
+                                        .read-modal-body .read-modal-header {
+                                                display: flex;
+                                                justify-content: space-between;
+                                                align-items: center;
+                                        }
+                                        .read-modal-body .read-modal-header h4 {
+                                                margin: 0;
+                                                font-size: 16px;
+                                                font-family: 'Roboto', sans-serif;
+                                        }
+                                        .read-modal-body .read-modal-content {
+                                                margin-bottom: 3rem;
+                                        }
+                                        .read-modal-body .read-modal-content p {
+                                                font-size: 1rem;
+                                                line-height: 1.8rem;
+                                        }
+                                        .read-modal-body button {
+                                                float: right;
+                                        }
+                                        .read-modal-body i {
+                                                color: #ddd;
+                                        }
+                                        .read-modal .close-button {
+                                                font-size: 24px;
+                                                cursor: pointer;
+                                        }
+                                        @-webkit-keyframes animatetop {
+                                                from {top:-300px; opacity:0} 
+                                                to {top:0; opacity:1}
+                                        }  
+                                        @keyframes animatetop {
+                                                from {top:-300px; opacity:0}
+                                                to {top:0; opacity:1}
+                                        }
+
+                                        // Read Modal
+                                        function readOpen() {
+                                        var modal = document.getElementById("readModal");
+                                        modal.style.display = "block";
+                                        
+                                        // Attach click event listener to close modal on outside click
+                                        window.addEventListener("click", readHide);
+                                        }
+
+                                        function readClose() {
+                                        var modal = document.getElementById("readModal");
+                                        modal.style.display = "none";
+
+                                        // Remove click event listener for closing modal on outside click
+                                        window.removeEventListener("click", readHide);
+                                        }
+
+                                        function readHide(event) {
+                                        var modal = document.getElementById("readModal");
+                                        if (event.target === modal) {
+                                        readClose();
+                                        }
+                                        }
+                                        </pre>
+                                </div>
+                        </div>
+
+                        <div class="tab-area mt-4">
+                                <div class="code-tab">
+                                        <button class="code-tab-btn btn-4" data-tab="component-4">Modal with Footer</button>
+                                        <button class="code-tab-btn btn-4" data-tab="view-4">Code</button>
+                                        <div class="code-slide-bar"></div>
+                                </div>
+                                <div class="code-tab-content ctent-4" id="component-4">
+                                        <div class="ui-zone">
+                                                <div class="container">
+                                                        <div class="tab-center">
+                                                                <button  id="openModal" class="stack-btn-1" onclick="fmodalOpen()">Open Modal</button>
+                                                        </div>
+                                                        <div id="footerModal" class="footer-modal">
+                                                                <div id="content" class="footer-modal-body">
+                                                                        <div class="footer-modal-header">
+                                                                                <h4>Modal with Footer</h4>
+                                                                                <span class="close-button" onclick="fmodalClose()"><i class="fa-solid fa-xmark"></i></span>
+                                                                        </div>
+                                                                        <div class="footer-modal-content">
+                                                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id odio magna. Nam vel augue rutrum, imperdiet sem a, mollis arcu. Phasellus et turpis porttitor enim facilisis dignissim eu eget ligula. Quisque malesuada justo mi, non auctor est mattis ut. Maecenas in nulla ligula. Cras tristique orci et enim elementum, sit amet malesuada sapien pharetra. Praesent egestas, massa vitae interdum facilisis, elit sem iaculis quam, at tempus tortor enim at mauris. Integer in consectetur orci. Sed sagittis ligula sit amet tincidunt egestas.</p>
+                                                                        </div>
+                                                                        <div class="footer-modal-footer">
+                                                                                <button class="stack-btn-10" onclick="fmodalClose()">Close Button</button>
+                                                                        </div>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="code-tab-content ctent-4" id="view-4">
+                                        <pre>
+                                        &lt;button id="openModal" class="stack-btn-1" onclick="fmodalOpen()"&gt;Open Modal&lt;/button&gt;
+
+                                        &lt;div id="footerModal" class="footer-modal"&gt;
+                                                &lt;div id="content" class="footer-modal-body"&gt;
+                                                        &lt;div class="footer-modal-header"&gt;
+                                                        &lt;h4&gt;Modal with Footer&lt;/h4&gt;
+                                                        &lt;span class="close-button" onclick="fmodalClose()"&gt;&lt;i class="fa-solid fa-xmark"&gt;&lt;/i&gt;&lt;/span&gt;
+                                                        &lt;/div&gt;
+                                                        &lt;div class="footer-modal-content"&gt;
+                                                        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id odio magna. Nam vel augue rutrum, imperdiet sem a, mollis arcu. Phasellus et turpis porttitor enim facilisis dignissim eu eget ligula. Quisque malesuada justo mi, non auctor est mattis ut. Maecenas in nulla ligula. Cras tristique orci et enim elementum, sit amet malesuada sapien pharetra. Praesent egestas, massa vitae interdum facilisis, elit sem iaculis quam, at tempus tortor enim at mauris. Integer in consectetur orci. Sed sagittis ligula sit amet tincidunt egestas.&lt;/p&gt;
+                                                        &lt;/div&gt;
+                                                        &lt;div class="footer-modal-footer"&gt;
+                                                        &lt;button class="stack-btn-10" onclick="fmodalClose()"&gt;Close Button&lt;/button&gt;
+                                                        &lt;/div&gt;
+                                                &lt;/div&gt;
+                                        &lt;/div&gt;
+
+                                        .footer-modal {
+                                                display: none; 
+                                                position: fixed; 
+                                                z-index: 1;
+                                                padding-top: 100px; 
+                                                left: 0;
+                                                top: 0;
+                                                width: 100%; 
+                                                height: 100%; 
+                                                overflow: auto; 
+                                                background-color: rgb(0,0,0); 
+                                                background-color: rgba(0,0,0,0.4); 
+                                        }
+                                        .footer-modal-body {
+                                                position: relative;
+                                                background-color: #fefefe;
+                                                margin: auto;
+                                                padding: 20px;
+                                                width: 80%;
+                                                max-width: 600px;
+                                                -webkit-animation-name: animatetop;
+                                                -webkit-animation-duration: 0.4s;
+                                                animation-name: animatetop;
+                                                animation-duration: 0.4s;
+                                        }
+                                        .footer-modal-body .footer-modal-header {
+                                                display: flex;
+                                                justify-content: space-between;
+                                                align-items: center;
+                                        }
+                                        .footer-modal-body .footer-modal-header h3 {
+                                                margin: 0;
+                                                font-family: 'Roboto', sans-serif;
+                                        }
+                                        .footer-modal-body .footer-modal-content {
+                                                margin-top: 1.5rem;
+                                                margin-bottom: 1.5rem;
+                                        }
+                                        .footer-modal-body .footer-modal-content p {
+                                                font-size: 1rem;
+                                                line-height: 1.8rem;
+                                        }
+                                        .footer-modal-body i {
+                                                color: #ddd;
+                                        }
+                                        .footer-modal-footer .close-button {
+                                                font-size: 24px;
+                                                cursor: pointer;
+                                        }
+                                        @-webkit-keyframes animatetop {
+                                                from {top:-300px; opacity:0} 
+                                                to {top:0; opacity:1}
+                                        }  
+                                        @keyframes animatetop {
+                                                from {top:-300px; opacity:0}
+                                                to {top:0; opacity:1}
+                                        }
+
+                                        // Footer Modal
+                                        function fmodalOpen() {
+                                        var modal = document.getElementById("footerModal");
+                                        modal.style.display = "block";
+                                        
+                                        // Attach click event listener to close modal on outside click
+                                        window.addEventListener("click", fmhide);
+                                        }
+
+
+                                        function fmodalClose() {
+                                        var modal = document.getElementById("footerModal");
+                                        modal.style.display = "none";
+
+                                        // Remove click event listener for closing modal on outside click
+                                        window.removeEventListener("click", fmhide);
+                                        }
+
+                                        function fmhide(event) {
+                                        var modal = document.getElementById("footerModal");
+                                        if (event.target === modal) {
+                                        fmodalClose();
+                                        }
+                                        }
+                                        </pre>
+                                </div>
+                        </div>
+
+                        <div class="tab-area mt-4">
+                                <div class="code-tab">
+                                        <button class="code-tab-btn btn-5" data-tab="component-5">Confirm Modal</button>
+                                        <button class="code-tab-btn btn-5" data-tab="view-5">Code</button>
+                                        <div class="code-slide-bar"></div>
+                                </div>
+                                <div class="code-tab-content ctent-5" id="component-5">
+                                        <div class="ui-zone">
+                                                <div class="container">
+                                                        <div class="tab-center">
+                                                                <button  id="openModal" class="stack-btn-1" onclick="confirmOpen()">Confirm Modal</button>
+                                                        </div>
+                        
+                                                        <div id="confirmModal" class="confirm-modal">
+                                                        <div id="content" class="confirm-modal-body">
+                                                        <div class="confirm-modal-header">
+                                                        <h4>Confirmation Modal</h4>
+                                                        <span class="close-button" onclick="confirmClose()"><i class="fa-solid fa-xmark"></i></span>
+                                                        </div>
+                                                        <div class="confirm-modal-content">
+                                                        <div class="confirm-content">
+                                                                <h4><i class="fa-solid fa-trash"></i></h4>
+                                                                <p>Are you sure you want to delete this item?</p>
+                                                        </div>
+                                                        <button class="cancel-btn stack-btn-10">No Cancel it!</button>
+                                                        <button class="ok-btn stack-btn-1">Yes, I'm Sure</button>
+                                                        </div>
+                                                        </div>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="code-tab-content ctent-5" id="view-5">
+                                        <pre>
+                                        &lt;button id="openModal" class="stack-btn-1" onclick="confirmOpen()"&gt;Confirm Modal&lt;/button&gt;
+
+                                        &lt;div id="confirmModal" class="confirm-modal"&gt;
+                                                &lt;div id="content" class="confirm-modal-body"&gt;
+                                                        &lt;div class="confirm-modal-header"&gt;
+                                                        &lt;h4&gt;Confirmation Modal&lt;/h4&gt;
+                                                        &lt;span class="close-button" onclick="confirmClose()"&gt;&lt;i class="fa-solid fa-xmark"&gt;&lt;/i&gt;&lt;/span&gt;
+                                                        &lt;/div&gt;
+                                                        &lt;div class="confirm-modal-content"&gt;
+                                                        &lt;div class="confirm-content"&gt;
+                                                                &lt;h4&gt;&lt;i class="fa-solid fa-trash"&gt;&lt;/i&gt;&lt;/h4&gt;
+                                                                &lt;p&gt;Are you sure you want to delete this item?&lt;/p&gt;
+                                                        &lt;/div&gt;
+                                                        &lt;button class="cancel-btn stack-btn-10"&gt;No, Cancel it!&lt;/button&gt;
+                                                        &lt;button class="ok-btn stack-btn-1"&gt;Yes, I'm Sure&lt;/button&gt;
+                                                        &lt;/div&gt;
+                                                &lt;/div&gt;
+                                        &lt;/div&gt;
+
+                                        .confirm-modal {
+                                                display: none; 
+                                                position: fixed; 
+                                                z-index: 1;
+                                                padding-top: 100px; 
+                                                left: 0;
+                                                top: 0;
+                                                width: 100%; 
+                                                height: 100%; 
+                                                overflow: auto; 
+                                                background-color: rgb(0,0,0); 
+                                                background-color: rgba(0,0,0,0.4); 
+                                        }
+                                        .confirm-modal-body {
+                                                position: relative;
+                                                background-color: #fefefe;
+                                                margin: auto;
+                                                padding: 20px;
+                                                width: 80%;
+                                                max-width: 600px;
+                                                -webkit-animation-name: animatetop;
+                                                -webkit-animation-duration: 0.4s;
+                                                animation-name: animatetop;
+                                                animation-duration: 0.4s;
+                                        }
+                                        .confirm-modal-body .confirm-modal-header {
+                                                display: flex;
+                                                justify-content: space-between;
+                                                align-items: center;
+                                        }
+                                        .confirm-modal-body .confirm-modal-header h3 {
+                                                margin: 0;
+                                                font-family: 'Roboto', sans-serif;
+                                        }
+                                        .confirm-modal-body .confirm-content {
+                                                display: flex;
+                                                flex-direction: column;
+                                                align-items: center;
+                                                justify-content: center;
+                                                text-align: center;
+                                                margin-top: 2rem;
+                                                margin-bottom: 2rem;
+                                        }
+                                        .confirm-modal-body .confirm-modal-content p {
+                                                font-size: 1rem;
+                                        }
+                                        .confirm-modal-body .confirm-modal-content button {
+                                                display: inline-block;
+                                                margin: 0 5px;
+                                        }
+                                        .confirm-modal-body .ok-btn {
+                                                float: right;
+                                        }
+                                        .confirm-modal-body i {
+                                                color: #ddd;
+                                        }
+                                        .confirm-modal .close-button {
+                                                font-size: 24px;
+                                                cursor: pointer;
+                                        }
+                                        @-webkit-keyframes animatetop {
+                                                from {top:-300px; opacity:0} 
+                                                to {top:0; opacity:1}
+                                        }  
+                                        @keyframes animatetop {
+                                                from {top:-300px; opacity:0}
+                                                to {top:0; opacity:1}
+                                        }
+
+                                        // Confirm Modal
+                                        function confirmOpen() {
+                                        var modal = document.getElementById("confirmModal");
+                                        modal.style.display = "block";
+                                        
+                                        // Attach click event listener to close modal on outside click
+                                        window.addEventListener("click", confirmHide);
+                                        }
+
+
+                                        function confirmClose() {
+                                        var modal = document.getElementById("confirmModal");
+                                        modal.style.display = "none";
+
+                                        // Remove click event listener for closing modal on outside click
+                                        window.removeEventListener("click", confirmHide);
+                                        }
+
+                                        function confirmHide(event) {
+                                        var modal = document.getElementById("confirmModal");
+                                        if (event.target === modal) {
+                                        confirmClose();
+                                        }
+                                        }
+                                        </pre>
+                                </div>
+                        </div>
+
+                        <div class="tab-area mt-4">
+                                <div class="code-tab">
+                                        <button class="code-tab-btn btn-6" data-tab="component-6">CTA Modal</button>
+                                        <button class="code-tab-btn btn-6" data-tab="view-6">Code</button>
+                                        <div class="code-slide-bar"></div>
+                                </div>
+                                <div class="code-tab-content ctent-6" id="component-6">
+                                        <div class="ui-zone">
+                                                <div class="container">
+                                                        <div class="tab-center">
+                                                                <button  id="ctaModalbtn" class="stack-btn-1" onclick="ctaOpen()">CTA Modal</button>
+                                                        </div>
+                                                        <div id="ctaModal" class="cta-modal">
+                                                                <div id="content" class="cta-modal-body">
+                                                                <div class="cta-modal-header">
+                                                                <h4>Call to Action Modal</h4>
+                                                                <span class="close-button" onclick="ctaClose()"><i class="fa-solid fa-xmark"></i></span>
+                                                                </div>
+                                                                <div class="cta-modal-content">
+                                                                <div class="cta-content">
+                                                                        <h4><i class="fa-solid fa-envelope"></i></h4>
+                                                                        <p>Subscribe to the newsletter</p>
+                                                                        <button class="ok-btn stack-btn-1">Yes, I will!</button>
+                                                                </div>
+                                                                </div>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="code-tab-content ctent-6" id="view-6">
+                                        <pre>
+                                        &lt;button id="ctaModalbtn" class="stack-btn-1" onclick="ctaOpen()"&gt;CTA Modal&lt;/button&gt;
+
+                                        &lt;div id="ctaModal" class="cta-modal"&gt;
+                                                &lt;div id="content" class="cta-modal-body"&gt;
+                                                        &lt;div class="cta-modal-header"&gt;
+                                                        &lt;h4&gt;Call to Action Modal&lt;/h4&gt;
+                                                        &lt;span class="close-button" onclick="ctaClose()"&gt;&lt;i class="fa-solid fa-xmark"&gt;&lt;/i&gt;&lt;/span&gt;
+                                                        &lt;/div&gt;
+                                                        &lt;div class="cta-modal-content"&gt;
+                                                        &lt;div class="cta-content"&gt;
+                                                                &lt;h4&gt;&lt;i class="fa-solid fa-envelope"&gt;&lt;/i&gt;&lt;/h4&gt;
+                                                                &lt;p&gt;Subscribe to the newsletter&lt;/p&gt;
+                                                                &lt;button class="ok-btn stack-btn-1"&gt;Yes, I will!&lt;/button&gt;
+                                                        &lt;/div&gt;
+                                                        &lt;/div&gt;
+                                                &lt;/div&gt;
+                                        &lt;/div&gt;
+
+                                        .cta-modal {
+                                                display: none; 
+                                                position: fixed; 
+                                                z-index: 1;
+                                                padding-top: 100px; 
+                                                left: 0;
+                                                top: 0;
+                                                width: 100%; 
+                                                height: 100%; 
+                                                overflow: auto; 
+                                                background-color: rgb(0,0,0); 
+                                                background-color: rgba(0,0,0,0.4); 
+                                        }
+                                        .cta-modal-body {
+                                                position: relative;
+                                                background-color: #fefefe;
+                                                margin: auto;
+                                                padding: 20px;
+                                                width: 80%;
+                                                max-width: 600px;
+                                                -webkit-animation-name: animatetop;
+                                                -webkit-animation-duration: 0.4s;
+                                                animation-name: animatetop;
+                                                animation-duration: 0.4s;
+                                        }
+                                        .cta-modal-body .cta-modal-header {
+                                                display: flex;
+                                                justify-content: space-between;
+                                                align-items: center;
+                                        }
+                                        .cta-modal-body .cta-modal-header h4 {
+                                                margin: 0;
+                                                font-size: 16px;
+                                                font-family: 'Roboto', sans-serif;
+                                        }
+                                        .cta-modal-body .cta-content {
+                                                display: flex;
+                                                flex-direction: column;
+                                                align-items: center;
+                                                justify-content: center;
+                                                text-align: center;
+                                        }
+                                        .cta-modal-body .cta-content p {
+                                                margin-top: 1.5rem;
+                                                margin-bottom: 2rem;
+                                                font-size: 1rem;
+                                        }
+                                        .cta-modal-body .cta-content i {
+                                                margin-top: 1.5rem;
+                                                font-size: 42px;
+                                        }
+                                        .cta-modal-body .cta-modal-content button {
+                                                display: inline-block;
+                                                margin: 0 5px;
+                                                width: 100%;
+                                        }
+                                        .cta-modal-body i {
+                                                color: #ddd;
+                                        }
+                                        .cta-modal .close-button {
+                                                font-size: 24px;
+                                                cursor: pointer;
+                                        }
+                                        @-webkit-keyframes animatetop {
+                                                from {top:-300px; opacity:0} 
+                                                to {top:0; opacity:1}
+                                        }  
+                                        @keyframes animatetop {
+                                                from {top:-300px; opacity:0}
+                                                to {top:0; opacity:1}
+                                        }
+
+                                        // CTA Modal
+                                        function ctaOpen() {
+                                        var modal = document.getElementById("ctaModal");
+                                        modal.style.display = "block";
+                                        
+                                        // Attach click event listener to close modal on outside click
+                                        window.addEventListener("click", ctaHide);
+                                        }
+
+
+                                        function ctaClose() {
+                                        var modal = document.getElementById("ctaModal");
+                                        modal.style.display = "none";
+
+                                        // Remove click event listener for closing modal on outside click
+                                        window.removeEventListener("click", ctaHide);
+                                        }
+
+                                        function ctaHide(event) {
+                                        var modal = document.getElementById("ctaModal");
+                                        if (event.target === modal) {
+                                        ctaClose();
+                                        }
+                                        }
+                                        </pre>
+                                </div>
+                        </div>
+                </div>
+        </div>
+</section>

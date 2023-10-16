@@ -1,0 +1,769 @@
+<section class="page-area">
+        <div class="flex-container">
+                <div class="item">
+                        <div class="introduction">
+                                <h1>Freeform <span class="text-primary">Tables</span></h1>
+                                <p>Different types of Table Components for different needs</p>
+                        </div>
+                </div>
+        </div>
+</section>
+<section class="content-area">
+        <div class="ui-area">
+                <div class="content-zone">
+                        <div class="tab-area">
+                                <div class="code-tab">
+                                        <button class="code-tab-btn btn-1" data-tab="component-1">Regular Table</button>
+                                        <button class="code-tab-btn btn-1" data-tab="view-1">Code</button>
+                                        <div class="code-slide-bar"></div>
+                                </div>
+                                <div class="code-tab-content ctent-1" id="component-1">
+                                        <div class="ui-zone">
+                                                <div class="stack-table-container-1">
+                                                        <table class="stack-table-1">
+                                                                <thead>
+                                                                <tr>
+                                                                        <th>Name</th>
+                                                                        <th>Age</th>
+                                                                        <th>City</th>
+                                                                </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                <tr>
+                                                                        <td>John Doe</td>
+                                                                        <td>25</td>
+                                                                        <td>New York</td>
+                                                                </tr>
+                                                                <tr>
+                                                                        <td>Jane Smith</td>
+                                                                        <td>30</td>
+                                                                        <td>Los Angeles</td>
+                                                                </tr>
+                                                                <tr>
+                                                                        <td>Michael Johnson</td>
+                                                                        <td>28</td>
+                                                                        <td>Chicago</td>
+                                                                </tr>
+                                                                </tbody>
+                                                        </table>
+                                                </div>
+
+                                                <div class="stack-table-container-2 mt-3">
+                                                        <table class="stack-table-2">
+                                                                <thead>
+                                                                <tr>
+                                                                        <th>Name</th>
+                                                                        <th>Age</th>
+                                                                        <th>City</th>
+                                                                </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                <tr>
+                                                                        <td>John Doe</td>
+                                                                        <td>25</td>
+                                                                        <td>New York</td>
+                                                                </tr>
+                                                                <tr>
+                                                                        <td>Jane Smith</td>
+                                                                        <td>30</td>
+                                                                        <td>Los Angeles</td>
+                                                                </tr>
+                                                                <tr>
+                                                                        <td>Michael Johnson</td>
+                                                                        <td>28</td>
+                                                                        <td>Chicago</td>
+                                                                </tr>
+                                                                </tbody>
+                                                        </table>
+                                                </div>
+
+                                                <div class="stack-table-container-3 mt-3">
+                                                <table class="stack-table-3">
+                                                        <thead>
+                                                        <tr>
+                                                                <th>Name</th>
+                                                                <th>Age</th>
+                                                                <th>City</th>
+                                                        </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                        <tr>
+                                                                <td data-label="Name">John Doe</td>
+                                                                <td data-label="Age">25</td>
+                                                                <td data-label="City">New York</td>
+                                                        </tr>
+                                                        <tr>
+                                                                <td data-label="Name">Jane Smith</td>
+                                                                <td data-label="Age">30</td>
+                                                                <td data-label="City">Los Angeles</td>
+                                                        </tr>
+                                                        <tr>
+                                                                <td data-label="Name">Michael Johnson</td>
+                                                                <td data-label="Age">28</td>
+                                                                <td data-label="City">Chicago</td>
+                                                        </tr>
+                                                        </tbody>
+                                                </table>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="code-tab-content ctent-1" id="view-1">
+                                        <pre>
+                                        &lt;div class="stack-table-container-1"&gt;
+                                                &lt;table class="stack-table-1"&gt;
+                                                        &lt;thead&gt;
+                                                        &lt;tr&gt;
+                                                        &lt;th&gt;Name&lt;/th&gt;
+                                                        &lt;th&gt;Age&lt;/th&gt;
+                                                        &lt;th&gt;City&lt;/th&gt;
+                                                        &lt;/tr&gt;
+                                                        &lt;/thead&gt;
+                                                        &lt;tbody&gt;
+                                                        &lt;tr&gt;
+                                                        &lt;td&gt;John Doe&lt;/td&gt;
+                                                        &lt;td&gt;25&lt;/td&gt;
+                                                        &lt;td&gt;New York&lt;/td&gt;
+                                                        &lt;/tr&gt;
+                                                        &lt;tr&gt;
+                                                        &lt;td&gt;Jane Smith&lt;/td&gt;
+                                                        &lt;td&gt;30&lt;/td&gt;
+                                                        &lt;td&gt;Los Angeles&lt;/td&gt;
+                                                        &lt;/tr&gt;
+                                                        &lt;tr&gt;
+                                                        &lt;td&gt;Michael Johnson&lt;/td&gt;
+                                                        &lt;td&gt;28&lt;/td&gt;
+                                                        &lt;td&gt;Chicago&lt;/td&gt;
+                                                        &lt;/tr&gt;
+                                                        &lt;/tbody&gt;
+                                                &lt;/table&gt;
+                                        &lt;/div&gt;
+
+                                        &lt;div class="stack-table-container-2"&gt;
+                                                &lt;table class="stack-table-2"&gt;
+                                                        &lt;thead&gt;
+                                                        &lt;tr&gt;
+                                                        &lt;th&gt;Name&lt;/th&gt;
+                                                        &lt;th&gt;Age&lt;/th&gt;
+                                                        &lt;th&gt;City&lt;/th&gt;
+                                                        &lt;/tr&gt;
+                                                        &lt;/thead&gt;
+                                                        &lt;tbody&gt;
+                                                        &lt;tr&gt;
+                                                        &lt;td&gt;John Doe&lt;/td&gt;
+                                                        &lt;td&gt;25&lt;/td&gt;
+                                                        &lt;td&gt;New York&lt;/td&gt;
+                                                        &lt;/tr&gt;
+                                                        &lt;tr&gt;
+                                                        &lt;td&gt;Jane Smith&lt;/td&gt;
+                                                        &lt;td&gt;30&lt;/td&gt;
+                                                        &lt;td&gt;Los Angeles&lt;/td&gt;
+                                                        &lt;/tr&gt;
+                                                        &lt;tr&gt;
+                                                        &lt;td&gt;Michael Johnson&lt;/td&gt;
+                                                        &lt;td&gt;28&lt;/td&gt;
+                                                        &lt;td&gt;Chicago&lt;/td&gt;
+                                                        &lt;/tr&gt;
+                                                        &lt;/tbody&gt;
+                                                &lt;/table&gt;
+                                        &lt;/div&gt;
+
+                                        &lt;div class="stack-table-container-3"&gt;
+                                                &lt;table class="stack-table-3"&gt;
+                                                        &lt;thead&gt;
+                                                        &lt;tr&gt;
+                                                        &lt;th&gt;Name&lt;/th&gt;
+                                                        &lt;th&gt;Age&lt;/th&gt;
+                                                        &lt;th&gt;City&lt;/th&gt;
+                                                        &lt;/tr&gt;
+                                                        &lt;/thead&gt;
+                                                        &lt;tbody&gt;
+                                                        &lt;tr&gt;
+                                                        &lt;td data-label="Name"&gt;John Doe&lt;/td&gt;
+                                                        &lt;td data-label="Age"&gt;25&lt;/td&gt;
+                                                        &lt;td data-label="City"&gt;New York&lt;/td&gt;
+                                                        &lt;/tr&gt;
+                                                        &lt;tr&gt;
+                                                        &lt;td data-label="Name"&gt;Jane Smith&lt;/td&gt;
+                                                        &lt;td data-label="Age"&gt;30&lt;/td&gt;
+                                                        &lt;td data-label="City"&gt;Los Angeles&lt;/td&gt;
+                                                        &lt;/tr&gt;
+                                                        &lt;tr&gt;
+                                                        &lt;td data-label="Name"&gt;Michael Johnson&lt;/td&gt;
+                                                        &lt;td data-label="Age"&gt;28&lt;/td&gt;
+                                                        &lt;td data-label="City"&gt;Chicago&lt;/td&gt;
+                                                        &lt;/tr&gt;
+                                                        &lt;/tbody&gt;
+                                                &lt;/table&gt;
+                                        &lt;/div&gt;
+
+                                        .stack-table-container-1 {
+                                                width: 100%;
+                                        }
+                                        table.stack-table-1 {
+                                                border-collapse: collapse;
+                                                margin: 25px 0;
+                                                font-size: 1rem;
+                                                width: 100%;
+                                                overflow: hidden;
+                                                background-color: #fff;
+                                                border-bottom: 2px solid #030712;
+                                        }
+                                        table.stack-table-1 th, td {
+                                                padding: 15px;
+                                        }
+                                        table.stack-table-1 thead {
+                                                background-color: #030712;
+                                                color: #fff;
+                                                text-align: left;
+                                                font-weight: bold;
+                                        }
+                                        table.stack-table-1 tr:nth-child(even) {
+                                                background-color: #f4f6fb;
+                                        }
+                                        .stack-table-container-2 {
+                                                width: 100%;
+                                        }
+                                        table.stack-table-2 {
+                                                border-collapse: collapse;
+                                                margin: 25px 0;
+                                                font-size: 1rem;
+                                                width: 100%;
+                                                overflow: hidden;
+                                                background-color: #fff;
+                                                border-bottom: 2px solid #030712;
+                                        }
+                                        table.stack-table-2 th, td {
+                                                padding: 15px;
+                                                text-align: left;
+                                                border-bottom: 1px solid #ddd;
+                                        }
+                                        table.stack-table-2 thead {
+                                                background-color: #030712;
+                                                color: #fff;
+                                        }
+                                        table.stack-table-2 td[data-label]:before {
+                                                content: attr(data-label);
+                                                float: left;
+                                                font-weight: bold;
+                                        }
+                                        .stack-table-container-3 {
+                                                width: 100%;
+                                        }
+                                        table.stack-table-3 {
+                                                border-collapse: collapse;
+                                                margin: 25px 0;
+                                                font-size: 1rem;
+                                                width: 100%;
+                                                overflow: hidden;
+                                                background-color: #fff;
+                                                border-bottom: 2px solid #030712;
+                                        }
+                                        table.stack-table-3 th,
+                                        table.stack-table-3 td {
+                                                padding: 15px;
+                                                border: 1px solid #ddd;
+                                                text-align: left;
+                                        }
+                                        table.stack-table-3 thead {
+                                                background-color: #030712;
+                                                color: #fff;
+                                        }
+                                        table.stack-table-3 tbody tr:nth-child(even) {
+                                                background-color: #f4f6fb;
+                                        }
+                                        table.stack-table-3 tbody td[data-label]:before {
+                                                content: attr(data-label);
+                                                float: left;
+                                                font-weight: bold;
+                                                margin-right: 5px;
+                                        }
+                                                @media (max-width: 790px) {
+                                                .stack-table-container-1,
+                                                .stack-table-container-2,
+                                                .stack-table-container-3 {
+                                                        overflow-x: auto;
+                                                        font-size: 0.8em
+                                                }
+                                                .stack-table-container-1 th,
+                                                .stack-table-container-2 th,
+                                                .stack-table-container-3 th {
+                                                        padding: 8px;
+                                                }
+                                        }
+                                        </pre>
+                                </div>
+                        </div>
+
+                        <div class="tab-area mt-4">
+                                <div class="code-tab">
+                                        <button class="code-tab-btn btn-2" data-tab="component-2">Filter Table</button>
+                                        <button class="code-tab-btn btn-2" data-tab="view-2">Code</button>
+                                        <div class="code-slide-bar"></div>
+                                </div>
+                                <div class="code-tab-content ctent-2" id="component-2">
+                                        <div class="ui-zone">
+                                                <div class="filter-table-container">
+                                                        <div class="filter-options">
+                                                                <label for="rows-per-page">Rows per page:</label>
+                                                                <select id="rows-per-page">
+                                                                        <option>Select</option>
+                                                                        <option value="2">2</option>
+                                                                        <option value="5">5</option>
+                                                                        <option value="10">10</option>
+                                                                        <option value="all">All</option>
+                                                                </select>
+                                                        </div>
+                                                        <div class="filter-input">
+                                                                <input type="text" id="search-input" placeholder="Search...">
+                                                        </div>
+                                                </div>
+                                                <table class="filter-table" id="data-table">
+                                                        <thead>
+                                                        <tr>
+                                                                <th>Name</th>
+                                                                <th>Age</th>
+                                                                <th>City</th>
+                                                        </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                        <tr>
+                                                                <td data-label="Name">Kaustubh Shinde</td>
+                                                                <td data-label="Age">28</td>
+                                                                <td data-label="City">Mumbai</td>
+                                                        </tr>
+                                                        <tr>
+                                                                <td data-label="Name">Kazuto Kirigaya</td>
+                                                                <td data-label="Age">21</td>
+                                                                <td data-label="City">Tokyo</td>
+                                                        </tr>
+                                                        <tr>
+                                                                <td data-label="Name">John Doe</td>
+                                                                <td data-label="Age">25</td>
+                                                                <td data-label="City">New York</td>
+                                                        </tr>
+                                                        <tr>
+                                                                <td data-label="Name">Alex Mercer</td>
+                                                                <td data-label="Age">30</td>
+                                                                <td data-label="City">Manchester</td>
+                                                        </tr>
+                                                        <tr>
+                                                                <td data-label="Name">Liu Gonghu</td>
+                                                                <td data-label="Age">45</td>
+                                                                <td data-label="City">Chengdu</td>
+                                                        </tr>
+                                                        <tr>
+                                                                <td data-label="Name">Kim Mi-So</td>
+                                                                <td data-label="Age">33</td>
+                                                                <td data-label="City">Seoul</td>
+                                                        </tr>
+                                                        <tr>
+                                                                <td data-label="Name">Van Pho</td>
+                                                                <td data-label="Age">26</td>
+                                                                <td data-label="City">Hanoi</td>
+                                                        </tr>
+                                                        <tr>
+                                                                <td data-label="Name">Hrishikesh Joshi</td>
+                                                                <td data-label="Age">28</td>
+                                                                <td data-label="City">Johansburg</td>
+                                                        </tr>
+                                                        <tr>
+                                                                <td data-label="Name">Ammar Okuro</td>
+                                                                <td data-label="Age">27</td>
+                                                                <td data-label="City">Virgina</td>
+                                                        </tr>
+                                                        <tr>
+                                                                <td data-label="Name">Misa Yamanaka</td>
+                                                                <td data-label="Age">22</td>
+                                                                <td data-label="City">California LA</td>
+                                                        </tr>
+                                                        <tr>
+                                                                <td data-label="Name">Maria Von</td>
+                                                                <td data-label="Age">35</td>
+                                                                <td data-label="City">Paris</td>
+                                                        </tr>
+                                                        <tr>
+                                                                <td data-label="Name">Jane Smith</td>
+                                                                <td data-label="Age">30</td>
+                                                                <td data-label="City">Los Angeles</td>
+                                                        </tr>
+                                                        <tr>
+                                                                <td data-label="Name">Michael Johnson</td>
+                                                                <td data-label="Age">28</td>
+                                                                <td data-label="City">Chicago</td>
+                                                        </tr>
+                                                        <tr>
+                                                                <td data-label="Name">Emily Davis</td>
+                                                                <td data-label="Age">22</td>
+                                                                <td data-label="City">San Francisco</td>
+                                                        </tr>
+                                                        <tr>
+                                                                <td data-label="Name">Alex Turner</td>
+                                                                <td data-label="Age">35</td>
+                                                                <td data-label="City">Seattle</td>
+                                                        </tr>
+                                                        <tr>
+                                                                <td data-label="Name">Jessica Brown</td>
+                                                                <td data-label="Age">27</td>
+                                                                <td data-label="City">Miami</td>
+                                                        </tr>
+                                                        </tbody>
+                                                </table>
+                                                <div class="filter-pagination" id="pagination"></div>
+                                        </div>
+                                </div>
+                                <div class="code-tab-content ctent-2" id="view-2">
+                                        <pre>
+                                        &lt;div class="filter-table-container"&gt;
+                                        &lt;div class="filter-options"&gt;
+                                                &lt;label for="rows-per-page"&gt;Rows per page:&lt;/label&gt;
+                                                &lt;select id="rows-per-page"&gt;
+                                                &lt;option&gt;Select&lt;/option&gt;
+                                                &lt;option value="2"&gt;2&lt;/option&gt;
+                                                &lt;option value="5"&gt;5&lt;/option&gt;
+                                                &lt;option value="10"&gt;10&lt;/option&gt;
+                                                &lt;option value="all"&gt;All&lt;/option&gt;
+                                                &lt;/select&gt;
+                                        &lt;/div&gt;
+                                        &lt;div class="filter-input"&gt;
+                                                &lt;input type="text" id="search-input" placeholder="Search..."&gt;
+                                        &lt;/div&gt;
+                                        &lt;/div&gt;
+                                        &lt;table class="filter-table" id="data-table"&gt;
+                                        &lt;thead&gt;
+                                                &lt;tr&gt;
+                                                &lt;th&gt;Name&lt;/th&gt;
+                                                &lt;th&gt;Age&lt;/th&gt;
+                                                &lt;th&gt;City&lt;/th&gt;
+                                                &lt;/tr&gt;
+                                        &lt;/thead&gt;
+                                        &lt;tbody&gt;
+                                                &lt;tr&gt;
+                                                &lt;td data-label="Name"&gt;Kaustubh Shinde&lt;/td&gt;
+                                                &lt;td data-label="Age"&gt;28&lt;/td&gt;
+                                                &lt;td data-label="City"&gt;Mumbai&lt;/td&gt;
+                                                &lt;/tr&gt;
+                                                &lt;tr&gt;
+                                                &lt;td data-label="Name"&gt;Kazuto Kirigaya&lt;/td&gt;
+                                                &lt;td data-label="Age"&gt;21&lt;/td&gt;
+                                                &lt;td data-label="City"&gt;Tokyo&lt;/td&gt;
+                                                &lt;/tr&gt;
+                                                &lt;tr&gt;
+                                                &lt;td data-label="Name"&gt;John Doe&lt;/td&gt;
+                                                &lt;td data-label="Age"&gt;25&lt;/td&gt;
+                                                &lt;td data-label="City"&gt;New York&lt;/td&gt;
+                                                &lt;/tr&gt;
+                                                &lt;tr&gt;
+                                                &lt;td data-label="Name"&gt;Alex Mercer&lt;/td&gt;
+                                                &lt;td data-label="Age"&gt;30&lt;/td&gt;
+                                                &lt;td data-label="City"&gt;Manchester&lt;/td&gt;
+                                                &lt;/tr&gt;
+                                                &lt;tr&gt;
+                                                &lt;td data-label="Name"&gt;Liu Gonghu&lt;/td&gt;
+                                                &lt;td data-label="Age"&gt;45&lt;/td&gt;
+                                                &lt;td data-label="City"&gt;Chengdu&lt;/td&gt;
+                                                &lt;/tr&gt;
+                                                &lt;tr&gt;
+                                                &lt;td data-label="Name"&gt;Kim Mi-So&lt;/td&gt;
+                                                &lt;td data-label="Age"&gt;33&lt;/td&gt;
+                                                &lt;td data-label="City"&gt;Seoul&lt;/td&gt;
+                                                &lt;/tr&gt;
+                                                &lt;tr&gt;
+                                                &lt;td data-label="Name"&gt;Van Pho&lt;/td&gt;
+                                                &lt;td data-label="Age"&gt;26&lt;/td&gt;
+                                                &lt;td data-label="City"&gt;Hanoi&lt;/td&gt;
+                                                &lt;/tr&gt;
+                                                &lt;tr&gt;
+                                                &lt;td data-label="Name"&gt;Hrishikesh Joshi&lt;/td&gt;
+                                                &lt;td data-label="Age"&gt;28&lt;/td&gt;
+                                                &lt;td data-label="City"&gt;Johansburg&lt;/td&gt;
+                                                &lt;/tr&gt;
+                                                &lt;tr&gt;
+                                                &lt;td data-label="Name"&gt;Ammar Okuro&lt;/td&gt;
+                                                &lt;td data-label="Age"&gt;27&lt;/td&gt;
+                                                &lt;td data-label="City"&gt;Virgina&lt;/td&gt;
+                                                &lt;/tr&gt;
+                                                &lt;tr&gt;
+                                                &lt;td data-label="Name"&gt;Misa Yamanaka&lt;/td&gt;
+                                                &lt;td data-label="Age"&gt;22&lt;/td&gt;
+                                                &lt;td data-label="City"&gt;California LA&lt;/td&gt;
+                                                &lt;/tr&gt;
+                                                &lt;tr&gt;
+                                                &lt;td data-label="Name"&gt;Maria Von&lt;/td&gt;
+                                                &lt;td data-label="Age"&gt;35&lt;/td&gt;
+                                                &lt;td data-label="City"&gt;Paris&lt;/td&gt;
+                                                &lt;/tr&gt;
+                                                &lt;tr&gt;
+                                                &lt;td data-label="Name"&gt;Jane Smith&lt;/td&gt;
+                                                &lt;td data-label="Age"&gt;30&lt;/td&gt;
+                                                &lt;td data-label="City"&gt;Los Angeles&lt;/td&gt;
+                                                &lt;/tr&gt;
+                                                &lt;tr&gt;
+                                                &lt;td data-label="Name"&gt;Michael Johnson&lt;/td&gt;
+                                                &lt;td data-label="Age"&gt;28&lt;/td&gt;
+                                                &lt;td data-label="City"&gt;Chicago&lt;/td&gt;
+                                                &lt;/tr&gt;
+                                                &lt;tr&gt;
+                                                &lt;td data-label="Name"&gt;Emily Davis&lt;/td&gt;
+                                                &lt;td data-label="Age"&gt;22&lt;/td&gt;
+                                                &lt;td data-label="City"&gt;San Francisco&lt;/td&gt;
+                                                &lt;/tr&gt;
+                                                &lt;tr&gt;
+                                                &lt;td data-label="Name"&gt;Alex Turner&lt;/td&gt;
+                                                &lt;td data-label="Age"&gt;35&lt;/td&gt;
+                                                &lt;td data-label="City"&gt;Seattle&lt;/td&gt;
+                                                &lt;/tr&gt;
+                                                &lt;tr&gt;
+                                                &lt;td data-label="Name"&gt;Jessica Brown&lt;/td&gt;
+                                                &lt;td data-label="Age"&gt;27&lt;/td&gt;
+                                                &lt;td data-label="City"&gt;Miami&lt;/td&gt;
+                                                &lt;/tr&gt;
+                                        &lt;/tbody&gt;
+                                        &lt;/table&gt;
+                                        &lt;div class="filter-pagination" id="pagination"&gt;&lt;/div&gt;
+
+                                        .filter-table-container {
+                                                width: 100%;
+                                                display: flex;
+                                                align-items: baseline;
+                                        }
+                                        .filter-table-container #search-input {
+                                                padding: 8px;
+                                                border: 1px solid #ccc;
+                                                outline: none;
+                                                font-size: 16px;
+                                                margin-bottom: 2px;
+                                                float: right;
+                                                transition: border-color 0.3s ease;
+                                        }
+                                        .filter-table-container #search-input:focus {
+                                                border: 2px solid #000;
+                                        }
+                                        table.filter-table {
+                                                border-collapse: collapse;
+                                                margin: 25px 0;
+                                                font-size: 1rem;
+                                                width: 100%;
+                                                overflow: hidden;
+                                                background-color: #fff;
+                                                border-bottom: 2px solid #030712;
+                                        }
+                                        table.filter-table th,
+                                        table.filter-table td {
+                                                padding: 15px;
+                                                text-align: left;
+                                        }
+                                        table.filter-table thead {
+                                                background-color: #030712;
+                                                color: #fff;
+                                        }
+                                        table.filter-table tbody tr:nth-child(even) {
+                                                background-color: #f4f6fb;
+                                        }
+                                        table.filter-table tbody td[data-label]:before {
+                                                content: attr(data-label);
+                                                float: left;
+                                                font-weight: bold;
+                                                margin-right: 5px;
+                                        }
+                                        .filter-pagination {
+                                                display: flex;
+                                                justify-content: right;
+                                                margin-top: 2px;
+                                                padding: 4px;
+                                        }
+                                        .filter-pagination button {
+                                                padding: 8px 15px;
+                                                margin: 0 2px;
+                                                cursor: pointer;
+                                                background-color: #fff;
+                                                color: #030712;
+                                                border: none;
+                                                border-radius: 3px;
+                                                border: 1px solid #ccc;
+                                                transition: background-color 0.3s ease;
+                                        }
+                                        .filter-pagination button:hover {
+                                                background-color: #030712;
+                                                color: #fff;
+                                        }
+                                        .filter-options {
+                                                flex: 1; 
+                                        }
+                                        .filter-options label {
+                                                margin-right: 10px;
+                                        }
+                                        .filter-options select {
+                                                padding: 8px;
+                                                outline: none;
+                                                font-size: 14px;
+                                                border-radius: 4px;
+                                                border: 1px solid #ccc;
+                                                background-color: #fff;
+                                        }
+                                        .filter-options select:focus {
+                                                border: 2px solid #000;
+                                        }
+                                        .filter-input {
+                                                flex: 1; 
+                                                display: flex; 
+                                                flex-direction: column; 
+                                                align-items: flex-end; 
+                                        }
+                                        .filter-input input {
+                                                width: 100%; 
+                                                padding: 8px;
+                                                border: 1px solid #ddd;
+                                                border-radius: 4px;
+                                                outline: none;
+                                                font-size: 14px;
+                                        }
+                                        @media (max-width: 790px) {
+                                                .filter-table-container {
+                                                        flex-direction: column;
+                                                }
+                                                .filter-table-container #search-input {
+                                                        width: 100%;
+                                                }
+                                                table.filter-table {
+                                                        overflow-x: auto;
+                                                }
+                                                table.filter-table tr {
+                                                        
+                                                        box-sizing: border-box;
+                                                }
+                                                .filter-options,
+                                                .filter-input {
+                                                        width: 100%;
+                                                }
+                                                .filter-options label {
+                                                        margin-bottom: 5px;
+                                                }
+                                                .filter-pagination {
+                                                        display: flex;
+                                                        justify-content: center; 
+                                                        margin-top: 10px; 
+                                                }
+                                        }
+
+                                        const table = document.getElementById('data-table');
+                                        const searchInput = document.getElementById('search-input');
+                                        const pagination = document.getElementById('pagination');
+                                        const rowsPerPageSelect = document.getElementById('rows-per-page');
+
+                                        let currentPage = 1;
+                                        let rowsPerPage = 5;
+
+                                        function filterTable() {
+                                        const searchTerm = searchInput.value.toLowerCase();
+                                        const rows = table.getElementsByTagName('tr');
+
+                                        for (let i = 1; i < rows.length; i++) {
+                                                const row = rows[i];
+                                                const cells = row.getElementsByTagName('td');
+                                                let found = false;
+
+                                                for (let cell of cells) {
+                                                if (cell.textContent.toLowerCase().includes(searchTerm)) {
+                                                        found = true;
+                                                        break;
+                                                }
+                                                }
+
+                                                row.style.display = found ? '' : 'none';
+                                        }
+
+                                        if (searchTerm === '') {
+                                                currentPage = 1;
+                                        }
+
+                                                updatePagination();
+                                                showRows();
+                                        }
+
+                                        function updatePagination() {
+                                        const rows = table.getElementsByTagName('tr');
+                                        const totalPages = Math.ceil((rows.length - 1) / rowsPerPage);
+
+                                        let paginationHtml = '';
+
+                                        if (totalPages > 1) {
+                                                        paginationHtml += `&lt;button class="page-button" data-page="1"&gt;First&lt;/button&gt;`;
+                                                for (let i = 1; i <= totalPages; i++) {
+                                                        paginationHtml += `&lt;button class="page-button" data-page="${i}"&gt;${i}&lt;/button&gt;`;
+                                                }
+                                                        paginationHtml += `&lt;button class="page-button" data-page="${totalPages}"&gt;Last&lt;/button&gt;`;
+                                        }
+
+                                        pagination.innerHTML = paginationHtml;
+
+                                        const pageButtons = document.querySelectorAll('.page-button');
+                                        pageButtons.forEach(button => {
+                                                button.addEventListener('click', () => {
+                                                if (button.classList.contains('disabled')) {
+                                                        return;
+                                                }
+
+                                                currentPage = parseInt(button.getAttribute('data-page'));
+                                                        showRows();
+                                                        updatePagination();
+                                                });
+                                        });
+
+                                        if (currentPage === 1) {
+                                                pageButtons[0].classList.add('disabled');
+                                        } else {
+                                                pageButtons[0].classList.remove('disabled');
+                                        }
+
+                                                if (currentPage === totalPages) {
+                                                        pageButtons[pageButtons.length - 1].classList.add('disabled');
+                                                } else {
+                                                        pageButtons[pageButtons.length - 1].classList.remove('disabled');
+                                                }
+                                        }
+
+                                        function showRows() {
+                                        const rows = table.getElementsByTagName('tr');
+                                        const startIndex = 1; // Always start from the first row (excluding header)
+
+                                        // Calculate endIndex based on rowsPerPage setting
+                                        let endIndex;
+                                        if (rowsPerPageSelect.value === 'all') {
+                                                endIndex = rows.length - 1; // Display all rows except the header
+                                        } else {
+                                                endIndex = currentPage * rowsPerPage;
+                                        }
+
+                                                for (let i = 1; i < rows.length; i++) {
+                                                        const row = rows[i];
+                                                                if (i >= startIndex && i <= endIndex) {
+                                                                row.style.display = '';
+                                                        } else {
+                                                                row.style.display = 'none';
+                                                        }
+                                                }
+                                        }
+
+                                        searchInput.addEventListener('input', filterTable);
+
+                                        rowsPerPageSelect.addEventListener('change', () => {
+                                        if (rowsPerPageSelect.value === 'all') {
+                                                rowsPerPage = table.rows.length - 1;
+                                        } else {
+                                                rowsPerPage = parseInt(rowsPerPageSelect.value);
+                                        }
+                                                currentPage = 1;
+                                                showRows();
+                                                updatePagination();
+                                        });
+
+                                        // Initial setup
+                                        filterTable();
+                                        updatePagination();
+                                        showRows();
+                                        </pre>
+                                </div>
+                        </div>
+                </div>
+        </div>
+</section>

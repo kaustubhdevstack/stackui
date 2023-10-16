@@ -1,0 +1,410 @@
+<section class="page-area">
+        <div class="flex-container">
+                <div class="item">
+                        <div class="introduction">
+                                <h1>Freeform <span class="text-primary">Accordions</span></h1>
+                                <p>Different types of Accordions for different needs</p>
+                        </div>
+                </div>
+        </div>
+</section>
+<section class="content-area">
+        <div class="ui-area">
+                <div class="content-zone">
+                        <div class="tab-area">
+                                <div class="code-tab">
+                                        <button class="code-tab-btn btn-1" data-tab="component-1">Regular Accordion</button>
+                                        <button class="code-tab-btn btn-1" data-tab="view-1">Code</button>
+                                        <div class="code-slide-bar"></div>
+                                </div>
+                                <div class="code-tab-content ctent-1" id="component-1">
+                                        <div class="ui-zone">
+                                                <div class="stack-accordion-1">
+                                                        <div class="accordion-item">
+                                                                <div class="accordion-header">
+                                                                        Regular Accordion 1
+                                                                        <i class="fas fa-chevron-right accordion-icon"></i>
+                                                                </div>
+                                                                <div class="accordion-content">
+                                                                <p>This is the content of Regular Accordion 1.</p>
+                                                                </div>
+                                                        </div>
+                                                        <div class="accordion-item">
+                                                                <div class="accordion-header">
+                                                                        Regular Accordion 2
+                                                                        <i class="fas fa-chevron-right accordion-icon"></i>
+                                                                </div>
+                                                                <div class="accordion-content">
+                                                                <p>This is the content of Regular Accordion 2.</p>
+                                                                </div>
+                                                        </div>
+                                                        <div class="accordion-item">
+                                                                <div class="accordion-header">
+                                                                        Regular Accordion 3
+                                                                        <i class="fas fa-chevron-right accordion-icon"></i>
+                                                                </div>
+                                                                <div class="accordion-content">
+                                                                <p>This is the content of Regular Accordion 3.</p>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="code-tab-content ctent-1" id="view-1">
+                                        <pre>
+                                        &lt;div class="stack-accordion-1"&gt;
+                                                &lt;div class="accordion-item"&gt;
+                                                        &lt;div class="accordion-header"&gt;
+                                                        Regular Accordion 1
+                                                        &lt;i class="fas fa-chevron-right accordion-icon"&gt;&lt;/i&gt;
+                                                        &lt;/div&gt;
+                                                        &lt;div class="accordion-content"&gt;
+                                                        &lt;p&gt;This is the content of Regular Accordion 1.&lt;/p&gt;
+                                                        &lt;/div&gt;
+                                                &lt;/div&gt;
+                                                &lt;div class="accordion-item"&gt;
+                                                        &lt;div class="accordion-header"&gt;
+                                                        Regular Accordion 2
+                                                        &lt;i class="fas fa-chevron-right accordion-icon"&gt;&lt;/i&gt;
+                                                        &lt;/div&gt;
+                                                        &lt;div class="accordion-content"&gt;
+                                                        &lt;p&gt;This is the content of Regular Accordion 2.&lt;/p&gt;
+                                                        &lt;/div&gt;
+                                                &lt;/div&gt;
+                                                &lt;div class="accordion-item"&gt;
+                                                        &lt;div class="accordion-header"&gt;
+                                                        Regular Accordion 3
+                                                        &lt;i class="fas fa-chevron-right accordion-icon"&gt;&lt;/i&gt;
+                                                        &lt;/div&gt;
+                                                        &lt;div class="accordion-content"&gt;
+                                                        &lt;p&gt;This is the content of Regular Accordion 3.&lt;/p&gt;
+                                                        &lt;/div&gt;
+                                                &lt;/div&gt;
+                                        &lt;/div&gt;
+
+                                        .stack-accordion-1 {
+                                                margin: 20px auto;
+                                        }
+                                        .stack-accordion-1 .accordion-item {
+                                                margin-bottom: 5px;
+                                        }
+                                        .stack-accordion-1 .accordion-header {
+                                                padding: 15px;
+                                                cursor: pointer;
+                                                display: flex;
+                                                color: #000;
+                                                align-items: center;
+                                                border-bottom: 1px solid #ddd;
+                                                justify-content: space-between;
+                                        }
+                                        .stack-accordion-1 .accordion-icon {
+                                                font-size: 1.2em;
+                                                transition: transform 0.3s;
+                                        }
+                                        .stack-accordion-1 .accordion-content {
+                                                display: none;
+                                                padding: 10px;
+                                                color: #475569;
+                                                background-color: #fff;
+                                                transition: transform 0.3s;
+                                        }
+                                        .stack-accordion-1 .accordion-item .accordion-content.active {
+                                                display: block;
+                                                padding: 20px;
+                                                transition: ease-in-out 1.3s;
+                                        }
+                                        .stack-accordion-1 .accordion-item .accordion-icon.open {
+                                                transform: rotate(90deg);
+                                                transition: transform 0.3s;
+                                        }
+
+                                        //Accordion 1
+                                        document.addEventListener('DOMContentLoaded', function() {
+                                        const accordionHeaders = document.querySelectorAll('.stack-accordion-1 .accordion-header');
+
+                                        accordionHeaders.forEach(header => {
+                                        header.addEventListener('click', () => {
+                                                const content = header.nextElementSibling;
+                                                const icon = header.querySelector('.accordion-icon');
+                                                
+                                                content.classList.toggle('active');
+                                                icon.classList.toggle('open');
+                                        });
+                                        });
+                                        });
+                                        </pre>
+                                </div>
+                        </div>
+
+                        <div class="tab-area mt-4">
+                                <div class="code-tab">
+                                        <button class="code-tab-btn btn-2" data-tab="component-2">Active Modal</button>
+                                        <button class="code-tab-btn btn-2" data-tab="view-2">Code</button>
+                                        <div class="code-slide-bar"></div>
+                                </div>
+                                <div class="code-tab-content ctent-2" id="component-2">
+                                        <div class="ui-zone">
+                                                <div class="stack-accordion-2">
+                                                        <div class="accordion-item">
+                                                                <div class="accordion-header">
+                                                                        Active Accordion 1
+                                                                        <i class="fas fa-chevron-right accordion-icon"></i>
+                                                                </div>
+                                                                <div class="accordion-content">
+                                                                <p>This is the content of Active Accordion 1.</p>
+                                                                </div>
+                                                        </div>
+                                                        <div class="accordion-item">
+                                                                <div class="accordion-header">
+                                                                        Active Accordion 2 
+                                                                        <i class="fas fa-chevron-right accordion-icon"></i>
+                                                                </div>
+                                                                <div class="accordion-content">
+                                                                <p>This is the content of Active Accordion 2.</p>
+                                                                </div>
+                                                        </div>
+                                                        <div class="accordion-item">
+                                                                <div class="accordion-header">
+                                                                        Active Accordion 3 
+                                                                        <i class="fas fa-chevron-right accordion-icon"></i>
+                                                                </div>
+                                                                <div class="accordion-content">
+                                                                <p>This is the content of Active Accordion 3.</p>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="code-tab-content ctent-2" id="view-2">
+                                        <pre>
+                                        &lt;div class="stack-accordion-2"&gt;
+                                                &lt;div class="accordion-item"&gt;
+                                                        &lt;div class="accordion-header"&gt;
+                                                        Active Accordion 1
+                                                        &lt;i class="fas fa-chevron-right accordion-icon"&gt;&lt;/i&gt;
+                                                        &lt;/div&gt;
+                                                        &lt;div class="accordion-content"&gt;
+                                                        &lt;p&gt;This is the content of Active Accordion 1.&lt;/p&gt;
+                                                        &lt;/div&gt;
+                                                &lt;/div&gt;
+                                                &lt;div class="accordion-item"&gt;
+                                                        &lt;div class="accordion-header"&gt;
+                                                        Active Accordion 2 
+                                                        &lt;i class="fas fa-chevron-right accordion-icon"&gt;&lt;/i&gt;
+                                                        &lt;/div&gt;
+                                                        &lt;div class="accordion-content"&gt;
+                                                        &lt;p&gt;This is the content of Active Accordion 2.&lt;/p&gt;
+                                                        &lt;/div&gt;
+                                                &lt;/div&gt;
+                                                &lt;div class="accordion-item"&gt;
+                                                        &lt;div class="accordion-header"&gt;
+                                                        Active Accordion 3 
+                                                        &lt;i class="fas fa-chevron-right accordion-icon"&gt;&lt;/i&gt;
+                                                        &lt;/div&gt;
+                                                        &lt;div class="accordion-content"&gt;
+                                                        &lt;p&gt;This is the content of Active Accordion 3.&lt;/p&gt;
+                                                        &lt;/div&gt;
+                                                &lt;/div&gt;
+                                        &lt;/div&gt;
+
+                                        .stack-accordion-2 {
+                                                margin: 20px auto;
+                                        }
+                                        .stack-accordion-2 .accordion-item {
+                                                margin-bottom: 5px;
+                                        }
+                                        .stack-accordion-2 .accordion-header {
+                                                padding: 15px;
+                                                cursor: pointer;
+                                                display: flex;
+                                                color: #000;
+                                                align-items: center;
+                                                border-bottom: 1px solid #ddd;
+                                                justify-content: space-between;
+                                        }
+                                        .stack-accordion-2 .accordion-icon {
+                                                font-size: 1.2em;
+                                                transition: transform 0.3s;
+                                        }
+                                        .stack-accordion-2 .accordion-content {
+                                                display: none;
+                                                padding: 10px;
+                                                color: #475569;
+                                                background-color: #fff;
+                                                transition: transform 0.3s;
+                                        }
+                                        .stack-accordion-2 .accordion-item .accordion-content.active {
+                                                display: block;
+                                                padding: 20px;
+                                                transition: ease-in-out 1.3s;
+                                        }
+                                        .stack-accordion-2 .accordion-item .accordion-icon.open {
+                                                transform: rotate(90deg);
+                                                transition: transform 0.3s;
+                                        }
+
+                                        //Accordion 2
+                                        document.addEventListener('DOMContentLoaded', function() {
+                                        const accordionHeaders = document.querySelectorAll('.stack-accordion-2 .accordion-header');
+
+                                        accordionHeaders.forEach((header, index) => {
+                                        const content = header.nextElementSibling;
+                                        const icon = header.querySelector('.accordion-icon');
+
+                                        if (index === 0) {
+                                                content.classList.add('active');
+                                                icon.classList.add('open');
+                                        }
+
+                                        header.addEventListener('click', () => {
+                                                content.classList.toggle('active');
+                                                icon.classList.toggle('open');
+                                        });
+                                        });
+                                        });
+                                        </pre>
+                                </div>
+                        </div>
+
+                        <div class="tab-area mt-4">
+                                <div class="code-tab">
+                                        <button class="code-tab-btn btn-3" data-tab="component-3">Push Accordion</button>
+                                        <button class="code-tab-btn btn-3" data-tab="view-3">Code</button>
+                                        <div class="code-slide-bar"></div>
+                                </div>
+                                <div class="code-tab-content ctent-3" id="component-3">
+                                        <div class="ui-zone">
+                                                <div class="stack-accordion-3">
+                                                        <div class="accordion-item">
+                                                                <div class="accordion-header">
+                                                                        Push Accordion 1
+                                                                        <i class="fas fa-chevron-right accordion-icon"></i>
+                                                                </div>
+                                                                <div class="accordion-content">
+                                                                <p>This is the content of Push Accordion 1.</p>
+                                                                </div>
+                                                        </div>
+                                                        <div class="accordion-item">
+                                                                <div class="accordion-header">
+                                                                        Push Accordion 2
+                                                                        <i class="fas fa-chevron-right accordion-icon"></i>
+                                                                </div>
+                                                                <div class="accordion-content">
+                                                                <p>This is the content of Push Accordion 2.</p>
+                                                                </div>
+                                                        </div>
+                                                        <div class="accordion-item">
+                                                                <div class="accordion-header">
+                                                                        Push Accordion 3 
+                                                                        <i class="fas fa-chevron-right accordion-icon"></i>
+                                                                </div>
+                                                                <div class="accordion-content">
+                                                                <p>This is the content of Push Accordion 3.</p>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="code-tab-content ctent-3" id="view-3">
+                                        <pre>
+                                        &lt;div class="stack-accordion-3"&gt;
+                                                &lt;div class="accordion-item"&gt;
+                                                        &lt;div class="accordion-header"&gt;
+                                                        Push Accordion 1
+                                                        &lt;i class="fas fa-chevron-right accordion-icon"&gt;&lt;/i&gt;
+                                                        &lt;/div&gt;
+                                                        &lt;div class="accordion-content"&gt;
+                                                        &lt;p&gt;This is the content of Push Accordion 1.&lt;/p&gt;
+                                                        &lt;/div&gt;
+                                                &lt;/div&gt;
+                                                &lt;div class="accordion-item"&gt;
+                                                        &lt;div class="accordion-header"&gt;
+                                                        Push Accordion 2
+                                                        &lt;i class="fas fa-chevron-right accordion-icon"&gt;&lt;/i&gt;
+                                                        &lt;/div&gt;
+                                                        &lt;div class="accordion-content"&gt;
+                                                        &lt;p&gt;This is the content of Push Accordion 2.&lt;/p&gt;
+                                                        &lt;/div&gt;
+                                                &lt;/div&gt;
+                                                &lt;div class="accordion-item"&gt;
+                                                        &lt;div class="accordion-header"&gt;
+                                                        Push Accordion 3 
+                                                        &lt;i class="fas fa-chevron-right accordion-icon"&gt;&lt;/i&gt;
+                                                        &lt;/div&gt;
+                                                        &lt;div class="accordion-content"&gt;
+                                                        &lt;p&gt;This is the content of Push Accordion 3.&lt;/p&gt;
+                                                        &lt;/div&gt;
+                                                &lt;/div&gt;
+                                        &lt;/div&gt;
+
+                                        .stack-accordion-3 {
+                                                margin: 20px auto;
+                                        }
+                                        .stack-accordion-3 .accordion-item {
+                                                margin-bottom: 5px;
+                                        }
+                                        .stack-accordion-3 .accordion-header {
+                                                padding: 15px;
+                                                cursor: pointer;
+                                                display: flex;
+                                                color: #000;
+                                                align-items: center;
+                                                border-bottom: 1px solid #ddd;
+                                                justify-content: space-between;
+                                        }
+                                        .stack-accordion-3 .accordion-icon {
+                                                font-size: 1.2em;
+                                                transition: transform 0.3s;
+                                        }
+                                        .stack-accordion-3 .accordion-content {
+                                                display: none;
+                                                padding: 10px;
+                                                color: #475569;
+                                                background-color: #fff;
+                                                transition: transform 0.3s;
+                                        }
+                                        .stack-accordion-3 .accordion-item .accordion-content.active {
+                                                display: block;
+                                                padding: 20px;
+                                                transition: ease-in-out 1.3s;
+                                        }
+                                        .stack-accordion-3 .accordion-item .accordion-icon.open {
+                                                transform: rotate(90deg);
+                                                transition: transform 0.3s;
+                                        }
+
+                                        //Accordion 3
+                                        document.addEventListener('DOMContentLoaded', function() {
+                                        const accordionHeaders = document.querySelectorAll('.stack-accordion-3 .accordion-header');
+
+                                        accordionHeaders.forEach(header => {
+                                        header.addEventListener('click', () => {
+                                                const content = header.nextElementSibling;
+                                                const icon = header.querySelector('.accordion-icon');
+
+                                                // Close all other open headers and contents
+                                                const allContents = document.querySelectorAll('.stack-accordion-3 .accordion-content');
+                                                const allIcons = document.querySelectorAll('.stack-accordion-3 .accordion-icon');
+                                                allContents.forEach(item => {
+                                                if (item !== content) {
+                                                item.classList.remove('active');
+                                                }
+                                                });
+                                                allIcons.forEach(iconItem => {
+                                                if (iconItem !== icon) {
+                                                iconItem.classList.remove('open');
+                                                }
+                                                });
+
+                                                // Toggle the clicked header and content
+                                                content.classList.toggle('active');
+                                                icon.classList.toggle('open');
+                                        });
+                                        });
+                                        });
+                                        </pre>
+                                </div>
+                        </div>
+                </div>
+        </div>
+</section>

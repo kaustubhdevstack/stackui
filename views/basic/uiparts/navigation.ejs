@@ -1,0 +1,1036 @@
+<section class="page-area">
+        <div class="flex-container">
+                <div class="item">
+                        <div class="introduction">
+                                <h1>Freeform <span class="text-primary">Navigations</span></h1>
+                                <p>Different types of Navigation for different needs</p>
+                        </div>
+                </div>
+        </div>
+</section>
+<section class="content-area">
+        <div class="ui-area">
+                <div class="content-zone">
+                        <div class="tab-area">
+                                <div class="code-tab">
+                                        <button class="code-tab-btn btn-1" data-tab="component-1">Responsive Navigation</button>
+                                        <button class="code-tab-btn btn-1" data-tab="view-1">Code</button>
+                                        <div class="code-slide-bar"></div>
+                                </div>
+                                <div class="code-tab-content ctent-1" id="component-1">
+                                        <div class="ui-zone">
+                                                <nav class="stack-main-header">
+                                                        <div class="stack-navbar">
+                                                                <i class="fa-solid fa-bars openNav"></i>
+                                                                <span class="logo navLogo"><a href="#"><img src="img/stackui-logo.png" alt=""></a></span>
+                                                                <div id="sidenavi" class="menu">
+                                                                        <ul class="nav-links">
+                                                                                <li><a href="#" class="active">Home</a></li>
+                                                                                <li><a href="#">Blog</a></li>
+                                                                                <li><a href="#">Services</a></li>
+                                                                                <li><a href="#">About</a></li>
+                                                                                <li><a href="#">Contact</a></li>
+                                                                        </ul>
+                                                                </div>
+                                                        </div>
+                                                </nav> 
+                                        </div>
+                                </div>
+                                <div class="code-tab-content ctent-1" id="view-1">
+                                        <pre>
+                                        &lt;nav class="stack-main-header"&gt;
+                                        &lt;div class="stack-navbar"&gt;
+                                                &lt;i class="fa-solid fa-bars openNav"&gt;&lt;/i&gt;
+                                                &lt;span class="logo navLogo"&gt;&lt;a href="#"&gt;&lt;img src="Image link goes here" alt=""&gt;&lt;/a&gt;&lt;/span&gt;
+                                                &lt;div id="sidenavi" class="menu"&gt;
+                                                &lt;ul class="nav-links"&gt;
+                                                        &lt;div class="logo-toggle"&gt;
+                                                        &lt;span class="logo navLogo"&gt;&lt;a href="#"&gt;&lt;img src="Image link goes here" alt=""&gt;&lt;/a&gt;&lt;/span&gt;
+                                                        &lt;/div&gt;
+                                                        &lt;li&gt;&lt;a href="#" class="active"&gt;Home&lt;/a&gt;&lt;/li&gt;
+                                                        &lt;li&gt;&lt;a href="#"&gt;Blog&lt;/a&gt;&lt;/li&gt;
+                                                        &lt;li&gt;&lt;a href="#"&gt;Services&lt;/a&gt;&lt;/li&gt;
+                                                        &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
+                                                        &lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+                                                &lt;/ul&gt;
+                                                &lt;/div&gt;
+                                        &lt;/div&gt;
+                                        &lt;/nav&gt;
+
+                                        .stack-main-header {
+                                                height: 70px;
+                                                width: 100%;
+                                                border: 1px solid #ddd;
+                                                border-radius: 4px;
+                                        }
+                                        .stack-navbar {
+                                                position: relative;
+                                                height: 100%;
+                                                max-width: 1280px;
+                                                margin: 0 auto;
+                                                padding: 0 30px;
+                                                display: flex;
+                                                align-items: center;
+                                                justify-content: space-between;
+                                        }
+                                        .stack-navbar .nav-links {
+                                                margin-top: 2px;
+                                        }
+                                        .stack-navbar .logo a {
+                                                font-size: 17px;
+                                                font-weight: 500;
+                                                color: #000;
+                                                text-decoration: none;
+                                        }
+                                        .stack-navbar .logo img {
+                                                width: 192px;
+                                                height: auto;
+                                                margin-top: 5px;
+                                        }
+                                        .stack-navbar .nav-links li {
+                                                margin: 0 5px;
+                                                list-style: none;
+                                                display: inline-block;
+                                        }
+                                        .stack-navbar .nav-links a {
+                                                display: flex;
+                                                align-items: center;
+                                        }
+                                        .stack-navbar .nav-links li a {
+                                                position: relative;
+                                                font-size: 17px;
+                                                font-weight: 400;
+                                                color: #000;
+                                                text-decoration: none;
+                                                padding: 10px;
+                                        }
+                                        .stack-navbar .nav-links li a:hover {
+                                                border-bottom: 1px solid var(--primary-dark);
+                                                transition: 0.2s ease;
+                                        }
+                                        .stack-navbar .menu .logo-toggle {
+                                                display: none;
+                                        }
+                                        .stack-navbar .openNav {
+                                                color: var(--primary-dark);
+                                                font-size: 25px;
+                                                cursor: pointer;
+                                                display: none;
+                                        }
+                                        @media (max-width: 790px) {
+                                                .stack-navbar {
+                                                        position: relative;
+                                                        height: 100%;
+                                                        max-width: 1280px;
+                                                        margin: 0 auto;
+                                                        padding: 0 20px;
+                                                        display: flex;
+                                                        align-items: center;
+                                                        justify-content: space-between;
+                                                }
+                                                .stack-navbar .openNav {
+                                                        display: block;
+                                                        font-size: 18px;
+                                                }
+                                                .stack-navbar .logo-toggle {
+                                                        display: flex;
+                                                        align-items: center;
+                                                        justify-content: center;
+                                                }
+                                                .stack-navbar .nav-links {
+                                                        display: none;
+                                                        position: fixed;
+                                                        top: -20px;
+                                                        left: 0;
+                                                        width: 250px;
+                                                        height: 100%;
+                                                        background-color: var(--dark-color);
+                                                        padding: 10px 10px;
+                                                        z-index: 9999;
+                                                        overflow: hidden;
+                                                        transition: transform 100s ease;
+                                                        transform: translateX(-100%);
+                                                }
+                                                .stack-navbar.active .nav-links,
+                                                .stack-navbar.active .nav-links .logo-toggle {
+                                                        display: block;
+                                                        transform: translateX(0%);
+                                                }
+                                                .stack-navbar .nav-links li {
+                                                        margin-bottom: 2px;
+                                                        display: block;
+                                                }
+                                                .stack-navbar .nav-links li a {
+                                                        color: var(--primary-white);
+                                                        font-size: 18px;
+                                                        text-decoration: none;
+                                                }
+                                                .stack-navbar .nav-links li a:hover {
+                                                        color: var(--dark-color);
+                                                        background-color: var(--primary-white);
+                                                        border-radius: 4px;
+                                                        transition: 0.2s ease;
+                                                }
+                                        }
+                                        @media screen and (min-width: 768px) and (max-width: 1023px) {
+                                                .stack-navbar {
+                                                        position: relative;
+                                                        height: 100%;
+                                                        max-width: 1280px;
+                                                        margin: 0 auto;
+                                                        padding: 0 20px;
+                                                        display: flex;
+                                                        align-items: center;
+                                                        justify-content: space-between;
+                                                }
+                                                .stack-navbar .openNav {
+                                                        display: block;
+                                                        font-size: 18px;
+                                                }
+                                                .stack-navbar .logo-toggle {
+                                                        display: flex;
+                                                        align-items: center;
+                                                        justify-content: center;
+                                                }
+                                                .stack-navbar .nav-links {
+                                                        display: none;
+                                                        position: fixed;
+                                                        top: -20px;
+                                                        left: 0;
+                                                        width: 250px;
+                                                        height: 100%;
+                                                        background-color: var(--dark-color);
+                                                        padding: 10px 10px;
+                                                        z-index: 9999;
+                                                        overflow: hidden;
+                                                        transition: transform 100s ease;
+                                                        transform: translateX(-100%);
+                                                }
+                                                .stack-navbar.active .nav-links,
+                                                .stack-navbar.active .nav-links .logo-toggle {
+                                                        display: block;
+                                                        transform: translateX(0%);
+                                                }
+                                                .stack-navbar .nav-links li {
+                                                        margin-bottom: 2px;
+                                                        display: block;
+                                                }
+                                                .stack-navbar .nav-links li a {
+                                                        color: var(--primary-white);
+                                                        font-size: 18px;
+                                                        text-decoration: none;
+                                                }
+                                                .stack-navbar .nav-links li a:hover {
+                                                        color: var(--dark-color);
+                                                        background-color: var(--primary-white);
+                                                        border-radius: 4px;
+                                                        transition: 0.2s ease;
+                                                }
+                                        }
+
+                                        // Sidebar
+                                        document.addEventListener("DOMContentLoaded", function() {
+                                                const menuIcon = document.querySelector(".openNav");
+                                                const sidenav = document.getElementById("sidenavi");
+                                                const navbar = document.querySelector(".stack-navbar");
+                                        
+                                                menuIcon.addEventListener("click", function() {
+                                                        sidenav.classList.toggle("active");
+                                                        navbar.classList.toggle("active");
+                                                });
+                                        
+                                                document.addEventListener("click", function(event) {
+                                                const targetElement = event.target;
+                                                if (
+                                                !targetElement.closest(".stack-main-header") &&
+                                                        sidenav.classList.contains("active")
+                                                ) {
+                                                        sidenav.classList.remove("active");
+                                                        navbar.classList.remove("active");
+                                                }
+                                                });
+                                        });
+
+                                        </pre>
+                                </div>
+                        </div>
+
+                        <div class="tab-area mt-4">
+                                <div class="code-tab">
+                                        <button class="code-tab-btn btn-2" data-tab="component-2">Cover Navigation</button>
+                                        <button class="code-tab-btn btn-2" data-tab="view-2">Code</button>
+                                        <div class="code-slide-bar"></div>
+                                </div>
+                                <div class="code-tab-content ctent-2" id="component-2">
+                                        <div class="ui-zone">
+                                                <div class="tab-center">
+                                                        <div class="cover-navigation">
+                                                                <nav class="fnav">
+                                                                        <button class="cover-menu toggle-menu">
+                                                                                <i class="fa-solid fa-bars"></i>
+                                                                        </button>
+                                                                </nav>
+                                                        </div>
+                                                        <div id="menu" class="full-nav">
+                                                                <button class="full-menu close-toggle">
+                                                                        <i class="fa-solid fa-xmark"></i>
+                                                                </button>
+                                                                <nav class="main-nav">
+                                                                        <ul>
+                                                                                <li>
+                                                                                        <a href="#">
+                                                                                        Home
+                                                                                        </a>
+                                                                                </li>
+                                                                                <li>
+                                                                                        <a href="#">
+                                                                                        About us
+                                                                                        </a>
+                                                                                </li>
+                                                                                
+                                                                                <li>
+                                                                                        <a href="#">
+                                                                                        Contact
+                                                                                        </a>
+                                                                                </li>
+                                                                        </ul>
+                                                                </nav>
+                                                        
+                                                                <footer class="menu-footer">
+                                                                        <nav class="footer-nav">
+                                                                                <ul>
+                                                                                <li>
+                                                                                <a href="#">
+                                                                                <i class="fa-brands fa-twitter"></i>
+                                                                                Twitter
+                                                                                </a>
+                                                                                </li>
+                                                                                <li>
+                                                                                <a href="#">
+                                                                                <i class="fa-brands fa-github"></i>
+                                                                                Github
+                                                                                </a>
+                                                                                </li>
+                                                                                <li>
+                                                                                <a href="#">
+                                                                                <i class="fa-brands fa-discord"></i>
+                                                                                Discord
+                                                                                </a>
+                                                                                </li>
+                                                                                </ul>
+                                                                        </nav>
+                                                                </footer>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="code-tab-content ctent-2" id="view-2">
+                                        <pre>
+                                        &lt;div class="cover-navigation"&gt;
+                                        &lt;nav class="fnav"&gt;
+                                                &lt;button class="cover-menu toggle-menu"&gt;
+                                                &lt;i class="fa-solid fa-bars"&gt;&lt;/i&gt;
+                                                &lt;/button&gt;
+                                        &lt;/nav&gt;
+                                        &lt;/div&gt;
+                                        &lt;div id="menu" class="full-nav"&gt;
+                                        &lt;button class="full-menu close-toggle"&gt;
+                                                &lt;i class="fa-solid fa-xmark"&gt;&lt;/i&gt;
+                                        &lt;/button&gt;
+                                        &lt;nav class="main-nav"&gt;
+                                                &lt;ul&gt;
+                                                &lt;li&gt;
+                                                        &lt;a href="#"&gt;
+                                                        Home
+                                                        &lt;/a&gt;
+                                                &lt;/li&gt;
+                                                &lt;li&gt;
+                                                        &lt;a href="#"&gt;
+                                                        About us
+                                                        &lt;/a&gt;
+                                                &lt;/li&gt;
+                                                &lt;li&gt;
+                                                        &lt;a href="#"&gt;
+                                                        Contact
+                                                        &lt;/a&gt;
+                                                &lt;/li&gt;
+                                                &lt;/ul&gt;
+                                        &lt;/nav&gt;
+
+                                        &lt;footer class="menu-footer"&gt;
+                                                &lt;nav class="footer-nav"&gt;
+                                                &lt;ul&gt;
+                                                        &lt;li&gt;
+                                                        &lt;a href="#"&gt;
+                                                                &lt;i class="fa-brands fa-twitter"&gt;&lt;/i&gt;
+                                                                Twitter
+                                                        &lt;/a&gt;
+                                                        &lt;/li&gt;
+                                                        &lt;li&gt;
+                                                        &lt;a href="#"&gt;
+                                                                &lt;i class="fa-brands fa-github"&gt;&lt;/i&gt;
+                                                                Github
+                                                        &lt;/a&gt;
+                                                        &lt;/li&gt;
+                                                        &lt;li&gt;
+                                                        &lt;a href="#"&gt;
+                                                                &lt;i class="fa-brands fa-discord"&gt;&lt;/i&gt;
+                                                                Discord
+                                                        &lt;/a&gt;
+                                                        &lt;/li&gt;
+                                                &lt;/ul&gt;
+                                                &lt;/nav&gt;
+                                        &lt;/footer&gt;
+                                        &lt;/div&gt;
+
+                                        .cover-menu {
+                                                background-color: transparent;
+                                                border: none;
+                                        }
+                                        .cover-menu i {
+                                                font-size: 2rem;
+                                                cursor: pointer;
+                                        }
+                                        .full-nav {
+                                                background: #030712;
+                                                height: 100%;
+                                                left: 0;
+                                                opacity: 0;
+                                                overflow: hidden;
+                                                position: fixed;
+                                                text-align: center;
+                                                top: 0;
+                                                transition: all 0.7s ease-in-out;
+                                                visibility: hidden;
+                                                width: 100%;
+                                                z-index: 1110;
+                                        }
+                                        .full-nav.open {
+                                                opacity: 1;
+                                                visibility: visible;
+                                        }
+                                        .full-nav.open li:nth-child(1) {
+                                                animation-delay: 0.1s;
+                                        }
+                                        .full-nav.open li:nth-child(2) {
+                                                animation-delay: 0.2s;
+                                        }
+                                        .full-nav.open li:nth-child(3) {
+                                                animation-delay: 0.3s;
+                                        }
+                                        .full-nav.open li:nth-child(4) {
+                                                animation-delay: 0.4s;
+                                        }
+                                        .full-nav.open li:nth-child(5) {
+                                                animation-delay: 0.5s;
+                                        }
+                                        .full-nav.open li:nth-child(6) {
+                                                animation-delay: 0.6s;
+                                        }
+                                        .full-nav.open li:nth-child(7) {
+                                                animation-delay: 0.7s;
+                                        }
+                                        .full-nav.open li:nth-child(8) {
+                                                animation-delay: 0.8s;
+                                        }
+                                        .full-nav.open li:nth-child(9) {
+                                                animation-delay: 0.9s;
+                                        }
+                                        .full-nav.open li:nth-child(10) {
+                                                animation-delay: 1s;
+                                        }
+                                        .full-nav li {
+                                                animation-duration: 1.0s;
+                                                animation-fill-mode: both;
+                                                animation-name: fadeInUp;
+                                        }
+                                        .main-nav {
+                                                position: relative;
+                                                top: 50%;
+                                                transform: translateY(-50%);
+                                        }
+                                        .main-nav ul {
+                                                list-style: none;
+                                                margin: 0;
+                                                padding: 0;
+                                        }
+                                        .main-nav a {
+                                                color: #fff; 
+                                                display: block;
+                                                font-size: 2.4rem;
+                                                padding: 1rem 1rem;
+                                                align-items: center;
+                                                justify-content: center;
+                                                text-decoration: none;
+                                                text-transform: uppercase;
+                                        }
+                                        .main-nav a:first-child {
+                                                padding-top: 0;
+                                        }
+                                        .menu-footer {
+                                                padding: 2rem;
+                                                bottom: 0;
+                                                left: 0;
+                                                position: absolute;
+                                                right: 0;
+                                        }
+                                        .menu-footer ul {
+                                                display: inline-block;
+                                                list-style: none;
+                                                margin: 0;
+                                                padding: 0;
+                                        }
+                                        .menu-footer li {
+                                                display: inline;
+                                                margin: 0 1rem;
+                                        }
+                                        .menu-footer a {
+                                                color: #fff; 
+                                                text-decoration: none;
+                                                text-transform: uppercase;
+                                        }
+                                        .close-toggle {
+                                                background: transparent;
+                                                border: none;
+                                                float: right;
+                                                margin-top: 20px;
+                                                margin-right: 20px;
+                                        }
+                                        .close-toggle i {
+                                                font-size: 1.5rem;
+                                                color: #fff;
+                                                cursor: pointer;
+                                        }
+
+                                         document.addEventListener('DOMContentLoaded', function () {
+                                                /* Cover navigation */
+                                                const toggleMenu = document.querySelector('.toggle-menu');
+                                                const menu = document.getElementById('menu');
+                                                const closeToggle = document.querySelector('.close-toggle');
+                                                
+                                                const toggleMenuAndMenu = () => {
+                                                toggleMenu.classList.toggle('active');
+                                                menu.classList.toggle('open');
+                                                };
+                                                
+                                                toggleMenu.addEventListener('click', toggleMenuAndMenu);
+                                                closeToggle.addEventListener('click', toggleMenuAndMenu);
+                                        });
+                                        </pre>
+                                </div>
+                        </div>
+
+                        <div class="tab-area mt-4">
+                                <div class="code-tab">
+                                        <button class="code-tab-btn btn-3" data-tab="component-3">Flyout Navigation</button>
+                                        <button class="code-tab-btn btn-3" data-tab="view-3">Code</button>
+                                        <div class="code-slide-bar"></div>
+                                </div>
+                                <div class="code-tab-content ctent-3" id="component-3">
+                                        <div class="ui-zone">
+                                                <div class="tab-center">
+                                                        <nav class="flyout-nav">
+                                                        <ul class="main-menu">
+                                                        <li class="has-flyout">
+                                                                <a href="#">
+                                                                        <span class="menu-text">What's New?</span>
+                                                                        <i class="fa-solid fa-chevron-down"></i>
+                                                                </a>
+                                                        <ul class="flyout">
+                                                        <li>
+                                                        <a href="#">
+                                                                <i class="fa-regular fa-pen-to-square"></i>
+                                                                <span class="menu-text">Blog</span>
+                                                                        <span class="menu-desc">Updates on Products, News about Compnay and More</span>
+                                                        </a>
+                                                        </li>
+                                                        <li>
+                                                        <a href="#">
+                                                                <i class="fa-solid fa-headset"></i>
+                                                                <span class="menu-text">Support Center</span>
+                                                                        <span class="menu-desc">Raise support tickets and get your queries solved</span>
+                                                        </a>
+                                                        </li>
+                                                        <li>
+                                                        <a href="#">
+                                                                <i class="fa-regular fa-calendar"></i>
+                                                                        <span class="menu-text">Events</span>
+                                                                                <span class="menu-desc">Checkout Video Tutorials & Live Webinars from experts</span>
+                                                        </a>
+                                                        </li>
+                                                        </ul>
+                                                        </li>
+                                                        </ul> 
+                                                        </nav>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="code-tab-content ctent-3" id="view-3">
+                                        <pre>
+                                        &lt;nav class="flyout-nav"&gt;
+                                        &lt;ul class="main-menu"&gt;
+                                                &lt;li class="has-flyout"&gt;
+                                                &lt;a href="#"&gt;
+                                                        &lt;span class="menu-text"&gt;What's New?&lt;/span&gt;
+                                                        &lt;i class="fa-solid fa-chevron-down"&gt;&lt;/i&gt;
+                                                &lt;/a&gt;
+                                                &lt;ul class="flyout"&gt;
+                                                        &lt;li&gt;
+                                                        &lt;a href="#"&gt;
+                                                                &lt;i class="fa-regular fa-pen-to-square"&gt;&lt;/i&gt;
+                                                                &lt;span class="menu-text"&gt;Blog&lt;/span&gt;
+                                                                &lt;span class="menu-desc"&gt;Updates on Products, News about Company and More&lt;/span&gt;
+                                                        &lt;/a&gt;
+                                                        &lt;/li&gt;
+                                                        &lt;li&gt;
+                                                        &lt;a href="#"&gt;
+                                                                &lt;i class="fa-solid fa-headset"&gt;&lt;/i&gt;
+                                                                &lt;span class="menu-text"&gt;Support Center&lt;/span&gt;
+                                                                &lt;span class="menu-desc"&gt;Raise support tickets and get your queries solved&lt;/span&gt;
+                                                        &lt;/a&gt;
+                                                        &lt;/li&gt;
+                                                        &lt;li&gt;
+                                                        &lt;a href="#"&gt;
+                                                                &lt;i class="fa-regular fa-calendar"&gt;&lt;/i&gt;
+                                                                &lt;span class="menu-text"&gt;Events&lt;/span&gt;
+                                                                &lt;span class="menu-desc"&gt;Checkout Video Tutorials &amp; Live Webinars from experts&lt;/span&gt;
+                                                        &lt;/a&gt;
+                                                        &lt;/li&gt;
+                                                &lt;/ul&gt;
+                                                &lt;/li&gt;
+                                        &lt;/ul&gt; 
+                                        &lt;/nav&gt;
+
+                                        .flyout-nav ul {
+                                                list-style: none;
+                                                margin-top: 15px;
+                                                padding: 0;
+                                                cursor: pointer;
+                                        }
+                                        .flyout-nav li {
+                                                display: inline-block;
+                                        }
+                                        .flyout-nav a {
+                                                text-decoration: none;
+                                                color: #000;
+                                        }
+                                        .flyout-nav a i {
+                                                margin-right: 8px;
+                                                margin-left: 8px;
+                                        }
+                                        .flyout-nav span.menu-text {
+                                                font-weight: bold;
+                                        }
+                                        .flyout-nav .menu-desc {
+                                                display: block;
+                                                font-size: 15px;
+                                                color: #1f2937;
+                                                margin-left: 35px;
+                                        }
+                                        .has-flyout {
+                                                position: relative;
+                                                padding-right: 20px;
+                                        }
+                                        .flyout {
+                                                position: absolute;
+                                                top: 100%;
+                                                left: 50%; 
+                                                display: none;
+                                                width: 500px; 
+                                                padding: 10px; 
+                                                border-radius: 8px;
+                                                background-color: #fff;
+                                                transform: translateX(-50%); 
+                                                z-index: 9999;
+                                                box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px 0px, rgba(0, 0, 0, 0.23) 0px 3px 6px 0px;
+                                        }
+                                        .flyout li {
+                                                display: block;
+                                                padding: 20px;
+                                        }
+                                        .flyout a {
+                                                color: #000;
+                                        }
+                                        .flyout li:hover {
+                                                background-color: #f1f1f1;
+                                        }
+                                        @media screen and (max-width: 767px) {
+                                                .flyout {
+                                                        width: 300px; 
+                                                        left: 50%; 
+                                                        transform: translateX(-50%); 
+                                                }
+                                                .flyout-nav .menu-desc {
+                                                        display: block;
+                                                        font-size: 12px;
+                                                        color: #1f2937;
+                                                        margin-left: 35px;
+                                                }
+                                        }
+                                        document.addEventListener("DOMContentLoaded", function () {
+                                        /* Flyout Navigation */
+                                        const hasFlyoutItems = document.querySelectorAll(".has-flyout");
+
+                                        hasFlyoutItems.forEach(function (item) {
+                                        item.addEventListener("click", function (event) {
+                                        event.preventDefault(); // Prevents the default behavior of the anchor tag
+
+                                                const flyoutMenu = item.querySelector(".flyout");
+                                                const isVisible = flyoutMenu.style.display === "block";
+                                        
+                                        // Close all flyouts before opening the clicked one
+                                        const allFlyoutMenus = document.querySelectorAll(".flyout");
+                                        allFlyoutMenus.forEach(function (menu) {
+                                                menu.style.display = "none";
+                                        });
+
+                                        // Toggle the visibility of the clicked flyout
+                                                flyoutMenu.style.display = isVisible ? "none" : "block";
+                                                });
+                                        });
+
+                                        // Close flyout when clicking outside
+                                        document.addEventListener("click", function (event) {
+                                        if (!event.target.closest(".has-flyout")) {
+                                        const flyoutMenus = document.querySelectorAll(".flyout");
+                                        flyoutMenus.forEach(function (menu) {
+                                                menu.style.display = "none";
+                                        });
+                                        }
+                                        });
+                                        });
+                                        </pre>
+                                </div>
+                        </div>
+
+                        <div class="tab-area mt-4">
+                                <div class="code-tab">
+                                        <button class="code-tab-btn btn-4" data-tab="component-4">Sidebar Navigation</button>
+                                        <button class="code-tab-btn btn-4" data-tab="view-4">Code</button>
+                                        <div class="code-slide-bar"></div>
+                                </div>
+                                <div class="code-tab-content ctent-4" id="component-4">
+                                        <div class="ui-zone">
+                                                <div class="tab-center">
+                                                        <div class="sidebar-nav">
+                                                                <nav class="sidenav-menu">
+                                                                <button class="toggle-side-menu" onclick="openNav()">
+                                                                        <i class="fa-solid fa-bars"></i>
+                                                                </button>
+                                                                </nav>
+                                                        </div>
+                                                        <div id="sidepanel" class="sidenav-panel">
+                                                                <span class="sidebar-logo"><a href="#"><img src="img/stack-navbar.png" alt=""></a></span>
+                                                                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                                                                <div class="accordion">
+                                                                        <a href="#"><i class="fa-solid fa-gauge-high nav-icon"></i> Home</a>
+                                                                        <a href="#"><i class="fa-solid fa-user nav-icon"></i> About</a>
+                                                                        <button class="accordion-btn" onclick="toggleAccordion('services')"><i class="fa-solid fa-bell-concierge nav-icon"></i> Services <i class="fa-solid fa-caret-down nav-ico"></i></button>
+                                                                        <div id="services" class="accordion-content">
+                                                                                <a href="#"><i class="fa-regular fa-circle nav-icon"></i> Service 1</a>
+                                                                                <a href="#"><i class="fa-regular fa-circle nav-icon"></i> Service 2</a>
+                                                                                <a href="#"><i class="fa-regular fa-circle nav-icon"></i> Service 3</a>
+                                                                        </div>
+                                                                        <a href="#"><i class="fa-solid fa-envelope nav-icon"></i> Contact</a>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="code-tab-content ctent-4" id="view-4">
+                                        <pre>
+                                        &lt;div class="sidebar-nav"&gt;
+                                        &lt;nav class="sidenav-menu"&gt;
+                                                &lt;button class="toggle-side-menu" onclick="openNav()"&gt;
+                                                &lt;i class="fa-solid fa-bars"&gt;&lt;/i&gt;
+                                                &lt;/button&gt;
+                                        &lt;/nav&gt;
+                                        &lt;/div&gt;
+                                        &lt;div id="sidepanel" class="sidenav-panel"&gt;
+                                        &lt;span class="sidebar-logo"&gt;&lt;a href="#"&gt;&lt;img src="logo link" alt=""&gt;&lt;/a&gt;&lt;/span&gt;
+                                        &lt;a href="javascript:void(0)" class="closebtn" onclick="closeNav()"&gt;&amp;times;&lt;/a&gt;
+                                        &lt;div class="accordion"&gt;
+                                                &lt;a href="#"&gt;&lt;i class="fa-solid fa-gauge-high nav-icon"&gt;&lt;/i&gt; Home&lt;/a&gt;
+                                                &lt;a href="#"&gt;&lt;i class="fa-solid fa-user nav-icon"&gt;&lt;/i&gt; About&lt;/a&gt;
+                                                &lt;button class="accordion-btn" onclick="toggleAccordion('services')"&gt;&lt;i class="fa-solid fa-bell-concierge nav-icon"&gt;&lt;/i&gt; Services &lt;i class="fa-solid fa-caret-down nav-ico"&gt;&lt;/i&gt;&lt;/button&gt;
+                                                &lt;div id="services" class="accordion-content"&gt;
+                                                &lt;a href="#"&gt;&lt;i class="fa-regular fa-circle nav-icon"&gt;&lt;/i&gt; Service 1&lt;/a&gt;
+                                                &lt;a href="#"&gt;&lt;i class="fa-regular fa-circle nav-icon"&gt;&lt;/i&gt; Service 2&lt;/a&gt;
+                                                &lt;a href="#"&gt;&lt;i class="fa-regular fa-circle nav-icon"&gt;&lt;/i&gt; Service 3&lt;/a&gt;
+                                                &lt;/div&gt;
+                                                &lt;a href="#"&gt;&lt;i class="fa-solid fa-envelope nav-icon"&gt;&lt;/i&gt; Contact&lt;/a&gt;
+                                        &lt;/div&gt;
+                                        &lt;/div&gt;
+
+                                        .sidenav-menu i {
+                                                font-size: 2rem;
+                                                cursor: pointer;
+                                        }
+                                        .sidenav-menu .toggle-side-menu {
+                                                background-color: transparent;
+                                                border: none;
+                                        }
+                                        .sidenav-panel {
+                                                height: 100%; 
+                                                width: 0; 
+                                                position: fixed; 
+                                                z-index: 9999; 
+                                                top: 0;
+                                                left: 0;
+                                                background-color: #030712; 
+                                                overflow-x: hidden; 
+                                                padding-top: 60px; 
+                                                transition: 0.5s; 
+                                        }
+                                        .sidenav-panel .sidebar-logo img {
+                                                position: absolute;
+                                                top: 20px;
+                                                width: 180px;
+                                        }
+                                        .sidenav-panel .sidebar-logo a:hover {
+                                                background-color: #030712; 
+                                        }
+                                        .sidenav-panel i.nav-icon {
+                                                float: left;
+                                                margin-right: 20px;
+                                                margin-top: 2px;
+                                        }
+                                        .sidenav-panel i.nav-ico {
+                                                float: right;
+                                                margin-right: 20px;
+                                                margin-top: 2px;
+                                        }
+                                        .sidenav-panel a {
+                                                padding: 12px 8px 12px 32px;
+                                                text-decoration: none;
+                                                font-size: 16px;
+                                                color: #fff;
+                                                display: block;
+                                                transition: 0.3s;
+                                        }
+                                        .sidenav-panel a:hover, .offcanvas a:focus,
+                                        .sidenav-panel button.accordion-btn:hover, .sidenav-panel button.accordion-btn:focus {
+                                                background-color: #007bff;
+                                        }
+                                        .sidenav-panel .closebtn {
+                                                position: absolute;
+                                                top: 0;
+                                                right: 25px;
+                                                font-size: 36px;
+                                                margin-left: 50px;
+                                        }
+                                        .sidenav-panel .closebtn:hover {
+                                                background-color: #030712; 
+                                        }
+                                        .sidenav-panel .accordion-btn {
+                                                background-color: transparent;
+                                                border: none;
+                                                width: 100%;
+                                                color: #fff;
+                                                text-align: left;
+                                                padding: 12px 8px 12px 30px;
+                                                position: relative;
+                                        }
+                                        .sidenav-panel .accordion-content {
+                                                max-height: 0;
+                                                overflow: hidden;
+                                                transition: max-height 0.3s ease-out;
+                                                background-color: #030712;
+                                        }
+                                        .sidenav-panel .accordion-content a {
+                                                padding: 12px 8px 12px 40px;
+                                        }
+
+                                        //Sidebar navigation
+                                        function openNav() {
+                                        document.getElementById("sidepanel").style.width = "300px";
+                                        }
+
+                                        function closeNav() {
+                                        document.getElementById("sidepanel").style.width = "0";
+                                        }
+
+                                        function toggleAccordion(accordionId) {
+                                        const accordionContent = document.getElementById(accordionId);
+                                        const otherAccordions = document.querySelectorAll('.accordion-content:not(#' + accordionId + ')');
+                                        
+                                        if (accordionContent.style.maxHeight) {
+                                        accordionContent.style.maxHeight = null;
+                                        } else {
+                                        otherAccordions.forEach((accordion) => {
+                                        accordion.style.maxHeight = null;
+                                        });
+                                        accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
+                                        }
+                                        }
+                                        </pre>
+                                </div>
+                        </div>
+
+                        <div class="tab-area mt-4">
+                                <div class="code-tab">
+                                        <button class="code-tab-btn btn-5" data-tab="component-5">Breadcrumb Navigation</button>
+                                        <button class="code-tab-btn btn-5" data-tab="view-5">Code</button>
+                                        <div class="code-slide-bar"></div>
+                                </div>
+                                <div class="code-tab-content ctent-5" id="component-5">
+                                        <div class="ui-zone">
+                                               <div class="btn-zone">
+                                                <nav class="stack-breadcrumbs">
+                                                        <a href="#home" class="bcrumb-item">Home</a>
+                                                        <a href="#blog" class="bcrumb-item">Blog</a> 
+                                                        <a href="#about" class="bcrumb-item">About</a>
+                                                        <a href="#contact" class="bcrumb-item is-active">Contact</a> 
+                                                </nav>
+                                               <nav class="stack-breadcrumb-nav mt-4">
+                                                <ul>
+                                                        <li>
+                                                                <a href="#"><i class="fa-solid fa-house-chimney"></i></a>
+                                                        </li>
+                                                        <i class="fa-solid fa-chevron-right"></i>
+                                                        <li>
+                                                                <a href="#">Category 1</a>
+                                                        </li>
+                                                        <i class="fa-solid fa-chevron-right"></i>
+                                                        <li>
+                                                                <a href="#">Category 2</a>
+                                                        </li>
+                                                        <i class="fa-solid fa-chevron-right"></i>
+                                                        <li>
+                                                                <a href="#" class="active">Post Title</a>
+                                                        </li>
+                                                </ul>
+                                                </nav>
+                                               </div>
+                                        </div>
+                                </div>
+                                <div class="code-tab-content ctent-5" id="view-5">
+                                        <pre>
+                                        /* First Breadcrumb bar */
+
+                                        &lt;nav class="stack-breadcrumbs"&gt;
+                                                &lt;a href="#home" class="bcrumb-item"&gt;Home&lt;/a&gt;
+                                                &lt;a href="#blog" class="bcrumb-item"&gt;Blog&lt;/a&gt;
+                                                &lt;a href="#about" class="bcrumb-item"&gt;About&lt;/a&gt;
+                                                &lt;a href="#contact" class="bcrumb-item is-active"&gt;Contact&lt;/a&gt;
+                                        &lt;/nav&gt;
+
+                                        /* Second Breadcrumb bar */
+
+                                        &lt;nav class="stack-breadcrumb-nav mt-3"&gt;
+                                                &lt;ul&gt;
+                                                &lt;li&gt;
+                                                        &lt;a href="#"&gt;&lt;i class="fa-solid fa-house-chimney"&gt;&lt;/i&gt;&lt;/a&gt;
+                                                &lt;/li&gt;
+                                                &lt;i class="fa-solid fa-chevron-right"&gt;&lt;/i&gt;
+                                                &lt;li&gt;
+                                                        &lt;a href="#"&gt;Category 1&lt;/a&gt;
+                                                &lt;/li&gt;
+                                                &lt;i class="fa-solid fa-chevron-right"&gt;&lt;/i&gt;
+                                                &lt;li&gt;
+                                                        &lt;a href="#"&gt;Category 2&lt;/a&gt;
+                                                &lt;/li&gt;
+                                                &lt;i class="fa-solid fa-chevron-right"&gt;&lt;/i&gt;
+                                                &lt;li&gt;
+                                                        &lt;a href="#" class="active"&gt;Post Title&lt;/a&gt;
+                                                &lt;/li&gt;
+                                                &lt;/ul&gt;
+                                        &lt;/nav&gt;
+
+                                        /* Breadcrumbs style 1 */
+
+                                        .stack-breadcrumbs {
+                                                margin: 0 auto;
+                                                background: #fff;
+                                                padding: 10px 24px; 
+                                                width: fit-content;
+                                                box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px 0px;
+                                        }
+                                        .stack-breadcrumbs ul i {
+                                                vertical-align: middle;
+                                        }
+                                        .stack-breadcrumbs ul {
+                                                display: flex;
+                                                flex-wrap: wrap;
+                                                list-style: none;
+                                                align-items: center;
+                                                padding: 0;
+                                                margin: 0;
+                                                gap: 8px;
+                                        }
+                                        .stack-breadcrumbs ul li {
+                                                flex: 1; 
+                                                max-width: 50%; 
+                                        }
+                                        .stack-breadcrumbs ul li a {
+                                                color: #000;
+                                                text-decoration: none;
+                                                white-space: nowrap; 
+                                                overflow: hidden; 
+                                                text-overflow: ellipsis; 
+                                        }
+                                        .stack-breadcrumbs ul li a:hover {
+                                                color: #007bff;
+                                        }
+                                        .stack-breadcrumbs ul li a.active {
+                                                font-weight: bold;
+                                        }
+                                        @media (max-width: 790px) {
+                                                .stack-breadcrumbs {
+                                                        padding: 10px 16px;
+                                                }
+                                        }
+
+                                        /* Breadcrumbs style 2 */
+                                        
+                                        .stack-breadcrumb-nav {
+                                                margin: 0 auto;
+                                                background: #fff;
+                                                padding: 10px 24px; 
+                                                width: fit-content;
+                                                box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px 0px;
+                                        }
+                                        .stack-breadcrumb-nav ul {
+                                                display: flex;
+                                                flex-wrap: wrap;
+                                                list-style: none;
+                                                align-items: center;
+                                                padding: 0;
+                                                margin: 0;
+                                                gap: 8px;
+                                        }
+                                        .stack-breadcrumb-nav ul li {
+                                                flex: 1; 
+                                                max-width: 50%; 
+                                        }
+                                        .stack-breadcrumb-nav ul li a {
+                                                color: #000;
+                                                vertical-align: middle;
+                                                text-decoration: none;
+                                                white-space: nowrap; 
+                                                overflow: hidden; 
+                                                text-overflow: ellipsis; 
+                                        }
+                                        .stack-breadcrumbs-nav ul li a:hover {
+                                                color: #007bff;
+                                        }
+                                        .stack-breadcrumbs-nav ul li a.active {
+                                                font-weight: bold;
+                                        }
+                                        @media screen and (max-width: 790px) {
+                                                .stack-breadcrumb-nav ul {
+                                                        display: flex;
+                                                        flex-wrap: wrap;
+                                                        list-style: none;
+                                                        align-items: center;
+                                                        padding: 0;
+                                                        margin: 0;
+                                                        gap: 4px;
+                                                }
+                                        }
+                                        </pre>
+                                </div>
+                        </div> 
+                </div>
+        </div>
+</section>

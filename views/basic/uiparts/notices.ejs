@@ -1,0 +1,264 @@
+<section class="page-area">
+        <div class="flex-container">
+                <div class="item">
+                        <div class="introduction">
+                                <h1>Freeform <span class="text-primary">Toast Notices</span></h1>
+                                <p>Different types of Toast Notices Components for different needs</p>
+                        </div>
+                </div>
+        </div>
+</section>
+<section class="content-area">
+        <div class="ui-area">
+                <div class="content-zone">
+                        <div class="tab-area">
+                                <div class="code-tab">
+                                        <button class="code-tab-btn btn-1" data-tab="component-1">Toast Notices</button>
+                                        <button class="code-tab-btn btn-1" data-tab="view-1">Code</button>
+                                        <div class="code-slide-bar"></div>
+                                </div>
+                                <div class="code-tab-content ctent-1" id="component-1">
+                                        <div class="ui-zone">
+                                                <div class="notice-row">
+                                                        <div class="stack-error-toast">
+                                                                <div class="column">
+                                                                        <i class="fa-solid fa-circle-xmark"></i>
+                                                                        <span>Error: This is error notification</span>
+                                                                        <i class="fa-solid fa-xmark close"></i>
+                                                                </div>
+                                                        </div>
+                                                        <div class="stack-success-toast">
+                                                                <div class="column">
+                                                                        <i class="fa-solid fa-circle-check"></i>
+                                                                        <span>Success: This is success notification</span>
+                                                                        <i class="fa-solid fa-xmark close"></i>
+                                                                </div>
+                                                        </div>
+                                                        <div class="stack-warning-toast">
+                                                                <div class="column">
+                                                                        <i class="fa-solid fa-circle-exclamation"></i>
+                                                                        <span>Warning: This is warning notification</span>
+                                                                        <i class="fa-solid fa-xmark close"></i>
+                                                                </div>
+                                                        </div>
+                                                        <div class="stack-info-toast">
+                                                                <div class="column">
+                                                                        <i class="fa-solid fa-circle-info"></i>
+                                                                        <span>Info: This is Information notification</span>
+                                                                        <i class="fa-solid fa-xmark close"></i>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="code-tab-content ctent-1" id="view-1">
+                                        <pre>
+                                        &lt;div class="stack-error-toast"&gt;
+                                        &lt;div class="column"&gt;
+                                                &lt;i class="fa-solid fa-circle-xmark"&gt;&lt;/i&gt;
+                                                &lt;span&gt;Error: This is error notification&lt;/span&gt;
+                                                &lt;i class="fa-solid fa-xmark close"&gt;&lt;/i&gt;
+                                        &lt;/div&gt;
+                                        &lt;/div&gt;
+                                        &lt;div class="stack-success-toast"&gt;
+                                        &lt;div class="column"&gt;
+                                                &lt;i class="fa-solid fa-circle-check"&gt;&lt;/i&gt;
+                                                &lt;span&gt;Success: This is success notification&lt;/span&gt;
+                                                &lt;i class="fa-solid fa-xmark close"&gt;&lt;/i&gt;
+                                        &lt;/div&gt;
+                                        &lt;/div&gt;
+                                        &lt;div class="stack-warning-toast"&gt;
+                                        &lt;div class="column"&gt;
+                                                &lt;i class="fa-solid fa-circle-exclamation"&gt;&lt;/i&gt;
+                                                &lt;span&gt;Warning: This is warning notification&lt;/span&gt;
+                                                &lt;i class="fa-solid fa-xmark close"&gt;&lt;/i&gt;
+                                        &lt;/div&gt;
+                                        &lt;/div&gt;
+                                        &lt;div class="stack-info-toast"&gt;
+                                        &lt;div class="column"&gt;
+                                                &lt;i class="fa-solid fa-circle-info"&gt;&lt;/i&gt;
+                                                &lt;span&gt;Info: This is Information notification&lt;/span&gt;
+                                                &lt;i class="fa-solid fa-xmark close"&gt;&lt;/i&gt;
+                                        &lt;/div&gt;
+                                        &lt;/div&gt;
+
+                                        .stack-error-toast {
+                                                width: 400px;
+                                                position: relative;
+                                                overflow: hidden;
+                                                list-style: none;
+                                                padding: 16px 17px;
+                                                margin-bottom: 10px;
+                                                background: #fff;
+                                                box-shadow: 0 4px 6px -1px rgba(0, 0, 0, .1), 0 2px 4px -1px rgba(0, 0, 0, .06);
+                                        }
+                                        .stack-error-toast .column {
+                                                display: flex;
+                                                align-items: center;
+                                        }
+                                        .stack-error-toast i {
+                                                font-size: 1.75rem;
+                                                color: #dc3545;
+                                        }
+                                        .stack-error-toast i.close {
+                                                margin-left: auto;
+                                                color: #ddd;
+                                                cursor: pointer;
+                                        }
+                                        .stack-error-toast span {
+                                                font-size: 1.07rem;
+                                                margin-left: 12px;
+                                        }
+                                        .stack-error-toast:before {
+                                                position: absolute;
+                                                content: "";
+                                                height: 3px;
+                                                width: 100%;
+                                                bottom: 0px;
+                                                left: 0px;
+                                                background: #dc3545;
+                                        }
+                                        .stack-success-toast {
+                                                width: 400px;
+                                                position: relative;
+                                                overflow: hidden;
+                                                list-style: none;
+                                                padding: 16px 17px;
+                                                margin-bottom: 10px;
+                                                background: #fff;
+                                                box-shadow: 0 4px 6px -1px rgba(0, 0, 0, .1), 0 2px 4px -1px rgba(0, 0, 0, .06);
+                                        }
+                                        .stack-success-toast .column {
+                                                display: flex;
+                                                align-items: center;
+                                        }
+                                        .stack-success-toast i {
+                                                font-size: 1.75rem;
+                                                color: #198754;
+                                        }
+                                        .stack-success-toast i.close {
+                                                margin-left: auto;
+                                                color: #ddd;
+                                                cursor: pointer;
+                                        }
+                                        .stack-success-toast span {
+                                                font-size: 1.07rem;
+                                                margin-left: 12px;
+                                        }
+                                        .stack-success-toast:before {
+                                                position: absolute;
+                                                content: "";
+                                                height: 3px;
+                                                width: 100%;
+                                                bottom: 0px;
+                                                left: 0px;
+                                                background: #198754;
+                                        }
+                                        .stack-warning-toast {
+                                                width: 400px;
+                                                position: relative;
+                                                overflow: hidden;
+                                                list-style: none;
+                                                padding: 16px 17px;
+                                                margin-bottom: 10px;
+                                                background: #fff;
+                                                box-shadow: 0 4px 6px -1px rgba(0, 0, 0, .1), 0 2px 4px -1px rgba(0, 0, 0, .06);
+                                        }
+                                        .stack-warning-toast .column {
+                                                display: flex;
+                                                align-items: center;
+                                        }
+                                        .stack-warning-toast i {
+                                                font-size: 1.75rem;
+                                                color: #ffc107;
+                                                cursor: pointer;
+                                        }
+                                        .stack-warning-toast i.close {
+                                                margin-left: auto;
+                                                color: #ddd;
+                                        }
+                                        .stack-warning-toast span {
+                                                font-size: 1.07rem;
+                                                margin-left: 12px;
+                                        }
+                                        .stack-warning-toast:before {
+                                                position: absolute;
+                                                content: "";
+                                                height: 3px;
+                                                width: 100%;
+                                                bottom: 0px;
+                                                left: 0px;
+                                                background: #ffc107;
+                                        }
+                                        .stack-info-toast {
+                                                width: 400px;
+                                                position: relative;
+                                                overflow: hidden;
+                                                list-style: none;
+                                                padding: 16px 17px;
+                                                margin-bottom: 10px;
+                                                background: #fff;
+                                                box-shadow: 0 4px 6px -1px rgba(0, 0, 0, .1), 0 2px 4px -1px rgba(0, 0, 0, .06);
+                                        }
+                                        .stack-info-toast .column {
+                                                display: flex;
+                                                align-items: center;
+                                        }
+                                        .stack-info-toast i {
+                                                font-size: 1.75rem;
+                                                color: #0d6efd;
+                                        }
+                                        .stack-info-toast i.close {
+                                                margin-left: auto;
+                                                color: #ddd;
+                                                cursor: pointer;
+                                        }
+                                        .stack-info-toast span {
+                                                font-size: 1.07rem;
+                                                margin-left: 12px;
+                                        }
+                                        .stack-info-toast:before {
+                                                position: absolute;
+                                                content: "";
+                                                height: 3px;
+                                                width: 100%;
+                                                bottom: 0px;
+                                                left: 0px;
+                                                background: #0d6efd;
+                                        }
+                                        @media (max-width: 790px) {
+                                                .stack-info-toast,
+                                                .stack-success-toast,
+                                                .stack-warning-toast,
+                                                .stack-error-toast {
+                                                        width: 100%; 
+                                                        padding: 10px 11px;
+                                                }
+                                        }
+
+                                        document.addEventListener('DOMContentLoaded', function () {
+                                        //Close Notice
+
+                                        // Get all close icons with the class name 'close-button'
+                                        const closeIcons = document.querySelectorAll('.close');
+
+                                        // Add a click event listener to each close icon
+                                                closeIcons.forEach(closeIcon => {
+                                                        closeIcon.addEventListener('click', function() {
+                                                                // Get the parent element of the close icon (e.g., 'stack-error-toast', 'stack-success-toast', etc.)
+                                                                const parentElement = this.closest('.stack-error-toast, .stack-success-toast, .stack-warning-toast, .stack-info-toast');
+                                                                
+                                                                // Check if a parent element was found
+                                                                if (parentElement) {
+                                                                // Hide the parent element
+                                                                parentElement.style.display = 'none';
+                                                                }
+                                                        });
+                                                });
+                                        });
+
+                                </div>
+                        </div>
+                </div>
+        </div>
+</section>

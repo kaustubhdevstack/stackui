@@ -1,0 +1,525 @@
+<section class="page-area">
+        <div class="flex-container">
+                <div class="item">
+                        <div class="introduction">
+                                <h1>Typing <span class="text-primary">Effects</span></h1>
+                                <p>Different types of text typing effects both CSS only + CSS & JS Only</p>
+                        </div>
+                </div>
+        </div>
+</section>
+<section class="content-area">
+        <div class="ui-area">
+                <div class="content-zone">
+                        <div class="tab-area">
+                                <div class="code-tab">
+                                        <button class="code-tab-btn btn-1" data-tab="component-1">Typing Effect 1</button>
+                                        <button class="code-tab-btn btn-1" data-tab="view-1">Code</button>
+                                        <div class="code-slide-bar"></div>
+                                </div>
+                                <div class="code-tab-content ctent-1" id="component-1">
+                                        <div class="tab-center">
+                                                <div class="type-effect-1">
+                                                        <h1 class="text-center">Basic typing effect with thick cursor.</h1>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="code-tab-content ctent-1" id="view-1">
+                                        <pre>
+                                        &lt;div class="type-effect-1"&gt;
+                                        &lt;h1 class="text-center"&gt;Basic typing effect with thick cursor.&lt;/h1&gt;
+                                        &lt;/div&gt;
+
+                                        .type-effect-1 {
+                                                display: inline-block;
+                                        }
+                                        .type-effect-1 h1 {
+                                                overflow: hidden;
+                                                border-right: .15em solid #000;
+                                                white-space: nowrap;
+                                                margin: 0 auto;
+                                                animation: 
+                                                typing 2.5s steps(30, end),
+                                                blink-caret .5s step-end infinite;
+                                        }
+                                        @keyframes typing {
+                                                from{width: 0}
+                                                to{width: 100%}
+                                        }
+                                        @keyframes blink-caret {
+                                                from, to { border-color: transparent }
+                                                50% { border-color: black; }
+                                        }
+                                        </pre>
+                                </div>
+                        </div>
+
+                        <div class="tab-area mt-4">
+                                <div class="code-tab">
+                                        <button class="code-tab-btn btn-2" data-tab="component-2">Typing Effect 2</button>
+                                        <button class="code-tab-btn btn-2" data-tab="view-2">Code</button>
+                                        <div class="code-slide-bar"></div>
+                                </div>
+                                <div class="code-tab-content ctent-2" id="component-2">
+                                        <div class="tab-center">
+                                                <div class="type-effect-2">
+                                                        <h1 class="text-center">Basic typing effect with thin cursor.</h1>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="code-tab-content ctent-2" id="view-2">
+                                        <pre>
+                                        &lt;div class="type-effect-2"&gt;
+                                        &lt;h1 class="text-center"&gt;Basic typing effect with thin cursor.&lt;/h1&gt;
+                                        &lt;/div&gt;
+
+                                        .type-effect-2 {
+                                                display: inline-block;
+                                        }
+                                        .type-effect-2 h1 {
+                                                border-right: 2px solid #000;
+                                                overflow: hidden;
+                                                white-space: nowrap;
+                                                margin: 0 auto;
+                                                animation: 
+                                                typewriter 4s steps(44) 1s 1 normal both,
+                                                blinkCursor 500ms steps(44) infinite normal
+                                        }
+                                        @keyframes typewriter {
+                                                from{ width: 0; }
+                                                to{ width: 100%; }
+                                        }
+                                        @keyframes blinkCursor {
+                                                from{ border-color: #000; }
+                                                to{ border-color: transparent; }
+                                        }
+                                        </pre>
+                                </div>
+                        </div>
+
+                        <div class="tab-area mt-4">
+                                <div class="code-tab">
+                                        <button class="code-tab-btn btn-3" data-tab="component-3">Typing Effect 3</button>
+                                        <button class="code-tab-btn btn-3" data-tab="view-3">Code</button>
+                                        <div class="code-slide-bar"></div>
+                                </div>
+                                <div class="code-tab-content ctent-3" id="component-3">
+                                        <div class="tab-center">
+                                                <div class="type-effect-3">
+                                                        <h1 class="text-center typewrite" data-period="2000" data-type='["Hello!", "How are you?", "I am Stack UI.", "This is repeated effect version 1."]'><span class="wrap"></span></h1>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="code-tab-content ctent-3" id="view-3">
+                                        <pre>
+                                        &lt;div class="type-effect-3"&gt;
+                                        &lt;h1 class="text-center typewrite" data-period="2000" data-type='["Hello!", "How are you?", "I am Stack UI.", "This is repeated effect version 1."]'>
+                                                &lt;span class="wrap"&gt;&lt;/span&gt;
+                                        &lt;/h1&gt;
+                                        &lt;/div&gt;
+
+                                        class TxtType {
+                                        constructor(el, toRotate, period) {
+                                                this.toRotate = JSON.parse(toRotate);
+                                                this.el = el;
+                                                this.loopNum = 0;
+                                                this.period = parseInt(period, 10) || 2000;
+                                                this.txt = '';
+                                                this.isDeleting = false;
+                                                this.tick();
+                                        }
+
+                                        tick() {
+                                        const i = this.loopNum % this.toRotate.length;
+                                        const fullTxt = this.toRotate[i];
+
+                                        if (this.isDeleting) {
+                                                this.txt = fullTxt.substring(0, this.txt.length - 1);
+                                        } else {
+                                                this.txt = fullTxt.substring(0, this.txt.length + 1);
+                                        }
+
+                                        this.el.innerHTML = ` &lt;span class="wrap"&gt;${this.txt}&lt;/span&gt;`;
+
+                                        let delta = 200 - Math.random() * 100;
+
+                                        if (this.isDeleting) {
+                                                delta /= 2;
+                                        }
+
+                                        if (!this.isDeleting && this.txt === fullTxt) {
+                                                delta = this.period;
+                                                this.isDeleting = true;
+                                        } else if (this.isDeleting && this.txt === '') {
+                                                this.isDeleting = false;
+                                                this.loopNum++;
+                                                delta = 500;
+                                        }
+
+                                                setTimeout(() => {
+                                                        this.tick();
+                                                }, delta);
+                                                }
+                                        }
+
+                                        window.onload = function () {
+                                                const elements = document.getElementsByClassName('typewrite');
+                                                        for (let i = 0; i < elements.length; i++) {
+                                                                const toRotate = elements[i].getAttribute('data-type');
+                                                                const period = elements[i].getAttribute('data-period');
+                                                                if (toRotate) {
+                                                                        new TxtType(elements[i], toRotate, period);
+                                                                }
+                                                }
+                                        };
+                                        </pre>
+                                </div>
+                        </div>
+
+                        <div class="tab-area mt-4">
+                                <div class="code-tab">
+                                        <button class="code-tab-btn btn-4" data-tab="component-4">Typing Effect 4</button>
+                                        <button class="code-tab-btn btn-4" data-tab="view-4">Code</button>
+                                        <div class="code-slide-bar"></div>
+                                </div>
+                                <div class="code-tab-content ctent-4" id="component-4">
+                                        <div class="tab-center">
+                                                <div class="type-effect-4">
+                                                        <h1 class="text-center">Typing effect in blue gradient.</h1>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="code-tab-content ctent-4" id="view-4">
+                                        <pre>
+                                        &lt;div class="type-effect-4"&gt;
+                                                &lt;h1 class="text-center"&gt;Typing effect in blue gradient.&lt;/h1&gt;
+                                        &lt;/div&gt;
+
+                                        .type-effect-4 {
+                                                display: inline-block;
+                                        }
+                                        .type-effect-4 h1 {
+                                                overflow: hidden;
+                                                border-right: .15em solid #1d4ed8;
+                                                white-space: nowrap;
+                                                margin: 0 auto;
+                                                font-size: 40px;
+                                                background: linear-gradient(to right, #0f766e, #0e7490, #6d28d9, #1d4ed8); 
+                                                -webkit-text-fill-color: transparent; 
+                                                -webkit-background-clip: text;
+                                                animation: 
+                                                gradient-typing 2.5s steps(30, end),
+                                                blinkcaret .5s step-end infinite;
+                                        }
+                                        @keyframes gradient-typing {
+                                                from{width: 0}
+                                                to{width: 100%}
+                                        }
+                                        @keyframes blinkcaret {
+                                                from, to { border-color: transparent }
+                                                50% { border-color: #1d4ed8; }
+                                        }
+                                        </pre>
+                                </div>
+                        </div>
+
+                        <div class="tab-area mt-4">
+                                <div class="code-tab">
+                                        <button class="code-tab-btn btn-5" data-tab="component-5">Typing Effect 5</button>
+                                        <button class="code-tab-btn btn-5" data-tab="view-5">Code</button>
+                                        <div class="code-slide-bar"></div>
+                                </div>
+                                <div class="code-tab-content ctent-5" id="component-5">
+                                        <div class="tab-center">
+                                                <div class="type-effect-5">
+                                                        <h1 class="black-type">What do you think of this?</h1>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="code-tab-content ctent-5" id="view-5">
+                                        <pre>
+                                        &lt;div class="type-effect-5"&gt;
+                                                &lt;h1 class="back-type"&gt;Typing effect in blue gradient.&lt;/h1&gt;
+                                        &lt;/div&gt;
+
+                                        .type-effect-5 {
+                                                background-color: #292524;
+                                                display: inline-block;
+                                                padding: 20px;
+                                        }
+                                        .type-effect-5 h1 {
+                                                font-family: 'Inconsolata', Consolas, monospace;
+                                                color: #fdba74;
+                                                position: relative;
+                                        }
+                                        .type-effect-5 h1::after {
+                                                content: "|";
+                                                position: absolute;
+                                                right: 0;
+                                                width: 100%;
+                                                color: #fff;
+                                                background: #292524;
+                                                animation: black-type 4s steps(16) forwards, caret 1s infinite;
+                                        }
+                                        @keyframes black-type {
+                                                to { width: 0 }
+                                        }
+                                        @keyframes caret {
+                                                50% { color: transparent }
+                                        }
+                                        </pre>
+                                </div>
+                        </div>
+
+                        <div class="tab-area mt-4">
+                                <div class="code-tab">
+                                        <button class="code-tab-btn btn-6" data-tab="component-6">Typing Effect 6</button>
+                                        <button class="code-tab-btn btn-6" data-tab="view-6">Code</button>
+                                        <div class="code-slide-bar"></div>
+                                </div>
+                                <div class="code-tab-content ctent-6" id="component-6">
+                                        <div class="tab-center">
+                                                <div class="type-effect-6">
+                                                        <span class="repeat-type"></span>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="code-tab-content ctent-6" id="view-6">
+                                        <pre>
+                                        &lt;div class="type-effect-6"&gt;
+                                                &lt;span class="repeat-type"&gt;&lt;/span&gt;
+                                        &lt;/div&gt;
+
+                                        .type-effect-6 {
+                                                display: inline-block;
+                                                background-color: #fff;
+                                                padding: 40px;
+                                        }
+                                        .repeat-type {
+                                                background-position: 0% 100%;
+                                                border-bottom: 3px solid red;
+                                                box-sizing: border-box;
+                                                color: #000;
+                                                font-size: 2rem;
+                                                padding-right: 2px;
+                                                position: relative;
+                                                transition: background-position 1s;
+                                        }
+                                        .repeat-type::after {
+                                                animation: blink-cursor 0.75s step-end infinite;
+                                                background-color: transparent;
+                                                content: "";
+                                                display: block;
+                                                height: 2rem;
+                                                position: absolute;
+                                                right: 0;
+                                                bottom: 0;
+                                                width: 2px;
+                                        }
+                                        .repeat-type.highlight {
+                                                background-image: linear-gradient(
+                                                to left,
+                                                rgba(0, 0, 0, 0.2) 50%,
+                                                transparent 50%
+                                        );
+                                                background-position: 100% 100%;
+                                                background-repeat: no-repeat;
+                                                background-size: 200% 2rem;
+                                        }
+                                        @keyframes blink-cursor {
+                                                0% {
+                                                        background-color: transparent;
+                                                }
+                                                50% {
+                                                        background-color: black;
+                                                }
+                                        }
+                                        @media only screen and (max-width: 600px) {
+                                                html {
+                                                        font-size: 12px;
+                                                }
+                                        }
+
+                                        const element = document.querySelector(".repeat-type");
+
+                                        function startType(pun, index) {
+                                                let typed = pun.substring(0, index + 1);
+                                                element.innerHTML = typed;
+
+                                        if (index < pun.length - 1) {
+                                                setTimeout(() => {
+                                                        startType(pun, index + 1);
+                                                }, 50);
+                                        } else {
+                                                setTimeout(() => {
+                                                element.classList.add("highlight");
+                                        }, 4000);
+
+                                        setTimeout(() => {
+                                                element.classList.remove("highlight");
+                                                element.innerHTML = "";
+                                                startType(getRandomPun(), 0);
+                                                }, 5000);
+                                                }
+                                        }
+
+                                        function getRandomPun() {
+                                        const puns = [
+                                                "This is repeated typing effect version 2 but with more Puns!",
+                                                "Why did the programmer quit his job? He didn't get arrays of opportunities",
+                                                "Coding is a byte-ful profession.",
+                                                "What's a programmer's favorite song? Hello, world by Adele.",
+                                                "A programmer's favorite drink? Java!",
+                                                "Why do programmers prefer dark mode? Because the light mode bugs them.",
+                                                "What's a coder's favorite exercise? Cursor-cises.",
+                                                "Why did the programmer get stuck in the shower? He couldn't find the right escape sequence.",
+                                                "Why did the programmer always carry a ladder? To reach the higher-level languages.",
+                                                "What's a computer programmer's favorite type of jewelry? A bit ring.",
+                                                "I told my programmer friend a joke about memory. But he forgot to laugh.",
+                                                "Why did the programmer bring a ladder to the bar? He heard the drinks were on the house.",
+                                                "What's a coder's favorite type of pet? A key-bored cat.",
+                                                "How did the programmer fix his broken chair? He used a chair array.",
+                                                "Why was the programmer cold? Because he left his Windows open.",
+                                                "What do you call a programmer who speaks French? A code-à-trois expert.",
+                                                "I heard the programmer opened a bakery. He specializes in cookies and data cakes.",
+                                                "What do you call a coding contest in the ocean? A mer-code-a-thon.",
+                                                "How did the people behind the latest hack escape? They ransomware.",
+                                                "Why did the programmer go broke? He lost his domain in a coding bet.",
+                                        ];
+                                        const index = Math.floor(Math.random() * puns.length);
+                                                return puns[index];
+                                        }
+
+                                        function initializeTypingAnimation() {
+                                                const pun = getRandomPun();
+                                                startType(pun, 0);
+                                        }
+
+                                        initializeTypingAnimation();
+                                        </pre>
+                                </div>
+                        </div>
+
+                        <div class="tab-area mt-4">
+                                <div class="code-tab">
+                                        <button class="code-tab-btn btn-7" data-tab="component-7">Typing Effect 7</button>
+                                        <button class="code-tab-btn btn-7" data-tab="view-7">Code</button>
+                                        <div class="code-slide-bar"></div>
+                                </div>
+                                <div class="code-tab-content ctent-7" id="component-7">
+                                        <div class="tab-center">
+                                                <div class="type-effect-7">
+                                                        <div id="natural" class="natural-type"></div>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="code-tab-content ctent-7" id="view-7">
+                                        <pre>
+                                        &lt;div class="type-effect-7"&gt;
+                                                &lt;div id="natural" class="natural-type"&gt;&lt;/div&gt;
+                                        &lt;/div&gt;
+
+                                        .type-effect-7 {
+                                                display: inline-block;
+                                                font-size: 20px;
+                                                letter-spacing: 6px;
+                                        }
+
+                                        var aText = [
+                                                "Why don't scientists trust atoms? Because they make up everything!",
+                                                "What did one wall say to the other wall? I'll meet you at the corner!",
+                                                "Why don't skeletons fight each other? They don't have the guts!",
+                                                "Why did the bicycle fall over? It was two-tired!",
+                                                "What do you call a fish wearing a crown? King mackerel!",
+                                                "How does a penguin build its house? Igloos it together!",
+                                                "Why don't eggs tell jokes? Because they might crack up!"
+                                        ];
+                                        var iSpeed = 100;
+                                        var iIndex = 0;
+                                        var iArrLength = aText[0].length;
+                                        var iScrollAt = 20;
+
+                                        var iTextPos = 0;
+                                        var sContents = '';
+                                        var iRow;
+
+                                        function typewriter() {
+                                        sContents = ' ';
+                                                iRow = Math.max(0, iIndex - iScrollAt);
+                                                var destination = document.getElementById("natural");
+
+                                                while (iRow < iIndex) {
+                                                sContents += aText[iRow++] + '<br />';
+                                        }
+                                        destination.innerHTML =
+                                                sContents + aText[iIndex].substring(0, iTextPos) + "_";
+                                                if (iTextPos++ == iArrLength) {
+                                                iTextPos = 0;
+                                                iIndex++;
+                                        if (iIndex != aText.length) {
+                                                iArrLength = aText[iIndex].length;
+                                                setTimeout(typewriter, 500);
+                                        }
+                                                } else {
+                                                        setTimeout(typewriter, iSpeed);
+                                                }
+                                        }
+
+                                        typewriter();
+                                        </pre>
+                                </div>
+                        </div>
+
+                        <div class="tab-area mt-4">
+                                <div class="code-tab">
+                                        <button class="code-tab-btn btn-8" data-tab="component-8">Typing Effect 8</button>
+                                        <button class="code-tab-btn btn-8" data-tab="view-8">Code</button>
+                                        <div class="code-slide-bar"></div>
+                                </div>
+                                <div class="code-tab-content ctent-8" id="component-8">
+                                        <div class="tab-center">
+                                                <div class="type-effect-8">
+                                                        <h1 class="text-center">For short texts</h1>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="code-tab-content ctent-8" id="view-8">
+                                        <pre>
+                                        &lt;div class="type-effect-8"&gt;
+                                                &lt;h1 class="text-center"&gt;&lt;/h1&gt;
+                                        &lt;/div&gt;
+
+                                        .type-effect-8 {
+                                                display: inline-block;
+                                        }
+                                        .type-effect-8 h1 {
+                                                white-space: nowrap;
+                                                overflow: hidden;
+                                                animation: typewriter 3s steps(13) infinite alternate,
+                                                        blink 800ms steps(13) infinite normal;
+                                                border-right: 5px solid black;
+                                        }
+                                        @keyframes typewriter {
+                                                from {
+                                                        width: 0%;
+                                                }
+
+                                                to {
+                                                        width: 100%;
+                                                }
+                                        }
+                                        @keyframes blink {
+                                                from {
+                                                        border-color: black;
+                                                }
+
+                                                to {
+                                                        border-color: transparent;
+                                                }
+                                        }
+                                        </pre>
+                                </div>
+                        </div>
+                </div>
+        </div>
+</section>

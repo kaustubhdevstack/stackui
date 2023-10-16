@@ -1,0 +1,351 @@
+<section class="page-area">
+        <div class="flex-container">
+                <div class="item">
+                        <div class="introduction">
+                                <h1>Freeform <span class="text-primary">Tabs</span></h1>
+                                <p>Different types of Tabs for different needs</p>
+                        </div>
+                </div>
+        </div>
+</section>
+<section class="content-area">
+        <div class="ui-area">
+                <div class="content-zone">
+                        <div class="tab-area">
+                                <div class="code-tab">
+                                        <button class="code-tab-btn btn-1" data-tab="component-1">Tabs Type 1</button>
+                                        <button class="code-tab-btn btn-1" data-tab="view-1">Code</button>
+                                        <div class="code-slide-bar"></div>
+                                </div>
+                                <div class="code-tab-content ctent-1" id="component-1">
+                                        <div class="ui-zone">
+                                                <div class="tab-container">
+                                                        <div class="tabs-area">
+                                                                <button class="tab-button active" data-tab="tab-1">Regular Tab 1</button>
+                                                                <button class="tab-button" data-tab="tab-2">Regular Tab 2</button>
+                                                                <button class="tab-button" data-tab="tab-3">Regular Tab 3</button>
+                                                        </div>
+                                                        <div class="stack-tab-content" id="tab-1">
+                                                                <h2>Content of Regular Tab 1</h2>
+                                                                <p>This is the content of Tab 1.</p>
+                                                        </div>
+
+                                                        <div class="stack-tab-content" id="tab-2">
+                                                                <h2>Content of Regular Tab 2</h2>
+                                                                <p>This is the content of Tab 2.</p>
+                                                        </div>
+
+                                                        <div class="stack-tab-content" id="tab-3">
+                                                                <h2>Content of Regular Tab 3</h2>
+                                                                <p>This is the content of Tab 3.</p>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="code-tab-content ctent-1" id="view-1">
+                                        <pre>
+                                        &lt;div class="tab-container"&gt;
+                                                &lt;div class="tabs-area"&gt;
+                                                        &lt;button class="tab-button active" data-tab="tab-1"&gt;Regular Tab 1&lt;/button&gt;
+                                                        &lt;button class="tab-button" data-tab="tab-2"&gt;Regular Tab 2&lt;/button&gt;
+                                                        &lt;button class="tab-button" data-tab="tab-3"&gt;Regular Tab 3&lt;/button&gt;
+                                                &lt;/div&gt;
+                                                &lt;div class="stack-tab-content" id="tab-1"&gt;
+                                                        &lt;h2&gt;Content of Regular Tab 1&lt;/h2&gt;
+                                                        &lt;p&gt;This is the content of Tab 1.&lt;/p&gt;
+                                                &lt;/div&gt;
+
+                                                &lt;div class="stack-tab-content" id="tab-2"&gt;
+                                                        &lt;h2&gt;Content of Regular Tab 2&lt;/h2&gt;
+                                                        &lt;p&gt;This is the content of Tab 2.&lt;/p&gt;
+                                                &lt;/div&gt;
+
+                                                &lt;div class="stack-tab-content" id="tab-3"&gt;
+                                                        &lt;h2&gt;Content of Regular Tab 3&lt;/h2&gt;
+                                                        &lt;p&gt;This is the content of Tab 3.&lt;/p&gt;
+                                                &lt;/div&gt;
+                                        &lt;/div&gt;
+
+
+                                        .tab-container {
+                                                box-shadow: 0 4px 6px -1px rgba(0, 0, 0, .1), 0 2px 4px -1px rgba(0, 0, 0, .06);
+                                        }
+                                        .tabs-area {
+                                                display: flex;
+                                                justify-content: space-around;
+                                                margin-top: 20px;
+                                        }
+                                        .tab-button {
+                                                flex: 1;
+                                                padding: 12px 0;
+                                                border: none;
+                                                cursor: pointer;
+                                                text-align: center;
+                                                font-size: 16px;
+                                                background-color: #f1f1f1;
+                                        }
+                                        .tab-button.active {
+                                                color: #000;
+                                                background-color: #fff;
+                                        }
+                                        #tab-1, #tab-2, #tab-3 {
+                                                background-color: #fff;
+                                        }
+                                        .stack-tab-content {
+                                                display: none;
+                                                padding: 4rem;
+                                                background-color: #f3f4f6;
+                                        }
+                                        .stack-tab-content.show {
+                                                display: block;
+                                        }
+                                        /* Media query for tablets */
+                                        @media screen and (min-width: 768px) and (max-width: 1023px) {
+                                                .tabs-area {
+                                                        flex-direction: column;
+                                                }
+                                                .tab-button {
+                                                        flex: none;
+                                                        width: 100%;
+                                                }
+                                        }
+                                        /* Media query for mobile */
+                                        @media (max-width: 790px) {
+                                                .tabs-area {
+                                                        flex-direction: column;
+                                                }
+                                                .tab-button {
+                                                        flex: none;
+                                                        width: 100%;
+                                                }
+                                                .stack-tab-content {
+                                                        padding: 2rem;
+                                                }
+                                        }
+
+                                        document.addEventListener('DOMContentLoaded', function () {
+                                                const tabButtons = document.querySelectorAll('.tab-button');
+                                                const tabContents = document.querySelectorAll('.stack-tab-content');
+
+                                                tabButtons.forEach((button, index) => {
+                                                button.addEventListener('click', () => {
+                                                const tabId = button.dataset.tab;
+
+                                                tabButtons.forEach(btn => {
+                                                btn.classList.remove('active');
+                                                });
+
+                                                tabContents.forEach(content => {
+                                                content.classList.remove('show');
+                                                });
+
+                                                button.classList.add('active');
+                                                document.getElementById(tabId).classList.add('show');
+                                                });
+
+                                                // Display the content of Tab 1 by default
+                                                if (index === 0) {
+                                                button.classList.add('active');
+                                                }
+                                                });
+
+                                                // Display the content of Tab 1 by default
+                                                tabContents[0].classList.add('show');
+                                        });
+
+                                        </pre>
+                                </div>
+                        </div>
+
+                        <div class="tab-area mt-4">
+                                <div class="code-tab">
+                                        <button class="code-tab-btn btn-2" data-tab="component-2">Tabs Type 2</button>
+                                        <button class="code-tab-btn btn-2" data-tab="view-2">Code</button>
+                                        <div class="code-slide-bar"></div>
+                                </div>
+                                <div class="code-tab-content ctent-2" id="component-2">
+                                        <div class="ui-zone">
+                                                <div class="slide-tab-container">
+                                                        <div class="slide-tabs-area">
+                                                                <button class="slide-tab-button active" data-tab="slide-tab-1">Slide Tab 1</button>
+                                                                <button class="slide-tab-button" data-tab="slide-tab-2">Slide Tab 2</button>
+                                                                <button class="slide-tab-button" data-tab="slide-tab-3">Slide Tab 3</button>
+                                                                <div class="slide-bar"></div>
+                                                        </div>
+                                                        <div class="slide-tab-content" id="slide-tab-1">
+                                                                <h2>Content of Slide Tab 1</h2>
+                                                                <p>This is the content of Tab 1.</p>
+                                                        </div>
+
+                                                        <div class="slide-tab-content" id="slide-tab-2">
+                                                                <h2>Content of Slide Tab 2</h2>
+                                                                <p>This is the content of Tab 2.</p>
+                                                        </div>
+
+                                                        <div class="slide-tab-content" id="slide-tab-3">
+                                                                <h2>Content of Slide Tab 3</h2>
+                                                                <p>This is the content of Tab 3.</p>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="code-tab-content ctent-2" id="view-2">
+                                        <pre>
+                                        &lt;div class="slide-tab-container"&gt;
+                                                &lt;div class="slide-tabs-area"&gt;
+                                                        &lt;button class="slide-tab-button active" data-tab="slide-tab-1"&gt;Slide Tab 1&lt;/button&gt;
+                                                        &lt;button class="slide-tab-button" data-tab="slide-tab-2"&gt;Slide Tab 2&lt;/button&gt;
+                                                        &lt;button class="slide-tab-button" data-tab="slide-tab-3"&gt;Slide Tab 3&lt;/button&gt;
+                                                        &lt;div class="slide-bar"&gt;&lt;/div&gt;
+                                                &lt;/div&gt;
+                                                &lt;div class="slide-tab-content" id="slide-tab-1"&gt;
+                                                        &lt;h2&gt;Content of Slide Tab 1&lt;/h2&gt;
+                                                        &lt;p&gt;This is the content of Tab 1.&lt;/p&gt;
+                                                &lt;/div&gt;
+
+                                                &lt;div class="slide-tab-content" id="slide-tab-2"&gt;
+                                                        &lt;h2&gt;Content of Slide Tab 2&lt;/h2&gt;
+                                                        &lt;p&gt;This is the content of Tab 2.&lt;/p&gt;
+                                                &lt;/div&gt;
+
+                                                &lt;div class="slide-tab-content" id="slide-tab-3"&gt;
+                                                        &lt;h2&gt;Content of Slide Tab 3&lt;/h2&gt;
+                                                        &lt;p&gt;This is the content of Tab 3.&lt;/p&gt;
+                                                &lt;/div&gt;
+                                        &lt;/div&gt;
+
+                                        .slide-tab-container {
+                                                box-shadow: 0 4px 6px -1px rgba(0, 0, 0, .1), 0 2px 4px -1px rgba(0, 0, 0, .06);
+                                        }
+                                        .slide-tabs-area {
+                                                position: relative;
+                                                display: flex;
+                                                justify-content: space-around;
+                                                margin-top: 20px;
+                                                overflow: hidden;
+                                        }
+                                        .slide-tab-button {
+                                                flex: 1;
+                                                padding: 12px 0;
+                                                background-color: #fff;
+                                                font-size: 16px;
+                                                border: none;
+                                                cursor: pointer;
+                                                text-align: center;
+                                                transition: background-color 0.3s ease-in-out;
+                                        }
+                                        .slide-tab-button.active {
+                                                color: #00695c;
+                                                border-bottom: 2px solid #00695c;
+                                        }
+                                        .slide-tab-content {
+                                                display: none;
+                                                padding: 4rem;
+                                                pointer-events: none;
+                                                opacity: 0; 
+                                                position: absolute;
+                                                top: 0;
+                                                left: 0;
+                                                background-color: #f3f4f6;
+                                        }
+                                        .slide-tab-content.show {
+                                                display: block;
+                                                pointer-events: auto;
+                                                opacity: 1; 
+                                                position: relative; 
+                                        }
+                                        .slide-bar {
+                                                position: absolute;
+                                                bottom: 0;
+                                                height: 3px;
+                                                background-color: #007bff;
+                                                transition: transform 1s ease-in-out;
+                                        }
+                                        #slide-tab-1 {
+                                                background-color: #99f6e4;
+                                        }
+                                        #slide-tab-2 {
+                                                background-color: #a7f3d0;
+                                        }
+                                        #slide-tab-3 {
+                                                background-color: #bbf7d0;
+                                        }
+                                        /* Media query for tablets */
+                                        @media screen and (min-width: 768px) and (max-width: 1023px) {
+                                                .slide-tabs-area {
+                                                        flex-direction: column;
+                                                }
+                                                .slide-tab-button {
+                                                        flex: none;
+                                                        width: 100%;
+                                                }
+                                        }
+                                        /* Media query for mobile */
+                                                @media (max-width: 790px) {
+                                                .slide-tabs-area {
+                                                        flex-direction: column;
+                                                }
+                                                .slide-tab-button {
+                                                        flex: none;
+                                                        width: 100%;
+                                                }
+                                                .slide-tab-content {
+                                                        padding: 10px;
+                                                }
+                                        }
+
+                                        document.addEventListener('DOMContentLoaded', function () {
+                                        const slideButtons = document.querySelectorAll('.slide-tab-button');
+                                        const slideContents = document.querySelectorAll('.slide-tab-content');
+                                        const slideBar = document.querySelector('.slide-bar');
+
+                                        slideButtons.forEach((button, index) => {
+                                        button.addEventListener('click', () => {
+                                                const tabId = button.dataset.tab;
+
+                                                slideButtons.forEach(btn => {
+                                                btn.classList.remove('active');
+                                                });
+
+                                                slideContents.forEach(content => {
+                                                content.classList.remove('show');
+                                                });
+
+                                                button.classList.add('active');
+                                                document.getElementById(tabId).classList.add('show');
+
+                                                // Move the slide bar to the selected tab with more noticeable effect
+                                                const buttonWidth = button.offsetWidth;
+                                                const slideBarOffset = index * buttonWidth;
+                                                slideBar.style.transform = `translateX(${slideBarOffset}px)`;
+
+                                                // Add a small animation to the slide bar
+                                                slideBar.style.transition = 'transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55)';
+
+                                                // Slide the tab content with fade effect
+                                                slideContents.forEach((content, contentIndex) => {
+                                                if (contentIndex === index) {
+                                                        content.style.transition = 'opacity 1s ease-in-out'; // Use opacity for fade effect
+                                                        content.style.opacity = 1; // Fade into view
+                                                } else {
+                                                        content.style.transition = 'opacity 1s ease-in-out'; // Use opacity for fade effect
+                                                        content.style.opacity = 0; // Fade out of view
+                                                }
+                                                });
+                                        });
+
+                                        // Display the content of Tab 1 by default
+                                        if (index === 0) {
+                                                button.classList.add('active');
+                                        }
+                                        });
+
+                                        // Display the content of Tab 1 by default
+                                        slideContents[0].classList.add('show');
+                                        });
+                                        </pre>
+                                </div>
+                        </div>
+                </div>
+        </div>
+</section>

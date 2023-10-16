@@ -1,0 +1,1784 @@
+<section class="page-area">
+        <div class="flex-container">
+                <div class="item">
+                        <div class="introduction">
+                                <h1>Freeform <span class="text-primary">Forms</span></h1>
+                                <p>Different types of Form Components for different needs</p>
+                        </div>
+                </div>
+        </div>
+</section>
+<section class="content-area">
+        <div class="ui-area">
+                <div class="content-zone">
+                        <div class="tab-area">
+                                <div class="code-tab">
+                                        <button class="code-tab-btn btn-1" data-tab="component-1">Textboxes</button>
+                                        <button class="code-tab-btn btn-1" data-tab="view-1">Code</button>
+                                        <div class="code-slide-bar"></div>
+                                </div>
+                                <div class="code-tab-content ctent-1" id="component-1">
+                                        <div class="ui-zone">
+                                                <div class="text-box-1 m-3">
+                                                        <input type="text" class="text-input" placeholder="type something...">
+                                                </div>
+                                                <div class="text-box-2 m-3">
+                                                        <input type="text" class="text-input" placeholder="type something...">
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="code-tab-content ctent-1" id="view-1">
+                                        <pre>
+                                        &lt;div class="text-box-1"&gt;
+                                                &lt;input type="text" class="text-input" placeholder="type something..."&gt;
+                                        &lt;/div&gt;
+                                        &lt;div class="text-box-2"&gt;
+                                                &lt;input type="text" class="text-input" placeholder="type something..."&gt;
+                                        &lt;/div&gt;
+
+                                        .text-box-1 .text-input {
+                                                width: 100%;
+                                                padding: 12px;
+                                                font-size: 16px;
+                                                border: 1px solid #ccc;
+                                                border-radius: 4px;
+                                                resize: vertical;
+                                                transition: 0.3 ease;
+                                                outline: none;
+                                                box-sizing: border-box;
+                                                appearance: none;
+                                        }
+                                        .text-box-1 .text-input:focus {
+                                                border: 2px solid #000;
+                                        }
+                                        .text-box-2 .text-input {
+                                                width: 100%;
+                                                padding: 12px;
+                                                font-size: 16px;
+                                                border-left: none;
+                                                border-right: none;
+                                                border-top: none;
+                                                border-bottom: 1px solid #ccc;
+                                                resize: vertical;
+                                                transition: 0.3 ease;
+                                                outline: none;
+                                                box-sizing: border-box;
+                                                appearance: none;
+                                        }
+                                        .text-box-2 .text-input:focus {
+                                                border-left: none;
+                                                border-right: none;
+                                                border-top: none;
+                                                border-bottom: 2px solid #000;
+                                        }
+                                        @media screen and (min-width: 768px) and (max-width: 1023px) {
+                                                .text-box-1,
+                                                .text-box-2 {
+                                                        flex-direction: column;
+                                                }
+                                                .text-box-1 .text-input,
+                                                .text-box-2 .text-input {
+                                                        width: 94%;
+                                                }
+                                        }
+                                        @media (max-width: 790px) {
+                                                .text-box-1,
+                                                .text-box-2 {
+                                                        flex-direction: column;
+                                                }
+                                                .text-box-1 .text-input,
+                                                .text-box-2 .text-input {
+                                                        width: 94%;
+                                                }
+                                        }
+                                        </pre>
+                                </div>
+                        </div>
+
+                        <div class="tab-area mt-4">
+                                <div class="code-tab">
+                                        <button class="code-tab-btn btn-2" data-tab="component-2">Textareas</button>
+                                        <button class="code-tab-btn btn-2" data-tab="view-2">Code</button>
+                                        <div class="code-slide-bar"></div>
+                                </div>
+                                <div class="code-tab-content ctent-2" id="component-2">
+                                        <div class="ui-zone">
+                                                <div class="text-area-1 m-3">
+                                                        <textarea class="text-input" placeholder="type something..." id="" cols="30" rows="10"></textarea>
+                                                </div>
+                                                <div class="text-area-2 m-3">
+                                                        <textarea class="text-input" placeholder="type something..." id="" cols="30" rows="10"></textarea>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="code-tab-content ctent-2" id="view-2">
+                                        <pre>
+                                        &lt;div class="text-area-1"&gt;
+                                                &lt;textarea class="text-input" placeholder="type something..." id="" cols="30" rows="10"&gt;&lt;/textarea&gt;
+                                        &lt;/div&gt;
+                                        &lt;div class="text-area-2"&gt;
+                                                &lt;textarea class="text-input" placeholder="type something..." id="" cols="30" rows="10"&gt;&lt;/textarea&gt;
+                                        &lt;/div&gt;
+
+                                        .text-area-1 .text-input {
+                                                width: 100%;
+                                                padding: 12px;
+                                                font-size: 16px;
+                                                border: 1px solid #ccc;
+                                                border-radius: 4px;
+                                                resize: vertical;
+                                                outline: none;
+                                                appearance: none;
+                                                box-sizing: border-box;
+                                                transition: 0.3 ease;
+                                        }
+                                        .text-area-1 .text-input:focus {
+                                                border: 2px solid #000;
+                                        }
+                                        .text-area-2 .text-input {
+                                                width: 100%;
+                                                padding: 12px;
+                                                font-size: 16px;
+                                                border-left: none;
+                                                border-right: none;
+                                                border-top: none;
+                                                outline: none;
+                                                appearance: none;
+                                                border-bottom: 1px solid #ccc;
+                                                resize: vertical;
+                                                box-sizing: border-box;
+                                                transition: 0.3 ease;
+                                        }
+                                        .text-area-2 .text-input:focus {
+                                                border-left: none;
+                                                border-right: none;
+                                                border-top: none;
+                                                border-bottom: 2px solid #000;
+                                        }
+                                        @media screen and (min-width: 768px) and (max-width: 1023px) {
+                                                .text-area-1,
+                                                .text-area-2 {
+                                                        flex-direction: column;
+                                                }
+                                                .text-area-1 .text-input,
+                                                .text-area-2 .text-input {
+                                                        width: 100%;
+                                                }
+                                        }
+                                        @media (max-width: 790px) {
+                                                .text-area-1,
+                                                .text-area-2 {
+                                                        flex-direction: column;
+                                                }
+                                                .text-area-1 .text-input,
+                                                .text-area-2 .text-input {
+                                                        width: 100%;
+                                                }
+                                        }
+                                        </pre>
+                                </div>
+                        </div>
+
+                        <div class="tab-area mt-4">
+                                <div class="code-tab">
+                                        <button class="code-tab-btn btn-3" data-tab="component-3">Select Boxes</button>
+                                        <button class="code-tab-btn btn-3" data-tab="view-3">Code</button>
+                                        <div class="code-slide-bar"></div>
+                                </div>
+                                <div class="code-tab-content ctent-3" id="component-3">
+                                        <div class="ui-zone">
+                                                <div class="select-box-1 m-3">
+                                                        <select class="select-menu">
+                                                                <option>Select Option</option>
+                                                                <option value="option1">Option 1</option>
+                                                                <option value="option2">Option 2</option>
+                                                                <option value="option3">Option 3</option>
+                                                        </select>
+                                                        <div class="icon-container">
+                                                                <i class="fa-solid fa-chevron-down"></i>
+                                                        </div>
+                                                </div>
+
+                                                <div class="select-box-2 m-3">
+                                                        <select class="select-menu">
+                                                                <option>Select Option</option>
+                                                                <option value="option1">Option A</option>
+                                                                <option value="option2">Option B</option>
+                                                                <option value="option3">Option C</option>
+                                                        </select>
+                                                        <div class="icon-container">
+                                                                <i class="fa-solid fa-chevron-down"></i>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="code-tab-content ctent-3" id="view-3">
+                                        <pre>
+                                        &lt;div class="select-box-1"&gt;
+                                        &lt;select class="select-menu"&gt;
+                                                &lt;option&gt;Select Option&lt;/option&gt;
+                                                &lt;option value="option1"&gt;Option 1&lt;/option&gt;
+                                                &lt;option value="option2"&gt;Option 2&lt;/option&gt;
+                                                &lt;option value="option3"&gt;Option 3&lt;/option&gt;
+                                        &lt;/select&gt;
+                                        &lt;div class="icon-container"&gt;
+                                                &lt;i class="fa-solid fa-chevron-down"&gt;&lt;/i&gt;
+                                        &lt;/div&gt;
+                                        &lt;/div&gt;
+
+                                        &lt;div class="select-box-2"&gt;
+                                        &lt;select class="select-menu"&gt;
+                                                &lt;option&gt;Select Option&lt;/option&gt;
+                                                &lt;option value="option1"&gt;Option A&lt;/option&gt;
+                                                &lt;option value="option2"&gt;Option B&lt;/option&gt;
+                                                &lt;option value="option3"&gt;Option C&lt;/option&gt;
+                                        &lt;/select&gt;
+                                        &lt;div class="icon-container"&gt;
+                                                &lt;i class="fa-solid fa-chevron-down"&gt;&lt;/i&gt;
+                                        &lt;/div&gt;
+                                        &lt;/div&gt;
+
+                                        .select-box-1 {
+                                                display: flex;
+                                                align-items: center;
+                                                position: relative;
+                                        }
+                                        .select-box-1 .select-menu {
+                                                outline: none;
+                                                appearance: none;
+                                                padding: 0 30px 0 13px;
+                                                width: 100%;
+                                                border: 1px solid #ccc;
+                                                height: 45px;
+                                                background-color: #fff;
+                                                border-radius: 4px;
+                                                box-sizing: border-box;
+                                                font-size: 16px;
+                                        }
+                                        .select-box-1 .select-menu:focus {
+                                                border: 2px solid #000;
+                                        }
+                                        .select-box-1 .icon-container {
+                                                width: 50px;
+                                                height: 100%;
+                                                position: absolute;
+                                                right: 0;
+                                                display: flex;
+                                                align-items: center;
+                                                justify-content: center;
+                                        }
+                                        .select-box-1 .icon-container i {
+                                                color: #000;
+                                                cursor: pointer;
+                                        }
+                                        .select-box-2 {
+                                                display: flex;
+                                                align-items: center;
+                                                position: relative;
+                                        }
+                                        .select-box-2 .select-menu {
+                                                outline: none;
+                                                appearance: none;
+                                                padding: 0 30px 0 13px;
+                                                width: 100%;
+                                                border-left: none;
+                                                border-right: none;
+                                                border-top: none;
+                                                border-bottom: 1px solid #ccc;
+                                                height: 45px;
+                                                box-sizing: border-box;
+                                                background-color: #fff;
+                                                font-size: 16px;    
+                                        }
+                                        .select-box-2 .select-menu:focus {
+                                                border-bottom: 2px solid #000;
+                                        }
+                                        .select-box-2 .icon-container {
+                                                width: 50px;
+                                                height: 100%;
+                                                position: absolute;
+                                                right: 0;
+                                                display: flex;
+                                                align-items: center;
+                                                justify-content: center;
+                                        }
+                                        .select-box-2 .icon-container i {
+                                                color: #000;
+                                                cursor: pointer;
+                                        }
+                                        @media screen and (min-width: 768px) and (max-width: 1023px) {
+                                                .select-box-1,
+                                                .select-box-2 {
+                                                        flex-direction: column;
+                                                }
+                                                .select-box-1 .select-menu,
+                                                .select-box-2 .select-menu {
+                                                        width: 100%;
+                                                }
+                                        }
+                                        @media (max-width: 790px) {
+                                                .select-box-1,
+                                                .select-box-2 {
+                                                        flex-direction: column;
+                                                }
+                                                .select-box-1 .select-menu,
+                                                .select-box-2 .select-menu {
+                                                        width: 100%;
+                                                }
+                                        }
+                                        </pre>
+                                </div>
+                        </div>
+
+                        <div class="tab-area mt-4">
+                                <div class="code-tab">
+                                        <button class="code-tab-btn btn-4" data-tab="component-4">Search Boxes</button>
+                                        <button class="code-tab-btn btn-4" data-tab="view-4">Code</button>
+                                        <div class="code-slide-bar"></div>
+                                </div>
+                                <div class="code-tab-content ctent-4" id="component-4">
+                                        <div class="ui-zone">
+                                                <div class="search-box-1 m-3">
+                                                        <i class="fa-solid fa-search"></i>
+                                                        <input type="text" class="search-input" placeholder="Search"> 
+                                                </div>
+                                                <div class="search-box-2 m-3">
+                                                        <input type="text" class="search-input" placeholder="Search"> 
+                                                        <i class="fa-solid fa-search"></i>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="code-tab-content ctent-4" id="view-4">
+                                        <pre>
+                                        &lt;div class="search-box-1"&gt;
+                                                &lt;i class="fa-solid fa-search"&gt;&lt;/i&gt;
+                                                &lt;input type="text" class="search-input" placeholder="Search"&gt;
+                                        &lt;/div&gt;
+                                        &lt;div class="search-box-2"&gt;
+                                                &lt;input type="text" class="search-input" placeholder="Search"&gt;
+                                                &lt;i class="fa-solid fa-search"&gt;&lt;/i&gt;
+                                        &lt;/div&gt;
+
+                                        .search-box-1 {
+                                                position: relative;
+                                        }
+                                        .search-box-1 .search-input {
+                                                height: 50px;
+                                                width: 100%;
+                                                outline: none;
+                                                appearance: none;
+                                                font-size: 16px;
+                                                border-radius: 4px;
+                                                box-sizing: border-box;
+                                                padding: 0 20px 0 43px;
+                                                border: 1px solid #ccc;
+                                        }
+                                        .search-box-1 i {
+                                                top: 50%;
+                                                left: 15px;
+                                                color: #000;
+                                                font-size: 20px;
+                                                pointer-events: none;
+                                                transform: translateY(-50%);
+                                                position: absolute;                               
+                                        }
+                                        .search-box-1 .search-input:focus {
+                                                border: 2px solid #000;
+                                        }
+                                        .search-box-2 {
+                                                position: relative;
+                                        }
+                                        .search-box-2 .search-input {
+                                                height: 50px;
+                                                width: 100%;
+                                                outline: none;
+                                                font-size: 16px;
+                                                box-sizing: border-box;
+                                                padding: 0 20px 0 43px;
+                                                border-left: none;
+                                                border-right: none;
+                                                border-top: none;
+                                                appearance: none;
+                                                border-bottom: 1px solid #ccc;
+                                        }
+                                        .search-box-2 i {
+                                                top: 50%;
+                                                left: 15px;
+                                                color: #000;
+                                                font-size: 20px;
+                                                pointer-events: none;
+                                                transform: translateY(-50%);
+                                                position: absolute;                               
+                                        }
+                                        .search-box-2 .search-input:focus {
+                                                border-bottom: 2px solid #000;
+                                        }
+                                        @media screen and (min-width: 768px) and (max-width: 1023px) {
+                                                .search-box-1,
+                                                .search-box-2 {
+                                                        flex-direction: column;
+                                                }
+                                                .search-box-1 .search-input,
+                                                .search-box-2 .search-input {
+                                                        width: 100%;
+                                                }
+                                        }
+                                        @media (max-width: 790px) {
+                                                .search-box-1,
+                                                .search-box-2 {
+                                                        flex-direction: column;
+                                                }
+                                                .search-box-1 .search-input,
+                                                .search-box-2 .search-input {
+                                                        width: 100%;
+                                                }
+                                        }
+                                        </pre>
+                                </div>
+                        </div>
+
+                        <div class="tab-area mt-4">
+                                <div class="code-tab">
+                                        <button class="code-tab-btn btn-5" data-tab="component-5">File Uploads</button>
+                                        <button class="code-tab-btn btn-5" data-tab="view-5">Code</button>
+                                        <div class="code-slide-bar"></div>
+                                </div>
+                                <div class="code-tab-content ctent-5" id="component-5">
+                                        <div class="ui-zone">
+                                                <div class="file-upload-1 m-3">
+                                                        <input type="file" id="file-input" class="upload">
+                                                </div>
+                                                <div class="file-upload-2 m-3">
+                                                        <input type="file" id="file-input" class="upload">
+                                                </div> 
+                                        </div>
+                                </div>
+                                <div class="code-tab-content ctent-5" id="view-5">
+                                        <pre>
+                                        &lt;div class="file-upload-1"&gt;
+                                                &lt;input type="file" id="file-input" class="upload"&gt;
+                                        &lt;/div&gt;
+                                        &lt;div class="file-upload-2"&gt;
+                                                &lt;input type="file" id="file-input" class="upload"&gt;
+                                        &lt;/div&gt;
+
+                                        .file-upload-1 .hidden {
+                                                display: none;
+                                        }
+                                        .file-upload-1 input {
+                                                width: 100%;
+                                                padding: 12px;
+                                                font-size: 16px;
+                                                border: 1px solid #ccc;
+                                                border-radius: 4px;
+                                                resize: vertical;
+                                                transition: 0.3 ease;
+                                                outline: none;
+                                                box-sizing: border-box;
+                                                appearance: none;
+                                        }
+                                        .file-upload-1 input:focus {
+                                                border: 2px solid #000;
+                                        }
+                                        .file-upload-1 input[type=file]::file-selector-button {
+                                                background-color: #000;
+                                                color: #fff;
+                                                padding: 5px 10px;
+                                                border-radius: 4px;
+                                                cursor: pointer;
+                                                border: none;
+                                                transition: background-color 0.3s ease;
+                                        }
+                                        .file-upload-2 .hidden {
+                                                display: none;
+                                        }
+                                        .file-upload-2 input {
+                                                width: 100%;
+                                                padding: 12px;
+                                                font-size: 16px;
+                                                resize: vertical;
+                                                transition: 0.3 ease;
+                                                outline: none;
+                                                appearance: none;
+                                                appearance: none;
+                                                border-top: none;
+                                                border-left: none;
+                                                border-right: none;
+                                                border-bottom: 1px solid #ccc;
+                                                box-sizing: border-box;
+                                        }
+                                        .file-upload-2 input[type=file]::file-selector-button {
+                                                background-color: #000;
+                                                color: #fff;
+                                                padding: 5px 10px;
+                                                border-radius: 4px;
+                                                cursor: pointer;
+                                                border: none;
+                                                transition: background-color 0.3s ease;
+                                        }
+                                        .file-upload-2 input:focus {
+                                                border-bottom: 2px solid #000;
+                                        }
+                                        @media screen and (min-width: 768px) and (max-width: 1023px) {
+                                                .file-upload-1,
+                                                .file-upload-2 {
+                                                        flex-direction: column;
+                                                }
+                                                .file-upload-1 input,
+                                                .file-upload-2 input {
+                                                        width: 100%;
+                                                }
+                                        }
+                                        @media (max-width: 790px) {
+                                                .file-upload-1,
+                                                .file-upload-2 {
+                                                        flex-direction: column;
+                                                }
+                                                .file-upload-1 input,
+                                                .file-upload-2 input {
+                                                        width: 100%;
+                                                }
+                                        }
+                                        </pre>
+                                </div>
+                        </div>
+
+                        <div class="tab-area mt-4">
+                                <div class="code-tab">
+                                        <button class="code-tab-btn btn-6" data-tab="component-6">Email Boxes</button>
+                                        <button class="code-tab-btn btn-6" data-tab="view-6">Code</button>
+                                        <div class="code-slide-bar"></div>
+                                </div>
+                                <div class="code-tab-content ctent-6" id="component-6">
+                                        <div class="ui-zone">
+                                                <div class="email-box-1 m-3">
+                                                        <input type="email" class="email-input" placeholder="Enter your email">
+                                                </div>
+                                                <div class="email-box-2 m-3">
+                                                        <input type="email" class="email-input" placeholder="Enter your email">
+                                                </div>  
+                                        </div>
+                                </div>
+                                <div class="code-tab-content ctent-6" id="view-6">
+                                        <pre>
+                                                &lt;div class="email-box-1"&gt;
+                                                        &lt;input type="email" class="email-input" placeholder="Enter your email"&gt;
+                                                &lt;/div&gt;
+
+                                                &lt;div class="email-box-2"&gt;
+                                                        &lt;input type="email" class="email-input" placeholder="Enter your email"&gt;
+                                                &lt;/div&gt;
+
+                                                .email-box-1 .email-input {
+                                                        width: 100%;
+                                                        padding: 12px;
+                                                        font-size: 16px;
+                                                        border: 1px solid #ccc;
+                                                        border-radius: 4px;
+                                                        resize: vertical;
+                                                        transition: 0.3 ease;
+                                                        outline: none;
+                                                        appearance: none;
+                                                        box-sizing: border-box;                                            
+                                                }
+                                                .email-box-1 .email-input:focus {
+                                                        border: 2px solid #000;
+                                                }
+                                                .email-box-2 .email-input {
+                                                        width: 100%;
+                                                        padding: 12px;
+                                                        font-size: 16px;
+                                                        resize: vertical;
+                                                        transition: 0.3 ease;
+                                                        outline: none;
+                                                        appearance: none;
+                                                        box-sizing: border-box;  
+                                                        border-top: none;
+                                                        border-right: none;
+                                                        border-left: none;
+                                                        border-bottom: 1px solid #ccc;                                          
+                                                }
+                                                .email-box-2 .email-input:focus {
+                                                        border-bottom: 2px solid #000;
+                                                }
+                                                @media screen and (min-width: 768px) and (max-width: 1023px) {
+                                                        .email-box-1,
+                                                        .email-box-2 {
+                                                                flex-direction: column;
+                                                        }
+                                                        .email-box-1 .email-input,
+                                                        .email-box-2 .email-input {
+                                                                width: 100%;
+                                                        }
+                                                }
+                                                @media (max-width: 790px) {
+                                                        .email-box-1,
+                                                        .email-box-2 {
+                                                                flex-direction: column;
+                                                        }
+                                                        .email-box-1 .email-input,
+                                                        .email-box-2 .email-input {
+                                                                width: 100%;
+                                                        }
+                                                }
+                                        </pre>
+                                </div>
+                        </div>
+
+                        <div class="tab-area mt-4">
+                                <div class="code-tab">
+                                        <button class="code-tab-btn btn-7" data-tab="component-7">Password Boxes</button>
+                                        <button class="code-tab-btn btn-7" data-tab="view-7">Code</button>
+                                        <div class="code-slide-bar"></div>
+                                </div>
+                                <div class="code-tab-content ctent-7" id="component-7">
+                                        <div class="ui-zone">
+                                                <div class="password-box-1 m-3">
+                                                        <input type="password" class="password-input" placeholder="Enter your password">
+                                                        <span class="toggle-password"><i class="fas fa-eye-slash closed-eye"></i></span>
+                                                </div>
+                                                <div class="password-box-2 m-3">
+                                                        <input type="password" class="password-input" placeholder="Enter your password">
+                                                        <span class="toggle-password"><i class="fas fa-eye-slash closed-eye"></i></span>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="code-tab-content ctent-7" id="view-7">
+                                        <pre>
+                                        &lt;div class="password-box-1"&gt;
+                                                &lt;input type="password" class="password-input" placeholder="Enter your password"&gt;
+                                                &lt;span class="toggle-password"&gt;&lt;i class="fas fa-eye-slash closed-eye"&gt;&lt;/i&gt;&lt;/span&gt;
+                                        &lt;/div&gt;
+
+                                        &lt;div class="password-box-2"&gt;
+                                                &lt;input type="password" class="password-input" placeholder="Enter your password"&gt;
+                                                &lt;span class="toggle-password"&gt;&lt;i class="fas fa-eye-slash closed-eye"&gt;&lt;/i&gt;&lt;/span&gt;
+                                        &lt;/div&gt;
+
+                                        .password-box-1 {
+                                                position: relative;
+                                        }
+                                        .password-box-1 .toggle-password,
+                                        .password-box-1 .toggle-password i {
+                                                cursor: pointer;
+                                                top: 50%;
+                                                right: 8px;
+                                                color: #000;
+                                                font-size: 20px;
+                                                transform: translateY(-50%);
+                                                position: absolute;    
+                                        }
+                                        .password-box-1 .closed-eye::before {
+                                                content: "\f070"; /* Unicode for closed eye icon */
+                                                font-family: "Font Awesome 5 Free";
+                                                font-weight: 900;         
+                                        }
+                                        .password-box-1 .open-eye::before {
+                                                content: "\f06e"; /* Unicode for open eye icon */
+                                                font-family: "Font Awesome 5 Free";
+                                                font-weight: 900;
+                                        }
+                                        .password-box-1 .password-input {
+                                                height: 50px;
+                                                width: 100%;
+                                                outline: none;
+                                                appearance: none;
+                                                font-size: 16px;
+                                                border-radius: 4px;
+                                                box-sizing: border-box;
+                                                padding: 0 43px 0 20px;
+                                                border: 1px solid #ccc;
+                                        }
+                                        .password-box-1 .password-input:focus {
+                                                border: 2px solid #000;
+                                        }
+                                        .password-box-2 {
+                                                position: relative;
+                                        }
+                                        .password-box-2 .toggle-password,
+                                        .password-box-2 .toggle-password i {
+                                                cursor: pointer;
+                                                top: 50%;
+                                                right: 8px;
+                                                color: #000;
+                                                font-size: 20px;
+                                                transform: translateY(-50%);
+                                                position: absolute;    
+                                        }
+                                        .password-box-2 .closed-eye::before {
+                                                content: "\f070"; /* Unicode for closed eye icon */
+                                                font-family: "Font Awesome 5 Free";
+                                                font-weight: 900;
+                                        }
+                                        .password-box-2 .open-eye::before {
+                                                content: "\f06e"; /* Unicode for open eye icon */
+                                                font-family: "Font Awesome 5 Free";
+                                                font-weight: 900;
+                                        }
+                                        .password-box-2 .password-input {
+                                                height: 50px;
+                                                width: 100%;
+                                                outline: none;
+                                                font-size: 16px;
+                                                box-sizing: border-box;
+                                                padding: 0 43px 0 20px;
+                                                border-left: none;
+                                                border-right: none;
+                                                border-top: none;
+                                                appearance: none;
+                                                border-bottom: 1px solid #ccc;
+                                        }
+                                        .password-box-2 .password-input:focus {
+                                                border-bottom: 2px solid #000;
+                                        }
+                                        @media screen and (min-width: 768px) and (max-width: 1023px) {
+                                                .password-box-1,
+                                                .password-box-2 {
+                                                        flex-direction: column;
+                                                }
+                                                .password-box-1 .password-input,
+                                                .password-box-2 .password-input {
+                                                        width: 100%;
+                                                }
+                                        }
+                                        @media (max-width: 790px) {
+                                                .password-box-1,
+                                                .password-box-2 {
+                                                        flex-direction: column;
+                                                }
+                                                .password-box-1 .password-input,
+                                                .password-box-2 .password-input {
+                                                        width: 100%;
+                                                }
+                                        }
+
+                                        //Password Icons
+                                        const togglePasswordIcons = document.querySelectorAll('.toggle-password');
+                                                togglePasswordIcons.forEach(icon => {
+                                                icon.addEventListener('click', () => {
+                                                        const passwordInput = icon.previousElementSibling;
+                                                                if (passwordInput.type === 'password') {
+                                                        passwordInput.type = 'text';
+                                                                icon.querySelector('i').classList.remove('closed-eye');
+                                                                icon.querySelector('i').classList.add('open-eye');
+                                                        } else {
+                                                        passwordInput.type = 'password';
+                                                                icon.querySelector('i').classList.remove('open-eye');
+                                                                icon.querySelector('i').classList.add('closed-eye');
+                                                        }
+                                                });
+                                        });
+                                        </pre>
+                                </div>
+                        </div>
+
+                        <div class="tab-area mt-4">
+                                <div class="code-tab">
+                                        <button class="code-tab-btn btn-8" data-tab="component-8">Radio Options</button>
+                                        <button class="code-tab-btn btn-8" data-tab="view-8">Code</button>
+                                        <div class="code-slide-bar"></div>
+                                </div>
+                                <div class="code-tab-content ctent-8" id="component-8">
+                                        <div class="ui-zone">
+                                                <div class="radio-box">
+                                                        <div class="radio-container-1 m-3">
+                                                                <input type="radio" class="radio-input" name="radio-group" id="radio1">
+                                                                <label for="radio1" class="radio-label">Option 1</label>
+                                                        </div>
+                                                        <div class="radio-container-2 m-3">
+                                                                <input type="radio" class="radio-input" name="radio-group" id="radio2">
+                                                                <label for="radio2" class="radio-label">Option 2</label>
+                                                        </div>
+                                                        <div class="radio-container-3 m-3">
+                                                                <input type="radio" class="radio-input" name="radio-group" id="radio3">
+                                                                <label for="radio3" class="radio-label">Option 3</label>
+                                                        </div>
+                                                        <div class="radio-container-4 m-3">
+                                                                <input type="radio" class="radio-input" name="radio-group" id="radio4">
+                                                                <label for="radio4" class="radio-label">Option 4</label>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="code-tab-content ctent-8" id="view-8">
+                                        <pre>
+                                        &lt;div class="radio-box"&gt;
+                                                &lt;div class="radio-container-1"&gt;
+                                                        &lt;input type="radio" class="radio-input" name="radio-group" id="radio1"&gt;
+                                                        &lt;label for="radio1" class="radio-label"&gt;Option 1&lt;/label&gt;
+                                                &lt;/div&gt;
+                                                &lt;div class="radio-container-2"&gt;
+                                                        &lt;input type="radio" class="radio-input" name="radio-group" id="radio2"&gt;
+                                                        &lt;label for="radio2" class="radio-label"&gt;Option 2&lt;/label&gt;
+                                                &lt;/div&gt;
+                                                &lt;div class="radio-container-3"&gt;
+                                                        &lt;input type="radio" class="radio-input" name="radio-group" id="radio3"&gt;
+                                                        &lt;label for="radio3" class="radio-label"&gt;Option 3&lt;/label&gt;
+                                                &lt;/div&gt;
+                                                &lt;div class="radio-container-4"&gt;
+                                                        &lt;input type="radio" class="radio-input" name="radio-group" id="radio4"&gt;
+                                                        &lt;label for="radio4" class="radio-label"&gt;Option 4&lt;/label&gt;
+                                                &lt;/div&gt;
+                                        &lt;/div&gt;
+
+                                        .radio-box {
+                                                margin: 0 auto;
+                                                text-align: center;
+                                        }
+                                        .radio-label {
+                                                display: inline-block;
+                                                position: relative;
+                                                font-size: 20px;
+                                                cursor: pointer;
+                                                color: #030712;
+                                        }
+                                        .radio-container-1 {
+                                                margin: 0;
+                                                display: inline-block;
+                                                margin-right: 20px; 
+                                        }
+                                        .radio-container-1 input[type="radio"] {
+                                                width: 18px;
+                                                height: 18px;
+                                        }
+                                        .radio-container-2 {
+                                                margin: 0;
+                                                display: inline-block;
+                                                margin-right: 20px; 
+                                        }
+                                        .radio-container-2 input[type="radio"] {
+                                                width: 18px;
+                                                height: 18px;
+                                                accent-color: green;
+                                        }
+                                        .radio-container-3 {
+                                                margin: 0;
+                                                display: inline-block;
+                                                margin-right: 20px; 
+                                        }
+                                        .radio-container-3 input[type="radio"] {
+                                                width: 18px;
+                                                height: 18px;
+                                                accent-color: red;
+                                        }
+                                        .radio-container-4 {
+                                                margin: 0;
+                                                display: inline-block;
+                                                margin-right: 20px; 
+                                        }
+                                        .radio-container-4 input[type="radio"] {
+                                                width: 18px;
+                                                height: 18px;
+                                                accent-color: black;
+                                        }
+                                        @media screen and (min-width: 768px) and (max-width: 1023px) {
+                                                .radio-label {
+                                                        font-size: 16px;
+                                                }
+                                                .radio-container-1 input[type="radio"],
+                                                .radio-container-2 input[type="radio"],
+                                                .radio-container-3 input[type="radio"],
+                                                .radio-container-4 input[type="radio"] {
+                                                        width: 14px;
+                                                        height: 14px;
+                                                }
+                                        }
+                                        </pre>
+                                </div>
+                        </div>
+
+                        <div class="tab-area mt-4">
+                                <div class="code-tab">
+                                        <button class="code-tab-btn btn-9" data-tab="component-9">Check Boxes</button>
+                                        <button class="code-tab-btn btn-9" data-tab="view-9">Code</button>
+                                        <div class="code-slide-bar"></div>
+                                </div>
+                                <div class="code-tab-content ctent-9" id="component-9">
+                                        <div class="ui-zone">
+                                                <div class="check-box">
+                                                        <div class="checkbox-container-1 m-3">
+                                                                <input type="checkbox" class="checkbox-input" id="checkbox1">
+                                                                <label for="checkbox1" class="checkbox-label">Option 1</label>
+                                                        </div>
+                                                        <div class="checkbox-container-2 m-3">
+                                                                <input type="checkbox" class="checkbox-input" id="checkbox2">
+                                                                <label for="checkbox2" class="checkbox-label">Option 2</label>
+                                                        </div>
+                                                        <div class="checkbox-container-3 m-3">
+                                                                <input type="checkbox" class="checkbox-input" id="checkbox3">
+                                                                <label for="checkbox3" class="checkbox-label">Option 3</label>
+                                                        </div>
+                                                        <div class="checkbox-container-4 m-3">
+                                                                <input type="checkbox" class="checkbox-input" id="checkbox4">
+                                                                <label for="checkbox4" class="checkbox-label">Option 4</label>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="code-tab-content ctent-9" id="view-9">
+                                        <pre>
+                                        &lt;div class="check-box"&gt;
+                                                &lt;div class="checkbox-container-1"&gt;
+                                                        &lt;input type="checkbox" class="checkbox-input" id="checkbox1"&gt;
+                                                        &lt;label for="checkbox1" class="checkbox-label"&gt;Option 1&lt;/label&gt;
+                                                &lt;/div&gt;
+                                                &lt;div class="checkbox-container-2"&gt;
+                                                        &lt;input type="checkbox" class="checkbox-input" id="checkbox2"&gt;
+                                                        &lt;label for="checkbox2" class="checkbox-label"&gt;Option 2&lt;/label&gt;
+                                                &lt;/div&gt;
+                                                &lt;div class="checkbox-container-3"&gt;
+                                                        &lt;input type="checkbox" class="checkbox-input" id="checkbox3"&gt;
+                                                        &lt;label for="checkbox3" class="checkbox-label"&gt;Option 3&lt;/label&gt;
+                                                &lt;/div&gt;
+                                                &lt;div class="checkbox-container-4"&gt;
+                                                        &lt;input type="checkbox" class="checkbox-input" id="checkbox4"&gt;
+                                                        &lt;label for="checkbox4" class="checkbox-label"&gt;Option 4&lt;/label&gt;
+                                                &lt;/div&gt;
+                                        &lt;/div&gt;
+
+                                        .check-box {
+                                                margin: 0 auto;
+                                                text-align: center;
+                                        }
+                                        .checkbox-label {
+                                                display: inline-block;
+                                                position: relative;
+                                                font-size: 20px;
+                                                padding-left: 5px; 
+                                                cursor: pointer;
+                                                color: #030712;
+                                        }
+                                        .checkbox-container-1 {
+                                                margin: 0;
+                                                display: inline-block;
+                                                margin-right: 20px; 
+                                        }
+                                        .checkbox-container-1 input[type="checkbox"] {
+                                                width: 18px;
+                                                height: 18px;
+                                        }
+                                        .checkbox-container-2 {
+                                                margin: 0;
+                                                display: inline-block;
+                                                margin-right: 20px; 
+                                        }
+                                        .checkbox-container-2 input[type="checkbox"] {
+                                                width: 18px;
+                                                height: 18px;
+                                                accent-color: green;
+                                        }
+                                        .checkbox-container-3 {
+                                                margin: 0;
+                                                display: inline-block;
+                                                margin-right: 20px; 
+                                        }
+                                        .checkbox-container-3 input[type="checkbox"] {
+                                                width: 18px;
+                                                height: 18px;
+                                                accent-color: red;
+                                        }
+                                        .checkbox-container-4 {
+                                                margin: 0;
+                                                display: inline-block;
+                                                margin-right: 20px; 
+                                        }
+                                        .checkbox-container-4 input[type="checkbox"] {
+                                                width: 18px;
+                                                height: 18px;
+                                                accent-color: black;
+                                        }
+                                        @media (max-width: 790px) {
+                                                .checkbox-label {
+                                                        font-size: 16px;
+                                                }
+                                                .checkbox-container-1 input[type="checkbox"],
+                                                .checkbox-container-2 input[type="checkbox"],
+                                                .checkbox-container-3 input[type="checkbox"],
+                                                .checkbox-container-4 input[type="checkbox"] {
+                                                        width: 14px;
+                                                        height: 14px;
+                                                }
+                                        }
+                                        @media screen and (min-width: 768px) and (max-width: 1023px) {
+                                                .checkbox-label {
+                                                        font-size: 16px;
+                                                }
+                                                .checkbox-container-1 input[type="checkbox"],
+                                                .checkbox-container-2 input[type="checkbox"],
+                                                .checkbox-container-3 input[type="checkbox"],
+                                                .checkbox-container-4 input[type="checkbox"] {
+                                                        width: 14px;
+                                                        height: 14px;
+                                                }
+                                        }
+                                        </pre>
+                                </div>
+                        </div>
+
+                        <div class="tab-area mt-4">
+                                <div class="code-tab">
+                                        <button class="code-tab-btn btn-10" data-tab="component-10">Combo Box</button>
+                                        <button class="code-tab-btn btn-10" data-tab="view-10">Code</button>
+                                        <div class="code-slide-bar"></div>
+                                </div>
+                                <div class="code-tab-content ctent-10" id="component-10">
+                                        <div class="ui-zone">
+                                                <div class="select-container">
+                                                        <div class="wrapper">
+                                                                <div class="select-btn">
+                                                                        <span>Select Country</span>
+                                                                        <i class="fa-solid fa-chevron-down"></i>
+                                                                </div>
+                                                                <div class="select-content">
+                                                                        <div class="search">
+                                                                                <i class="fa-solid fa-search"></i>
+                                                                                <input spellcheck="false" type="text" placeholder="Search">
+                                                                        </div>
+                                                                        <ul class="options"></ul>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="code-tab-content ctent-10" id="view-10">
+                                        <pre>
+                                        &lt;div class="select-container"&gt;
+                                                &lt;div class="wrapper"&gt;
+                                                        &lt;div class="select-btn"&gt;
+                                                        &lt;span&gt;Select Country&lt;/span&gt;
+                                                        &lt;i class="fa-solid fa-chevron-down"&gt;&lt;/i&gt;
+                                                        &lt;/div&gt;
+                                                        &lt;div class="select-content"&gt;
+                                                        &lt;div class="search"&gt;
+                                                                &lt;i class="fa-solid fa-search"&gt;&lt;/i&gt;
+                                                                &lt;input spellcheck="false" type="text" placeholder="Search"&gt;
+                                                        &lt;/div&gt;
+                                                        &lt;ul class="options"&gt;&lt;/ul&gt;
+                                                        &lt;/div&gt;
+                                                &lt;/div&gt;
+                                        &lt;/div&gt;
+
+                                        .select-container .wrapper {
+                                                width: 370px;
+                                                margin: 0 auto;
+                                        }
+                                        .select-container .select-btn {
+                                                display: flex;
+                                                align-items: center;
+                                                cursor: pointer;
+                                        }
+                                        .select-container li {
+                                                list-style: none;
+                                                cursor: pointer;
+                                        }
+                                        .select-container .select-btn {
+                                                height: 50px;
+                                                padding: 0 20px;
+                                                font-size: 18px;
+                                                background: #fff;
+                                                border-radius: 7px;
+                                                justify-content: space-between;
+                                                box-shadow: 0 4px 6px -1px rgba(0, 0, 0, .1), 0 2px 4px -1px rgba(0, 0, 0, .06);
+                                        }
+                                        .select-container .select-btn i {
+                                                font-size: 20px;
+                                                transition: transform 0.3s linear;
+                                        }
+                                        .select-container .wrapper.active .select-btn i {
+                                                transform: rotate(-180deg);
+                                        }
+                                        .select-container .select-content {
+                                                display: none;
+                                                padding: 20px;
+                                                margin-top: 15px;
+                                                background: #fff;
+                                                border-radius: 7px;
+                                                box-shadow: 0 4px 6px -1px rgba(0, 0, 0, .1), 0 2px 4px -1px rgba(0, 0, 0, .06);
+                                        }
+                                        .select-container .wrapper.active .select-content {
+                                                display: block;
+                                        }
+                                        .select-container .select-content .search {
+                                        position: relative;
+                                        }
+                                        .select-container .search i {
+                                                top: 50%;
+                                                left: 15px;
+                                                color: #000;
+                                                font-size: 20px;
+                                                pointer-events: none;
+                                                transform: translateY(-50%);
+                                                position: absolute;
+                                        }
+                                        .select-container .search input {
+                                                height: 50px;
+                                                width: 100%;
+                                                outline: none;
+                                                font-size: 16px;
+                                                border-radius: 5px;
+                                                box-sizing: border-box;
+                                                padding: 0 20px 0 43px;
+                                                border: 1px solid #000;
+                                        }
+                                        .select-container .search input:focus {
+                                                padding-left: 42px;
+                                                border: 2px solid #000;
+                                        }
+                                        .select-container .search input::placeholder {
+                                                color: #bfbfbf;
+                                        }
+                                        .select-container .select-content .options {
+                                                margin-top: 20px;
+                                                max-height: 250px;
+                                                overflow-y: auto;
+                                                padding-right: 7px; 
+                                                margin-left: -30px;
+                                        }
+                                        .select-container .options::-webkit-scrollbar {
+                                                width: 7px;
+                                        }
+                                        .select-container .options::-webkit-scrollbar-track {
+                                                background: #ccc;
+                                                border-radius: 25px;
+                                        }
+                                        .select-container .options::-webkit-scrollbar-thumb {
+                                                background: #b3b3b3;
+                                        }
+                                        .select-container .options::-webkit-scrollbar-thumb:hover {
+                                                background: #b3b3b3;
+                                        }
+                                        .select-container .options li {
+                                                height: 50px;
+                                                font-size: 18px;
+                                        }
+                                        .select-container .options li:hover {
+                                                color: #007bff;
+                                                text-decoration: underline;
+                                        }
+                                        @media (max-width: 790px) {
+                                                .select-container .wrapper {
+                                                        width: 90%; 
+                                                }
+                                                .select-container .select-btn {
+                                                        height: 40px; 
+                                                        font-size: 14px; 
+                                                }
+                                                .select-container .search input {
+                                                        height: 40px; 
+                                                        font-size: 14px; 
+                                                        padding: 0 10px 0 33px;
+                                                }
+                                                .select-container .select-btn i,
+                                                .select-container .search i {
+                                                        font-size: 14px;
+                                                }
+                                                .select-container .options li {
+                                                        height: 50px;
+                                                        font-size: 14px;
+                                                }
+                                                .select-container .select-content .options {
+                                                        margin-left: -30px;
+                                                }
+                                        }
+                                        @media screen and (min-width: 768px) and (max-width: 1023px) {
+                                                .select-container .wrapper {
+                                                        width: 90%; 
+                                                }
+                                                .select-container .select-btn {
+                                                        height: 40px; 
+                                                        font-size: 14px; 
+                                                }
+                                                .select-container .search input {
+                                                        height: 40px; 
+                                                        font-size: 14px; 
+                                                        padding: 0 10px 0 33px;
+                                                }
+                                                .select-container .select-btn i,
+                                                .select-container .search i {
+                                                        font-size: 14px;
+                                                }
+                                                .select-container .options li {
+                                                        height: 50px;
+                                                        font-size: 14px;
+                                                }
+                                                .select-container .select-content .options {
+                                                        margin-left: -30px;
+                                                }
+                                        }
+
+                                        const wrapper = document.querySelector(".select-container .wrapper"),
+                                        selectBtn = wrapper.querySelector(".select-container .select-btn"),
+                                        searchInp = wrapper.querySelector(".select-container .search input"),
+                                        options = wrapper.querySelector(".select-container .options");
+
+                                        let countries = ["Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Antigua and Barbuda", "Argentina"..."Zambia", "Zimbabwe"];
+
+                                                function addCountry(selectedCountry) {
+                                                        options.innerHTML = "";
+                                                        countries.forEach(country => {
+                                                        let isSelected = country === selectedCountry ? "selected" : "";
+                                                        let li = `&lt;li onclick="updateName(this)" class="${isSelected}"&gt;${country}&lt;/li&gt;`;
+                                                        options.insertAdjacentHTML("beforeend", li);
+                                                });
+                                        }
+                                        addCountry("Select Country");
+
+                                        function updateName(selectedLi) {
+                                                searchInp.value = "";
+                                                addCountry(selectedLi.innerText);
+                                                wrapper.classList.remove("active");
+                                                selectBtn.firstElementChild.innerText = selectedLi.innerText;
+                                        }
+
+                                        searchInp.addEventListener("keyup", () => {
+                                                let arr = [];
+                                                let searchWord = searchInp.value.toLowerCase();
+                                                arr = countries.filter(data => {
+                                                return data.toLowerCase().startsWith(searchWord);
+                                        }).map(data => {
+                                                let isSelected = data === selectBtn.firstElementChild.innerText ? "selected" : "";
+                                                return `&lt;li onclick="updateName(this)" class="${isSelected}"&gt;${data}&lt;/li&gt;`;
+                                        }).join("");
+                                                options.innerHTML = arr ? arr : `&lt;p style="margin-top: 10px;"&gt;Oops! Country not found&lt;/p&gt;`;
+                                        });
+
+                                        selectBtn.addEventListener("click", () => wrapper.classList.toggle("active"));
+                                        </pre>
+                                </div>
+                        </div>
+
+                        <div class="tab-area mt-4">
+                                <div class="code-tab">
+                                        <button class="code-tab-btn btn-11" data-tab="component-11">Command Box</button>
+                                        <button class="code-tab-btn btn-11" data-tab="view-11">Code</button>
+                                        <div class="code-slide-bar"></div>
+                                </div>
+                                <div class="code-tab-content ctent-11" id="component-11">
+                                        <div class="ui-zone">
+                                                <div class="command-box">
+                                                        <label for="custom-input"></label>
+                                                        <div class="command-wrapper">
+                                                                <i class="fa-solid fa-magnifying-glass"></i>
+                                                                <input class="command-input" placeholder="Type a command or search..." id="custom-input">
+                                                        </div>
+                                                        <div class="command-list-box" id="custom-list">
+                                                                <div role="presentation" data-value="suggestions" class="command-group-heading">
+                                                                        Suggestions
+                                                                </div>
+                                                                <div role="group" aria-labelledby="custom-list-suggestions">
+                                                                        <div class="command-item">
+                                                                                <i class="fa-solid fa-code"></i>
+                                                                                <span>Command List</span>
+                                                                        </div>
+                                                                        <div class="command-item">
+                                                                                <i class="fa-solid fa-file-lines"></i>
+                                                                                <span>Files</span>
+                                                                        </div>
+                                                                        <div class="command-item">
+                                                                                <i class="fa-regular fa-folder-open"></i>
+                                                                                <span>Folders</span>
+                                                                        </div>
+                                                                </div>
+                                                                <div class="command-separator"></div>
+                                                                <div class="command-group-heading">
+                                                                        Settings
+                                                                </div>
+                                                                <div role="group" aria-labelledby="custom-list-settings">
+                                                                        <div class="command-item" role="option">
+                                                                                <i class="fa-regular fa-address-card"></i>
+                                                                                <span>Profile</span>
+                                                                        </div>
+                                                                        <div class="command-item" role="option">
+                                                                                <i class="fa-solid fa-file-invoice"></i>
+                                                                                <span>Billing</span>
+                                                                        </div>
+                                                                        <div class="command-item" role="option">
+                                                                                <i class="fa-solid fa-gears"></i>
+                                                                                <span>Settings</span>
+                                                                        </div>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="code-tab-content ctent-11" id="view-11">
+                                        <pre>
+                                        &lt;div class="command-box"&gt;
+                                        &lt;label for="custom-input"&gt;&lt;/label&gt;
+                                        &lt;div class="command-wrapper"&gt;
+                                                &lt;i class="fa-solid fa-magnifying-glass"&gt;&lt;/i&gt;
+                                                &lt;input class="command-input" placeholder="Type a command or search..." id="custom-input"&gt;
+                                        &lt;/div&gt;
+                                        &lt;div class="command-list-box" id="custom-list"&gt;
+                                                &lt;div role="presentation" data-value="suggestions" class="command-group-heading"&gt;
+                                                Suggestions
+                                                &lt;/div&gt;
+                                                &lt;div role="group" aria-labelledby="custom-list-suggestions"&gt;
+                                                &lt;div class="command-item"&gt;
+                                                        &lt;i class="fa-solid fa-code"&gt;&lt;/i&gt;
+                                                        &lt;span&gt;Command List&lt;/span&gt;
+                                                &lt;/div&gt;
+                                                &lt;div class="command-item"&gt;
+                                                        &lt;i class="fa-solid fa-file-lines"&gt;&lt;/i&gt;
+                                                        &lt;span&gt;Files&lt;/span&gt;
+                                                &lt;/div&gt;
+                                                &lt;div class="command-item"&gt;
+                                                        &lt;i class="fa-regular fa-folder-open"&gt;&lt;/i&gt;
+                                                        &lt;span&gt;Folders&lt;/span&gt;
+                                                &lt;/div&gt;
+                                                &lt;/div&gt;
+                                                &lt;div class="command-separator"&gt;&lt;/div&gt;
+                                                &lt;div class="command-group-heading"&gt;
+                                                Settings
+                                                &lt;/div&gt;
+                                                &lt;div role="group" aria-labelledby="custom-list-settings"&gt;
+                                                &lt;div class="command-item" role="option"&gt;
+                                                        &lt;i class="fa-regular fa-address-card"&gt;&lt;/i&gt;
+                                                        &lt;span&gt;Profile&lt;/span&gt;
+                                                &lt;/div&gt;
+                                                &lt;div class="command-item" role="option"&gt;
+                                                        &lt;i class="fa-solid fa-file-invoice"&gt;&lt;/i&gt;
+                                                        &lt;span&gt;Billing&lt;/span&gt;
+                                                &lt;/div&gt;
+                                                &lt;div class="command-item" role="option"&gt;
+                                                        &lt;i class="fa-solid fa-gears"&gt;&lt;/i&gt;
+                                                        &lt;span&gt;Settings&lt;/span&gt;
+                                                &lt;/div&gt;
+                                                &lt;/div&gt;
+                                        &lt;/div&gt;
+                                        &lt;/div&gt;
+
+                                        .command-box {
+                                                display: flex;
+                                                height: 100%;
+                                                width: 100%;
+                                                color: #333;
+                                                overflow: hidden;
+                                                border-radius: 8px;
+                                                flex-direction: column;
+                                                background-color: #fff;
+                                                box-shadow: 0 4px 6px -1px rgba(0, 0, 0, .1), 0 2px 4px -1px rgba(0, 0, 0, .06);
+                                        }
+                                        .command-box label {
+                                                position: absolute;
+                                                width: 1px; 
+                                                height: 1px; 
+                                                padding: 0px; 
+                                                margin: -1px; 
+                                                overflow: hidden; 
+                                                clip: rect(0px, 0px, 0px, 0px); 
+                                                white-space: nowrap; 
+                                                border-width: 0px;
+                                        }
+                                        .command-wrapper {
+                                                display: flex;
+                                                position: relative;
+                                                align-items: center;
+                                                padding-left: 0.75rem;
+                                                border-bottom: 1px solid currentColor;
+                                        }
+                                        .command-input {
+                                                height: 24px; 
+                                                width: 100%;
+                                                border: none;
+                                                padding: 10px;
+                                                font-size: 16px;
+                                                outline: none;
+                                                background: transparent;
+                                                color: #333; 
+                                                display: flex;
+                                                border-radius: 0.375rem;
+                                                background-color: transparent;
+                                                padding-top: 0.75rem;
+                                                outline: none;
+                                        }
+                                        .command-list-box {
+                                                max-height: 500px; 
+                                                overflow-y: auto;
+                                                overflow-x: hidden;
+                                        }
+                                        .command-group-heading {
+                                                font-size: 16px; 
+                                                font-weight: 500;
+                                                color: #999; 
+                                                padding-left: 8px; 
+                                                padding-top: 6px; 
+                                                padding-bottom: 6px; 
+                                        }
+                                        .command-group-items {
+                                                margin-top: -1px;
+                                        }
+                                        .command-item {
+                                                display: flex;
+                                                cursor: default;
+                                                align-items: center;
+                                                padding: 8px 12px;
+                                                font-size: 16px; 
+                                                outline: none;
+                                                background: transparent;
+                                                color: #333; 
+                                        }
+                                        .command-item i {
+                                                margin-right: 10px;
+                                        }
+                                        .command-item:hover {
+                                                background-color: #f1f1f1;
+                                                padding: 8px 12px;
+                                                border-radius: 4px;
+                                                cursor: pointer;
+                                        }
+                                        .command-separator {
+                                                height: 1px;
+                                                background-color: #ccc; 
+                                        }
+                                        @media (max-width: 790px) {
+                                                .command-group-heading,
+                                                .command-item,
+                                                .command-input {
+                                                        font-size: 14px; 
+                                                }
+                                        }
+                                        @media screen and (min-width: 768px) and (max-width: 1023px) {
+                                                .command-group-heading,
+                                                .command-item,
+                                                .command-input {
+                                                        font-size: 14px; 
+                                                }
+                                        }
+
+                                        const input = document.getElementById("custom-input");
+                                        const commandItems = document.querySelectorAll(".command-item");
+
+                                        // Add an event listener to the input field for real-time filtering
+                                        input.addEventListener("input", filterCommands);
+
+                                        function filterCommands() {
+                                                const searchText = input.value.toLowerCase();
+
+                                                // Loop through each command item
+                                                commandItems.forEach(item => {
+                                                        const itemText = item.querySelector("span").textContent.toLowerCase();
+                                                        const shouldDisplay = itemText.includes(searchText);
+
+                                                // Display or hide the item based on the search text
+                                                        item.style.display = shouldDisplay ? "flex" : "none";
+                                                });
+                                        }
+                                        </pre>
+                                </div>
+                        </div>
+
+                        <div class="tab-area mt-4">
+                                <div class="code-tab">
+                                        <button class="code-tab-btn btn-12" data-tab="component-12">Draglist</button>
+                                        <button class="code-tab-btn btn-12" data-tab="view-12">Code</button>
+                                        <div class="code-slide-bar"></div>
+                                </div>
+                                <div class="code-tab-content ctent-12" id="component-12">
+                                        <div class="ui-zone">
+                                        <ul class="draggable-list">
+                                                        <li class="item" draggable="true">
+                                                        <div class="details">
+                                                                <img src="<?= base_url('/public/assets/img/profile-card.jpg'); ?>" alt="">
+                                                                <span>John Doe</span>
+                                                        </div>
+                                                        <i class="fa-solid fa-grip-vertical"></i>
+                                                        </li>
+                                                        <li class="item" draggable="true">
+                                                        <div class="details">
+                                                                <img src="<?= base_url('/public/assets/img/profile-card.jpg'); ?>" alt="">
+                                                                <span>Diablo Cruz</span>
+                                                        </div>
+                                                        <i class="fa-solid fa-grip-vertical"></i>
+                                                        </li>
+                                                        <li class="item" draggable="true">
+                                                        <div class="details">
+                                                                <img src="<?= base_url('/public/assets/img/profile-card.jpg'); ?>" alt="">
+                                                                <span>Alvin Johnson</span>
+                                                        </div>
+                                                        <i class="fa-solid fa-grip-vertical"></i>
+                                                        </li>
+                                                        <li class="item" draggable="true">
+                                                        <div class="details">
+                                                                <img src="<?= base_url('/public/assets/img/profile-card.jpg'); ?>" alt="">
+                                                                <span>Edward Joestar</span>
+                                                        </div>
+                                                        <i class="fa-solid fa-grip-vertical"></i>
+                                                        </li>
+                                                        <li class="item" draggable="true">
+                                                        <div class="details">
+                                                                <img src="<?= base_url('/public/assets/img/profile-card.jpg'); ?>" alt="">
+                                                                <span>Maria Sputnik</span>
+                                                        </div>
+                                                        <i class="fa-solid fa-grip-vertical"></i>
+                                                        </li>
+                                                        <li class="item" draggable="true">
+                                                        <div class="details">
+                                                                <img src="<?= base_url('/public/assets/img/profile-card.jpg'); ?>" alt="">
+                                                                <span>Mark Roger</span>
+                                                        </div>
+                                                        <i class="fa-solid fa-grip-vertical"></i>
+                                                        </li>
+                                                </ul>
+                                        </div>
+                                </div>
+                                <div class="code-tab-content ctent-12" id="view-12">
+                                        <pre>
+                                        &lt;ul class="draggable-list"&gt;
+                                                &lt;li class="item" draggable="true"&gt;
+                                                        &lt;div class="details"&gt;
+                                                        &lt;img src="Your image link goes here" alt=""&gt;
+                                                        &lt;span&gt;John Doe&lt;/span&gt;
+                                                        &lt;/div&gt;
+                                                        &lt;i class="fa-solid fa-grip-vertical"&gt;&lt;/i&gt;
+                                                &lt;/li&gt;
+                                                &lt;li class="item" draggable="true"&gt;
+                                                        &lt;div class="details"&gt;
+                                                        &lt;img src="Your image link goes here" alt=""&gt;
+                                                        &lt;span&gt;Diablo Cruz&lt;/span&gt;
+                                                        &lt;/div&gt;
+                                                        &lt;i class="fa-solid fa-grip-vertical"&gt;&lt;/i&gt;
+                                                &lt;/li&gt;
+                                                &lt;li class="item" draggable="true"&gt;
+                                                        &lt;div class="details"&gt;
+                                                        &lt;img src="Your image link goes here" alt=""&gt;
+                                                        &lt;span&gt;Alvin Johnson&lt;/span&gt;
+                                                        &lt;/div&gt;
+                                                        &lt;i class="fa-solid fa-grip-vertical"&gt;&lt;/i&gt;
+                                                &lt;/li&gt;
+                                                &lt;li class="item" draggable="true"&gt;
+                                                        &lt;div class="details"&gt;
+                                                        &lt;img src="Your image link goes here" alt=""&gt;
+                                                        &lt;span&gt;Edward Joestar&lt;/span&gt;
+                                                        &lt;/div&gt;
+                                                        &lt;i class="fa-solid fa-grip-vertical"&gt;&lt;/i&gt;
+                                                &lt;/li&gt;
+                                                &lt;li class="item" draggable="true"&gt;
+                                                        &lt;div class="details"&gt;
+                                                        &lt;img src="Your image link goes here" alt=""&gt;
+                                                        &lt;span&gt;Maria Sputnik&lt;/span&gt;
+                                                        &lt;/div&gt;
+                                                        &lt;i class="fa-solid fa-grip-vertical"&gt;&lt;/i&gt;
+                                                &lt;/li&gt;
+                                                &lt;li class="item" draggable="true"&gt;
+                                                        &lt;div class="details"&gt;
+                                                        &lt;img src="Your image link goes here" alt=""&gt;
+                                                        &lt;span&gt;Mark Roger&lt;/span&gt;
+                                                        &lt;/div&gt;
+                                                        &lt;i class="fa-solid fa-grip-vertical"&gt;&lt;/i&gt;
+                                                &lt;/li&gt;
+                                        &lt;/ul&gt;
+
+                                        .draggable-list {
+                                                width: 425px;
+                                                margin: 0 auto;
+                                                padding: 25px;
+                                                background: #fff;
+                                                padding: 30px 25px 20px;
+                                                box-shadow: 0 4px 6px -1px rgba(0, 0, 0, .1), 0 2px 4px -1px rgba(0, 0, 0, .06);
+                                        }
+                                        .draggable-list .item {
+                                                list-style: none;
+                                                display: flex;
+                                                cursor: move;
+                                                background: #fff;
+                                                align-items: center;
+                                                border-radius: 5px;
+                                                padding: 10px 13px;
+                                                margin-bottom: 11px;
+                                                border: 1px solid #ccc;
+                                                justify-content: space-between;
+                                        }
+                                        .draggable-list .item .details {
+                                                display: flex;
+                                                align-items: center;
+                                        }
+                                        .draggable-list .item .details img {
+                                                height: 43px;
+                                                width: 43px;
+                                                pointer-events: none;
+                                                margin-right: 12px;
+                                                object-fit: cover;
+                                                border-radius: 50%;
+                                        }
+                                        .draggable-list .item .details span {
+                                                font-size: 1.13rem;
+                                        }
+                                        .draggable-list .item i {
+                                                color: #474747;
+                                                font-size: 1.13rem;
+                                        }
+                                        .draggable-list .item.dragging {
+                                                opacity: 0.6;
+                                                pointer-events: none;
+                                        }
+                                        .draggable-list .item.dragging :where(.details, i) {
+                                                opacity: 0;
+                                        }
+                                        @media (max-width: 790px) {
+                                                .draggable-list {
+                                                        width: 90%;
+                                                        margin: 0 auto;
+                                                        padding: 15px;
+                                                        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px 0px;
+                                                }
+                                                .draggable-list .item .details img {
+                                                        height: 23px;
+                                                        width: 23px;
+                                                        pointer-events: none;
+                                                        margin-right: 12px;
+                                                        object-fit: cover;
+                                                        border-radius: 50%;
+                                                }
+                                                .draggable-list .item .details span {
+                                                        font-size: 1rem;
+                                                }
+                                                .draggable-list .item i {
+                                                        color: #474747;
+                                                        font-size: 0.8rem;
+                                                }
+                                        }
+
+                                        const sortableList = document.querySelector(".draggable-list");
+                                        const items = sortableList.querySelectorAll(".item");
+
+                                                let draggingItem = null;
+
+                                                items.forEach(item => {
+                                                item.addEventListener("dragstart", () => {
+                                                draggingItem = item;
+                                                setTimeout(() => item.classList.add("dragging"), 0);
+                                        });
+
+                                                item.addEventListener("dragend", () => {
+                                                draggingItem = null;
+                                                item.classList.remove("dragging");
+                                        });
+
+                                        item.addEventListener("dragover", e => {
+                                                        e.preventDefault();
+                                                        const afterElement = getDragAfterElement(sortableList, e.clientY);
+                                                        const currentDraggedElement = document.querySelector(".dragging");
+                                                        if (afterElement == null) {
+                                                                sortableList.appendChild(currentDraggedElement);
+                                                        } else {
+                                                        sortableList.insertBefore(currentDraggedElement, afterElement);
+                                                        }
+                                                });
+                                        });
+
+                                        function getDragAfterElement(container, y) {
+                                                        const draggableElements = [...container.querySelectorAll(".item:not(.dragging)")];
+                                                        return draggableElements.reduce((closest, child) => {
+                                                        const box = child.getBoundingClientRect();
+                                                        const offset = y - box.top - box.height / 2;
+                                                        
+                                                        if (offset < 0 && offset > closest.offset) {
+                                                        return { offset: offset, element: child };
+                                                        } else {
+                                                        return closest;
+                                                        }
+                                                }, { offset: Number.NEGATIVE_INFINITY }).element;
+                                        }
+                                        </pre>
+                                </div>
+                        </div>
+
+                        <div class="tab-area mt-4">
+                                <div class="code-tab">
+                                        <button class="code-tab-btn btn-13" data-tab="component-13">Range Bar</button>
+                                        <button class="code-tab-btn btn-13" data-tab="view-13">Code</button>
+                                        <div class="code-slide-bar"></div>
+                                </div>
+                                <div class="code-tab-content ctent-13" id="component-13">
+                                        <div class="ui-zone">
+                                                <div class="stack-range-box">
+                                                        <div class="inner-box">
+                                                        <div class="range-line"></div>
+                                                                <input type="range" class="range-slider" min="0" max="100" value="0"/>
+                                                        </div>
+                                                        <p class="range-num">0</p>
+                                                </div>
+                                        </div> 
+                                </div>
+                                <div class="code-tab-content ctent-13" id="view-13">
+                                        <pre>
+                                        &lt;div class="stack-range-box"&gt;
+                                        &lt;div class="inner-box"&gt;
+                                                &lt;div class="range-line"&gt;&lt;/div&gt;
+                                                &lt;input type="range" class="range-slider" min="0" max="100" value="0"/&gt;
+                                        &lt;/div&gt;
+                                        &lt;p class="range-num"&gt;0&lt;/p&gt;
+                                        &lt;/div&gt;
+
+                                        .stack-range-box {
+                                                display: flex;
+                                                align-items: center;
+                                                justify-content: center;
+                                                height: 100px;
+                                        }
+                                        .stack-range-box .inner-box {
+                                                width: 100%;
+                                                height: 100%;
+                                                display: flex;
+                                                align-items: center;
+                                                justify-content: center;
+                                                position: relative;
+                                        }
+                                        .stack-range-box .range-line {
+                                                left: 0;
+                                                width: 0%;
+                                                height: 5px;
+                                                border-radius: 10px;
+                                                position: absolute;
+                                                background: #030712;
+                                        }
+                                        .stack-range-box input[type="range"] {
+                                                appearance: none;
+                                                outline: none;
+                                                width: 100%;
+                                                height: 5px;
+                                                border-radius: 10px;
+                                                background: #e5e7eb;
+                                        }
+                                        .stack-range-box input[type="range"]::-webkit-slider-thumb {
+                                                appearance: none;
+                                                width: 25px;
+                                                height: 25px;
+                                                cursor: pointer;
+                                                border: none;
+                                                border-radius: 50%;
+                                                background: #030712;
+                                        }
+                                        .stack-range-box input[type="range"]::-ms-thumb {
+                                                appearance: none;
+                                                width: 25px;
+                                                height: 25px;
+                                                cursor: pointer;
+                                                border: none;
+                                                border-radius: 50%;
+                                                background: #030712;
+                                        }
+                                        .stack-range-box input[type="range"]::-moz-range-thumb {
+                                                appearance: none;
+                                                width: 25px;
+                                                height: 25px;
+                                                cursor: pointer;
+                                                border: none;
+                                                border-radius: 50%;
+                                                background: #030712;
+                                        }
+                                        .stack-range-box .range-num {
+                                                width: 50px;
+                                                text-align: center;
+                                                font-size: 24px;
+                                                font-weight: 600px;
+                                                margin-top: 15px;
+                                                margin-left: 10px;
+                                        }
+                                        </pre>
+                                </div>
+                        </div>
+                </div>
+        </div>
+</section>

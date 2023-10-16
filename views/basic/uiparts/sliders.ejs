@@ -1,0 +1,328 @@
+<section class="page-area">
+        <div class="flex-container">
+                <div class="item">
+                        <div class="introduction">
+                                <h1>Freeform <span class="text-primary">Sliders</span></h1>
+                                <p>Different types of Slider and Carousel Components for different needs</p>
+                        </div>
+                </div>
+        </div>
+</section>
+<section class="content-area">
+        <div class="ui-area">
+                <div class="content-zone">
+                        <div class="tab-area">
+                                <div class="code-tab">
+                                        <button class="code-tab-btn btn-1" data-tab="component-1">Main Slider</button>
+                                        <button class="code-tab-btn btn-1" data-tab="view-1">Code</button>
+                                        <div class="code-slide-bar"></div>
+                                </div>
+                                <div class="code-tab-content ctent-1" id="component-1">
+                                        <div class="ui-zone">
+                                                <div class="stack-slider-container">
+                                                        <div class="slider">
+                                                        <img src="img/sample-card.jpg" alt="Image 1">
+                                                        <img src="img/player.jpg" alt="Image 2">
+                                                        <img src="img/Bright.jpg" alt="Image 3">
+                                                        <img src="img/scenic.jpg" alt="Image 4">
+                                                        <img src="img/mountain.jpg" alt="Image 5">
+                                                        <img src="img/view.jpg" alt="Image 6">
+                                                        </div>
+                                                        <button class="slider-arrow left-arrow">&#8249;</button>
+                                                        <button class="slider-arrow right-arrow">&#8250;</button>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="code-tab-content ctent-1" id="view-1">
+                                        <pre>
+                                        &lt;div class="stack-slider-container"&gt;
+                                        &lt;div class="slider"&gt;
+                                                &lt;img src="Image link goes here" alt="Image 1"&gt;
+                                                &lt;img src="Image link goes here" alt="Image 2"&gt;
+                                                &lt;img src="Image link goes here" alt="Image 3"&gt;
+                                                &lt;img src="Image link goes here" alt="Image 4"&gt;
+                                                &lt;img src="Image link goes here" alt="Image 5"&gt;
+                                                &lt;img src="Image link goes here" alt="Image 6"&gt;
+                                        &lt;/div&gt;
+                                        &lt;button class="slider-arrow left-arrow"&gt;&#8249;&lt;/button&gt;
+                                        &lt;button class="slider-arrow right-arrow"&gt;&#8250;&lt;/button&gt;
+                                        &lt;/div&gt;
+
+                                        .stack-slider-container {
+                                                position: relative; 
+                                                overflow: hidden;
+                                                width: 100%;
+                                                height: auto;
+                                                box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+                                        }
+                                        .stack-slider-container .slider {
+                                                position: relative; 
+                                                display: flex;
+                                                width: 100%; 
+                                                transition: transform 0.5s ease-in-out;
+                                        }
+                                        .stack-slider-container .slider img {
+                                                width: 100%; 
+                                                height: auto;
+                                                object-fit: cover;
+                                                flex: 0 0 100%; 
+                                        }
+                                        .stack-slider-container .slider-arrow {
+                                                position: absolute;
+                                                top: 50%;
+                                                height: 44px;
+                                                width: 44px;
+                                                border-radius: 50%;
+                                                transform: translateY(-50%);
+                                                background-color: rgba(0, 0, 0, 0.5);
+                                                color: white;
+                                                border: none;
+                                                cursor: pointer;
+                                                font-size: 24px;
+                                                transition: background-color 0.3s ease-in-out;
+                                                z-index: 1;
+                                        }
+                                        .stack-slider-container .slider-arrow:hover {
+                                                background-color: rgba(0, 0, 0, 0.7);
+                                        }
+                                        .stack-slider-container .left-arrow {
+                                                left: 10px;
+                                        }
+                                        .stack-slider-container .right-arrow {
+                                                right: 10px;
+                                        }
+                                        @media (max-width: 790px) {
+                                                .stack-slider-container .slider {
+                                                position: relative; 
+                                                display: flex;
+                                                width: 100%; 
+                                                transition: transform 0.5s ease-in-out;
+                                                }
+                                                .stack-slider-container .slider-arrow {
+                                                font-size: 18px; 
+                                                }
+                                        }
+
+                                        document.addEventListener('DOMContentLoaded', function () {
+                                        //Slider
+                                        const slider = document.querySelector('.slider');
+                                        const leftArrow = document.querySelector('.left-arrow');
+                                        const rightArrow = document.querySelector('.right-arrow');
+                                        let counter = 0;
+                                        const sliderWidth = slider.clientWidth; 
+
+                                        function slide(direction) {
+                                        if (direction === 'left') {
+                                                counter--;
+                                        } else {
+                                                counter++;
+                                        }
+                                        if (counter < 0) {
+                                                counter = slider.children.length - 1;
+                                        } else if (counter >= slider.children.length) {
+                                                counter = 0;
+                                        }
+                                        slider.style.transform = `translateX(-${counter * sliderWidth}px)`;
+                                        }
+
+                                        leftArrow.addEventListener('click', () => slide('left'));
+                                        rightArrow.addEventListener('click', () => slide('right'));
+
+                                        const screenWidth = window.innerWidth;
+                                        const slidingInterval = screenWidth > 768 ? 3000 : 5000;
+                                        setInterval(() => slide('right'), slidingInterval);
+                                        });
+
+                                        </pre>
+                                </div>
+                        </div>
+
+                        <div class="tab-area mt-4">
+                                <div class="code-tab">
+                                        <button class="code-tab-btn btn-2" data-tab="component-2">Carousel Slider</button>
+                                        <button class="code-tab-btn btn-2" data-tab="view-2">Code</button>
+                                        <div class="code-slide-bar"></div>
+                                </div>
+                                <div class="code-tab-content ctent-2" id="component-2">
+                                        <div class="ui-zone">
+                                                        <div class="stack-carousel-container">
+                                                        <div class="carousel">
+                                                                <img src="img/C1.jpg" alt="Image 1">
+                                                                <img src="img/C2.jpg" alt="Image 2">
+                                                                <img src="img/C3.jpg" alt="Image 3">
+                                                                <img src="img/C4.jpg" alt="Image 4">
+                                                                <img src="img/C5.jpg" alt="Image 5">
+                                                                <img src="img/C6.jpg" alt="Image 6">
+                                                        </div>
+                                                        <button class="carousel-arrow prev-arrow">&#8249;</button>
+                                                        <button class="carousel-arrow next-arrow">&#8250;</button>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="code-tab-content ctent-2" id="view-2">
+                                        <pre>
+                                        &lt;div class="stack-carousel-container"&gt;
+                                        &lt;div class="carousel"&gt;
+                                                &lt;img src="Image link goes here" alt="Image 1"&gt;
+                                                &lt;img src="Image link goes here" alt="Image 2"&gt;
+                                                &lt;img src="Image link goes here" alt="Image 3"&gt;
+                                                &lt;img src="Image link goes here" alt="Image 4"&gt;
+                                                &lt;img src="Image link goes here" alt="Image 5"&gt;
+                                                &lt;img src="Image link goes here" alt="Image 6"&gt;
+                                        &lt;/div&gt;
+                                        &lt;button class="carousel-arrow prev-arrow"&gt;&#8249;&lt;/button&gt;
+                                        &lt;button class="carousel-arrow next-arrow"&gt;&#8250;&lt;/button&gt;
+                                        &lt;/div&gt;
+
+                                        .stack-carousel-container {
+                                                display: flex;
+                                                align-items: center;
+                                                justify-content: center;
+                                                position: relative;
+                                        }
+                                        .stack-carousel-container .carousel {
+                                                font-size: 0px;
+                                                cursor: pointer;
+                                                overflow: hidden;
+                                                white-space: nowrap;
+                                                scroll-behavior: smooth;
+                                        }
+                                        .stack-carousel-container .carousel img {
+                                                width: 240px;
+                                                height: 240px;
+                                                object-fit: cover;
+                                                user-select: none;
+                                                margin-left: 15px;
+                                                width: calc(100% / 3);
+                                        }
+                                        .stack-carousel-container .carousel img:first-child {
+                                                margin-left: 0px;
+                                        }
+                                        .stack-carousel-container .carousel-arrow {
+                                                position: absolute;
+                                                top: 50%;
+                                                height: 44px;
+                                                width: 44px;
+                                                border-radius: 50%;
+                                                transform: translateY(-50%);
+                                                background-color: rgba(0, 0, 0, 0.5);
+                                                color: white;
+                                                border: none;
+                                                cursor: pointer;
+                                                font-size: 24px;
+                                                transition: background-color 0.3s ease-in-out;
+                                                z-index: 1;
+                                        }
+                                        .stack-carousel-container .carousel-arrow:hover {
+                                                background-color: rgba(0, 0, 0, 0.7);
+                                        }
+                                        .stack-carousel-container .prev-arrow {
+                                                left: 10px;
+                                        }
+                                        .stack-carousel-container .next-arrow {
+                                                right: 10px;
+                                        }
+                                        @media (max-width: 790px) {
+                                                .stack-carousel-container .carousel-arrow {
+                                                        font-size: 18px;
+                                                }
+                                                .stack-carousel-container .carousel img {
+                                                        width: 100%;
+                                                }
+                                        }
+
+                                        document.addEventListener('DOMContentLoaded', function () {
+                                        //Carousel
+                                        const carousel = document.querySelector(".stack-carousel-container .carousel");
+                                        const firstImg = carousel.querySelector("img:first-child");
+                                        const arrowIcons = document.querySelectorAll(".stack-carousel-container .carousel-arrow");
+                                        const CAROUSEL_ITEM_MARGIN = 14;
+                                        const AUTO_SLIDE_INTERVAL = 3000; // Adjust the interval as needed
+
+                                        let isDragStart = false;
+                                        let prevPageX, prevScrollLeft, positionDiff;
+
+                                        const showHideIcons = () => {
+                                        const scrollWidth = carousel.scrollWidth - carousel.clientWidth;
+                                        arrowIcons[0].style.display = carousel.scrollLeft === 0 ? "none" : "block";
+                                        arrowIcons[1].style.display = carousel.scrollLeft === scrollWidth ? "none" : "block";
+                                        };
+
+                                        arrowIcons.forEach(icon => {
+                                        icon.addEventListener("click", () => {
+                                                const firstImgWidth = firstImg.clientWidth + CAROUSEL_ITEM_MARGIN;
+                                                carousel.scrollLeft += icon.id === "left" ? -firstImgWidth : firstImgWidth;
+                                                setTimeout(showHideIcons, 60);
+                                        });
+                                        });
+
+                                        const autoSlide = () => {
+                                        if (carousel.scrollLeft >= carousel.scrollWidth - carousel.clientWidth) {
+                                                carousel.scrollLeft = 0;
+                                        } else {
+                                                const firstImgWidth = firstImg.clientWidth + CAROUSEL_ITEM_MARGIN;
+                                                carousel.scrollLeft += firstImgWidth;
+                                        }
+                                        showHideIcons();
+                                        };
+
+                                        let autoSlideIntervalId = setInterval(autoSlide, AUTO_SLIDE_INTERVAL);
+
+                                        const dragStart = e => {
+                                        isDragStart = true;
+                                        clearInterval(autoSlideIntervalId);
+                                        prevPageX = e.pageX || e.touches[0].pageX;
+                                        prevScrollLeft = carousel.scrollLeft;
+                                        };
+
+                                        const dragStop = () => {
+                                        isDragStart = false;
+                                        if (!isDragging) {
+                                                isDragging = false;
+                                                autoSlideIntervalId = setInterval(autoSlide, AUTO_SLIDE_INTERVAL);
+                                        }
+                                        };
+
+                                        let isDragging = false;
+
+                                        const dragging = e => {
+                                        if (!isDragStart) return;
+                                        e.preventDefault();
+                                        carousel.classList.add("dragging");
+                                        positionDiff = (e.pageX || e.touches[0].pageX) - prevPageX;
+                                        carousel.scrollLeft = prevScrollLeft - positionDiff;
+                                        showHideIcons();
+                                        };
+
+                                        const handleMouseEvent = event => {
+                                        switch (event.type) {
+                                                case "mousedown":
+                                                dragStart(event);
+                                                document.addEventListener("mousemove", dragging);
+                                                document.addEventListener("mouseup", handleMouseUp);
+                                                break;
+                                                case "mouseup":
+                                                dragStop();
+                                                document.removeEventListener("mousemove", dragging);
+                                                document.removeEventListener("mouseup", handleMouseUp);
+                                                break;
+                                        }
+                                        };
+
+                                        const handleMouseUp = () => {
+                                        document.removeEventListener("mousemove", dragging);
+                                        document.removeEventListener("mouseup", handleMouseUp);
+                                        };
+
+                                        carousel.addEventListener("mousedown", handleMouseEvent);
+                                        carousel.addEventListener("touchstart", dragStart);
+                                        carousel.addEventListener("touchmove", dragging);
+                                        carousel.addEventListener("touchend", dragStop);
+                                        });
+                                        </pre>
+                                </div>
+                        </div>
+                </div>
+        </div>
+</section>
