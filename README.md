@@ -13,9 +13,9 @@ Developers can selectively choose the necessary components for their projects, e
 ## Why did I create Stack UI?
 
 While front-end frameworks like Tailwind CSS and Bootstrap 5 are great they come with some level of control that forces you to develop UI within their range. It makes UI Development fast but it sacrifices innovation, today with one look, anyone can tell whether a website is made by Tailwind, Bootstrap, or any other design system. 
-The result all apps have the same UI look and feel. 
+The result - all apps have the same UI look and feel. 
 
-With Stack UI I am to break the chain of Controlled UI Development.
+With Stack UI I am on a mission to break the chain of Controlled UI Development.
 
 There is a huge gap between coding every UI element from scratch to using the framework to build the UI.
 
@@ -23,10 +23,16 @@ stackui.co is my way of filling that huge gap, I realized that people are using 
 1. To build something fast in order to save time.
 2. To avoid building every small component from scratch after that they will style it according to their needs.
 
-So instead of prioritizing speed of development, I am focusing on the freedom to style the UI components. Bootstrap, Bulma CSS, and Materialize CSS do the same thing, however, there is a huge difference between them and Stack UI.
+So instead of prioritizing on point 1 which is - speed of development, I am focusing on point 2 - The freedom to style the UI components. Bootstrap, Bulma CSS, and Materialize CSS do the same thing, however, there is a huge difference between them and Stack UI.
 
-In order for Bootstrap, Bulma CSS, and Materialize CSS to work you need to download their files in your project so even if you end up using only 25% of the source the rest of it becomes useless. Stack UI being a Freeform and open UI platform gives direct access to the code without the need for installation so developers can choose what to include
-and what not to include creating a pretty optimized version of UI. This also eliminates the need for documentation.
+In order for Bootstrap, Bulma CSS, and Materialize CSS to work you need to download their files in your project and if you want to custom style the components or extend the capabilities with javascript or jQuery you need to create custom files and override the default framework files. What's more - If you end up using only 25% of the source the rest of it becomes useless or it becomes bloatware. Stack UI being a Freeform and open UI platform gives direct access to the code without the need for installation so developers can choose what to include
+and what not to include creating a pretty optimized version of UI. This has the following benefits:-
+
+1. No need to download framework files.
+2. No need to create custom CSS or JS files to override default framework files.
+3. No need to study documentation, your knowledge and experience as a developer is enough.
+4. You have the choice to choose what to include and what not to include avoiding the chance of useless/bloatware code
+5. Create an optimized front-end stack for every project.
 
 ## What you will get with Stack UI?
 <img src="https://stackui.co/project/2.png"/>
@@ -71,6 +77,7 @@ I do honestly believe that UI Development resources should be free and Open to e
 Hence this project requires a sufficient amount of sponsorship to survive. So if you think our effort is worthy then please consider sponsoring us.
 
 <b>Github link - </b>https://github.com/sponsors/kaustubhdevstack
+<br>
 <b>Patreon link - </b>https://www.patreon.com/StackUI
 
 Depending on the amount, you will receive special perks as well as early access to upcoming new updates as well.
