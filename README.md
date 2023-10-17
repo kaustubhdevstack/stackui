@@ -61,9 +61,9 @@ To add new components follow the instructions:-
 <b>Note:</b> Right now there are only components made with HTML, CSS, and JS so the following instructions from here will be only for HTML, CSS, and JS Components. The rest of the instructions will be given when React, Vue, and Angular Components are released which is going to be soon.
 
 1. Everything inside the <b>Basic</b> folder which is inside the <b>View</b> folder are the components created using HTML, CSS, and JS.
-2. The CSS File for the components will be inside "public/dist/basic/css/components.css
-3. JS Files for the components will be inside "public/dist/basic/js" (There are a total of 3 of them - Button.js, Click.js, Text.js)
-4. Routes are stored in - "routes/main.js"
+2. The CSS File for the components will be inside "public/dist/basic/css/components.css".
+3. JS Files for the components will be inside "public/dist/basic/js". (There are a total of 3 of them - Button.js, Click.js, Text.js)
+4. Routes are stored in - "routes/main.js".
 
 ## Support me
 
