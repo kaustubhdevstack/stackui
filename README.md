@@ -27,6 +27,7 @@ So instead of prioritizing on point 1 which is - speed of development, I am focu
 
 In order for Bootstrap, Bulma CSS, and Materialize CSS to work you need to download their files in your project and if you want to custom style the components or extend the capabilities with javascript or jQuery you need to create custom files and override the default framework files. What's more - If you end up using only 25% of the source the rest of it becomes useless or it becomes bloatware. 
 <br>
+<br>
 Stack UI being a Freeform and open UI platform gives direct access to the code without the need for installation so developers can choose what to include and what not to include creating a pretty optimized version of UI. This has the following benefits:-
 
 1. No need to download framework files.
