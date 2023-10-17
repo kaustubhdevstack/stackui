@@ -3,6 +3,9 @@
 <br>
 Thank you for visiting the @kaustubhdevstack/stackui repository! If you find this repository helpful or useful, we encourage you to start it on GitHub. Starring a repository is a way to show your support for the project. It also helps to increase the visibility of the project and to let the community know that it is valuable. Thanks again for your support and we hope you find the repository useful!
 
+## Stack UI Link
+<a href="https://stackui.co">Stack U - Freeform Open UI Library</a>
+
 ## What is Stack UI?
 Stack UI provides various Reusable and modifyable Freeform style components specially created for you to craft user interfaces with ease. If you hate installing various dependencies for your project and just want to modify components according to your needs then Stack UI is for you!
 
